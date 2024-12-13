@@ -62,7 +62,7 @@ export default function Index() {
         <Heading fontFamily="gingerBold" as="p" size="s" w="auto" margin="0" color="primary.default">Become trusted</Heading>
       </Flex>
       <Box>
-        <Flex alignItems="center" justifyContent="center" flexDirection="column" display={["none", "flex"]}>
+        <Flex alignItems="center" justifyContent="center" flexDirection="column" display={["flex", "flex"]} p={["1rem", "0"]}>
           <Heading fontFamily="gingerBold" as="h2" size="md" w="auto" margin="0" color="primary.default">Work with us by letting</Heading>
           <Heading fontFamily="gingerBold" as="h2" w="auto" m="0" size="lg" pl={["0", "15rem"]} color="primary.green" textDecoration="underline">AI work for YOU</Heading>
         </Flex>
