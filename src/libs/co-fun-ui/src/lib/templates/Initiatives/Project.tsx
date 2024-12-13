@@ -42,7 +42,7 @@ export const Project = ({ title, description, isEndorsed, formId, children, ...p
           {formId && <ModalBase content={signUp} title={'Subscribe'} button={subscribe} />}
           {!formId && subscribe}
           <Flex>
-            {!hasCopied && <ShareIcon cursor="pointer" onClick={() => { setClipboard('https://co-fun.com/trends'); onCopy() }} />}
+            {!hasCopied && <ShareIcon cursor="pointer" onClick={() => { setClipboard('https://cofun.digital/trends'); onCopy() }} />}
             {hasCopied && <TextBase fontFamily="gingerBold">Link copied</TextBase>}
           </Flex>
         </Flex>
