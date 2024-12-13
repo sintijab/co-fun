@@ -1,7 +1,7 @@
 import { ApexOptions } from 'apexcharts';
 import { ApexChart } from './ApexChart';
 
-export const StackedSingleBar = ({ series, options, width, height }: { series: ApexOptions['series'], options: ApexOptions, width?: number, height?: number}) => (
+export const StackedSingleBar = ({ series, options, width, height }: { series: ApexOptions['series'], options: ApexOptions, width?: number | string, height?: number}) => (
   <ApexChart options={options} series={series} type="bar" width={width || 450} height={height || 320} />
 );
 
