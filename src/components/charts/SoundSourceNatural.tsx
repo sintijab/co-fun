@@ -102,5 +102,5 @@ export const SoundSourceNatural = ({ data }: { data: SoundTechnical[] }) => {
         enabled: false
       }
   };
-  return <StackedSingleBar options={options} series={series} />
+  return <StackedSingleBar options={options} series={series}  width="100%" />
 }

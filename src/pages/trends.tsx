@@ -1,4 +1,4 @@
-import { Carousel, Flex, InitiativeOverview, Link, ModalBase, Project, TextBase } from "@co-fun/ui";
+import { Box, Carousel, Flex, InitiativeOverview, Link, ModalBase, Project, TextBase } from "@co-fun/ui";
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { AppDispatch } from "../store";
@@ -57,23 +57,41 @@ export default function Trends() {
                 <TextBase textStyle="project-title">Sound Origin and Characteristics</TextBase>
                 <ModalBase content={<Flex textStyle="button-select" mb="1rem" flexDirection="column">{<><TextBase textStyle="project-descr" flexBasis="100%" mb="1rem">Sound source in its spatial context and its subcategories provides a framework for understanding where and how the sounds are produced or perceived. Analyzing these together allows you to identify sound sources in specific spatial environments and link natural or artificial sources with their acoustic settings.</TextBase></>}</Flex>} title={'Sound Origin and Characteristics'} button={info} />
               </Flex>
+              <Box w={["100%", "31%"]} maxWidth="100%">
               <SoundSourceContext data={trendsList} />
+              </Box>
+              <Box w={["100%", "31%"]} maxWidth="100%">
               <RhythmicScaleContext data={trendsList} />
+              </Box>
+              <Box w={["100%", "31%"]} maxWidth="100%">
               <TempoComplexityContext data={trendsList} />
+              </Box>
               <Flex flexBasis="100%" alignItems="center" mb="2rem" mt="3rem" justifyContent="center">
                 <TextBase textStyle="project-title">Rhythm and Temporal Features</TextBase>
                 <ModalBase content={<Flex textStyle="button-select" mb="1rem" flexDirection="column">{<><TextBase textStyle="project-descr" flexBasis="100%" mb="1rem">These rhythm-related variables cover how sound flows over time and the nature of its rhythm, tempo, and pattern complexity. Beat types complements rhythmic scale and tempo modulation by adding specific rhythmic structure, which is essential when assessing how sounds might interact in dynamic patterns or temporal shifts. This group helps classify sounds based on rhythmic features and tempo behaviors, aiding in clustering sounds by their temporal characteristics.</TextBase></>}</Flex>} title={'Rhythm and Temporal Features'} button={info} />
               </Flex>
+              <Box w={["100%", "31%"]} maxWidth="100%">
               <TempoRhythmicScale data={trendsList} />
+              </Box>
+              <Box w={["100%", "31%"]} maxWidth="100%">
               <BeatTypesTempo data={trendsList} />
+              </Box>
+              <Box w={["100%", "31%"]} maxWidth="100%">
               <TempoRangeModulation data={trendsList} />
+              </Box>
               <Flex flexBasis="100%" alignItems="center" mb="2rem" mt="3rem" justifyContent="center">
                 <TextBase textStyle="project-title">Environment and Acoustic Properties</TextBase>
                 <ModalBase content={<Flex textStyle="button-select" mb="1rem" flexDirection="column">{<><TextBase textStyle="project-descr" flexBasis="100%" mb="1rem">Analyzing sound sources in spatial context allows you to evaluate the acoustic environments in which sounds are produced or recorded. This is important for categorizing sounds based on their spatial and environmental acoustics, which can influence how sounds propagate and blend in particular settings.</TextBase></>}</Flex>} title={'Environment and Acoustic Properties'} button={info} />
               </Flex>
+              <Box w={["100%", "31%"]} maxWidth="100%">
               <SoundSourceEnclosed data={trendsList} />
+              </Box>
+              <Box w={["100%", "31%"]} maxWidth="100%">
               <SoundSourceOpenAir data={trendsList} />
+              </Box>
+              <Box w={["100%", "31%"]} maxWidth="100%">
               <SoundSourceNatural data={trendsList} />
+              </Box>
             </Flex>
           </Project>
         </InitiativeOverview>

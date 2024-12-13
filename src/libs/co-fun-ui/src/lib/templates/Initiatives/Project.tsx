@@ -6,7 +6,7 @@ import { InputBase } from "@co-fun/ui";
 
 export const Project = ({ title, description, isEndorsed, formId, children, ...props }: { title: string; description: string, formId?: string, isEndorsed: boolean } & FlexProps) => {
   const { onCopy, value, setValue: setClipboard, hasCopied } = useClipboard('')
-  const { register, setValue } = useForm();
+  const { register } = useForm();
   const subscribe = <BellIcon cursor="pointer" />;
   const signUp = (
     <form action={formId} method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" className="validate" target="_blank">
@@ -30,7 +30,7 @@ export const Project = ({ title, description, isEndorsed, formId, children, ...p
     </form>
   )
   return (
-    <Box p="1.875rem 2.063rem" border="1px" borderColor="border.default" borderRadius="lg" {...props}>
+    <Box p={["1.875rem 1rem", "1.875rem 2.063rem"]} border="1px" borderColor="border.default" borderRadius="lg" {...props}>
       <Box display="flex" pb="1.125rem" justifyContent="space-between">
         <Box>
           <Flex alignItems="center" pb="0.75rem">
