@@ -32,6 +32,7 @@ export default function Index() {
   const chunkedItems = _.chunk(list, 3);
   const args = {
     title: 'AI Assistants in Sound Moderation',
+    link: './trends',
     author: 'Sintija Birgele',
     description: '“Listening helps us communicate and deepen our understanding and appreciation of environment around us. Learning about the sound artists and their work in different contexts helps listeners recognize how location influences sound, and most importantly acknowledge - what brings us joy.”',
     isFollowing: true,
