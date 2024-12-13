@@ -36,12 +36,11 @@ export default function Trends() {
     title: 'What are you listening now?',
     author: 'Sintija Birgele',
     description: '“Listening helps us communicate and deepen our understanding and appreciation of environment around us. Learning about the sound artists and their work in different contexts helps listeners recognize how location influences sound, and most importantly acknowledge - what brings us joy.”',
-    isFollowing: true,
+    isFollowing: null,
   };
   return <>
-    <Flex pt="3rem" h="100%" >
-      <Flex pl="5.5rem" mb="3.5rem" flexWrap="wrap" width="100%">
-        <InitiativeOverview {...args} border="1px solid #CCCCCC" borderRadius=".5rem" mt="1rem">
+      <Flex m={["2rem .5rem", "3.5rem"]} flexWrap="wrap" maxWidth="100%">
+        <InitiativeOverview {...args} border="1px solid #CCCCCC" borderRadius=".5rem" mt="1rem" p={["2rem .5rem", "4rem"]}>
           <Project title="AI Radio Moderation" description="Based on your listening experience AI algorithm will analyze your stats and give you suggestions from similar playlists on a daily basis. Variety of selection is based on how many active listeners are contributing to this project." isEndorsed={false} width="100%" formId="https://co-fun.us9.list-manage.com/subscribe/post?u=afdf41c218cb20406a176006b&amp;id=5656180439&amp;f_id=00a056e1f0">
             <TextBase textStyle="project-title" flexBasis="100%" mb="1rem">Rooftop Radio</TextBase>
             <Carousel cards={chunkedItems} h="300px" />
@@ -79,6 +78,5 @@ export default function Trends() {
           </Project>
         </InitiativeOverview>
       </Flex>
-    </Flex>
   </>
 }

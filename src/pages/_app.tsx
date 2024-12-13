@@ -14,7 +14,7 @@ export default function App({
   pageProps: { session, ...pageProps },
 }: AppProps) {
   const router = useRouter();
-  const isFullLayout = router.asPath.includes('/explore') || router.asPath.includes('/academy') || router.asPath === '/' || router.asPath.includes('/#');
+  const isFullLayout = router.asPath.includes('/explore') || router.asPath.includes('/academy') || router.asPath.includes('/trends') || router.asPath === '/' || router.asPath.includes('/#');
   return (
     <Provider store={store}>
       <PersistGate persistor={persistor}>
