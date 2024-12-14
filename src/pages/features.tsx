@@ -6,6 +6,27 @@ export default function Index() {
       <TextBase textStyle="heading" lineHeight="2" alignSelf="center">
         AI Assistance at Glance
       </TextBase>
+      <TextBase textStyle="project-descr" lineHeight="2" p=".5rem 0">
+        Adopting AI tools for assistance requires some technical knowledge. At CO-FUN we are making conscious decisions by promoting sustainable and efficient use of technology, adaptation and learning, consulting and developing solutions end-to-end to support businesses in project planning and execution.
+      </TextBase>
+      <TextBase textStyle="project-descr" lineHeight="2" p=".5rem 0">
+        Collecting some data about areas of your work that you feel like AI could be an integral part in any stages of your project. For instance, collecting biometric data using hardware and computer vision on devices to build interactive and actionable software. 
+      </TextBase>
+      <TextBase textStyle="project-descr" lineHeight="2" p=".5rem 0">
+        For one of my clients we used document scanning with OCR technology to scan and find the information from the documents and images for processing insurance claims. It can be also useful for analyzing damages on objects and even proposed methods for restoration.
+      </TextBase>
+      <TextBase textStyle="project-descr" lineHeight="2" p=".5rem 0">
+        For AI radio moderation I built a chatbot that collects info about listening experience from clients and then personalized the selection of recommendations. The results in visual display are available online: <u><a href="https://cofun.digital/trends" target="_blank" rel="norefferer noopener">https://cofun.digital/trends</a></u>, the AI Assistant was built in a <u><a href="https://youtu.be/clddPytzfwM" target="_blank" rel="norefferer noopener">chatbot</a></u>. AI tools can assist in optimizing pricing, and identifying target audiences.
+      </TextBase>
+      <TextBase textStyle="project-descr" lineHeight="2" p=".5rem 0">
+        AI is practical in generative art to experiment with different shapes, proportions, and materials. In digital mediums generating designs or transforming the forms of writing into visual formats replaces manual steps, that can be achieved for many generative processes with clear and guided system instructions.
+      </TextBase>
+      <TextBase textStyle="project-descr" lineHeight="2" p=".5rem 0">
+        In marketing we developed content generator deployed after several rounds of testing with rule-based rewards, delivering the results with high precision and quality. Another example of generated art work with hundreds of geometrical shapes in vector graphics is visible online <a href="https://cofun.digital/explore" target="_blank" rel="norefferer noopener">https://cofun.digital/explore</a> and in background for the content visual display <u><a href="https://cofun.digital/trends" target="_blank" rel="norefferer noopener">https://cofun.digital/trends</a></u>. There are many variations of how to develop AI tools in design while reducing manual work and fulfiling autonomy with generative process.
+      </TextBase>
+      <TextBase textStyle="project-descr" lineHeight="2" p=".5rem 0">
+        Physical environments share information that can be used in industrial settings and information processing with AI. As it analyzes historical data and real-time information to optimize manufacturing, it improves efficiency and quality. In CNC machining (computerized operation of machining tools used in manufacturing) and 3D printing it can fine-tune settings for creating prototypes or even final pieces, reducing waste and ensuring high precision.
+      </TextBase>
       <TextBase textStyle="initiative-descr" lineHeight="2" p=".5rem 0">
         AI-Powered System Components
       </TextBase>
