@@ -1,7 +1,9 @@
-import { Box, Text, VStack, Stack } from "@chakra-ui/react";
+import { Box, Text, VStack, Stack, Switch, CheckboxState } from "@chakra-ui/react";
 import { Link } from "../../foundations";
+import { ChangeEvent, useState } from "react";
 
 const PricingTable = () => {
+  const [hasMonthlyPrice, setMonthlyPrice] = useState<boolean>(true);
   const pricingData = [
     {
       title: "Creators",
@@ -20,6 +22,7 @@ const PricingTable = () => {
       title: "Business",
       label: 'most popular',
       price: 300,
+      secondPrice: 360,
       features: [
         "Creators features plus:",
         "Weekly AI courses",
@@ -44,6 +47,10 @@ const PricingTable = () => {
       ],
     },
   ];
+
+  const isChecked = (e: ChangeEvent<HTMLInputElement>) => {
+    setMonthlyPrice(!e.target.checked)
+  }
   
     return (
       <Box p={[0, 10]} fontFamily="gingerBold, sans-serif" w={["95%","unset"]}>
@@ -86,19 +93,48 @@ const PricingTable = () => {
                 <Text fontSize="4xl" fontWeight="light" color="#414141">
                 {plan.title}
                 </Text>
+                {plan.secondPrice && <Box pb=".3rem"><Switch size="lg" sx={{ 'span.chakra-switch__track:not([data-checked])': { backgroundColor: 'primary.green' } }} colorScheme='green' onChange={isChecked} /></Box>}
+                {hasMonthlyPrice && <Box fontSize="sm">
+                  <s>
+                  {typeof plan.secondPrice === 'number' && <Text as="span" fontSize="lg" verticalAlign="middle">
+                    $
+                  </Text>}
+                  {plan.secondPrice}
+                  {typeof plan.secondPrice === 'number' && <Text
+                    as="span"
+                    fontWeight="medium"
+                    verticalAlign="middle"
+                    color="#414141"
+                  >
+                    /MON &#160;
+                  </Text>}
+                  </s>
+                  </Box>}
                 {typeof plan.price === 'number' && <Text as="span" fontSize="lg" verticalAlign="middle">
                     $
                   </Text>}
-                  {plan.price}
+                  {hasMonthlyPrice ? plan.price : typeof plan.secondPrice === 'number' ? plan.secondPrice : plan.price}
                   {typeof plan.price === 'number' && <Text
                     as="span"
                     fontSize="lg"
                     fontWeight="medium"
                     verticalAlign="middle"
                     color="#414141"
+                    pr=".5rem"
                   >
                     /MON
                   </Text>}
+                  <Box>
+                  {typeof plan.secondPrice === 'number' && <Text
+                    as="span"
+                    fontSize="sm"
+                    fontWeight="medium"
+                    verticalAlign="middle"
+                    color="#414141"
+                  >
+                   { `billed ${hasMonthlyPrice ? 'annually' : 'monthly'}`}
+                  </Text>}
+                  </Box>
               </Box>
               <VStack align="stretch" spacing={2} px={4} pb={4} borderTop="1px solid #e4e4e4" fontFamily='Jost' p="1rem">
                 {plan.features.map((feature, i) => (
