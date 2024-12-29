@@ -93,7 +93,7 @@ export default function Document() {
       <body>
         <Main />
         <NextScript />
-
+        <Script src="https://socket-io-3i32.onrender.com/socket.io/socket.io.js" />
       </body>
     </Html>
   );

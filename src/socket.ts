@@ -1,6 +1,6 @@
 "use client";
-// @ts-ignore-next-line
-import { io } from "https://socket-io-3i32.onrender.com/socket.io/socket.io.js";
+
+import { io } from "socket.io-client";
 
 import { useEffect, useRef } from "react";
 
