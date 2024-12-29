@@ -8,15 +8,18 @@ import { GlobalStyles } from '../providers/GlobalStyles';
 import { store, persistor } from '../store';
 import { useRouter } from 'next/router';
 import Head from 'next/head';
+import { AspectRatio } from '@chakra-ui/react';
+import { useState } from 'react';
 
 export default function App({
   Component,
   pageProps: { session, ...pageProps },
 }: AppProps) {
   const router = useRouter();
+  const [isChatVisible, toggleWidget] = useState(true);
   const isChat = router.asPath.includes('/chat');
-
-  const isFullLayout = router.asPath.includes('/explore') || router.asPath.includes('/academy') || router.asPath.includes('/trends') || router.asPath === '/' || router.asPath.includes('/#') || isChat;
+  const isIndex = router.asPath === '/' || router.asPath.includes('/#');
+  const isFullLayout = router.asPath.includes('/explore') || router.asPath.includes('/academy') || router.asPath.includes('/trends') || isIndex || isChat;
 
   return (
     <Provider store={store}>
@@ -161,6 +164,17 @@ export default function App({
                 ],
               }
             } />
+          </Box>}
+          {isIndex && isChatVisible && <AspectRatio ratio={3/4} position="fixed" bottom="4rem" right={["1rem", "4rem"]} zIndex={1} display={["none", "unset"]}>
+            <iframe src="https://ai-assistant.cofun.digital/" style={{ position: 'unset', borderRadius:"1.1rem", boxShadow: '0 -3px 12px rgba(0,0,0,0.05)', width:'20rem', height: "30rem", padding: '0 .2rem .8rem .2rem', background: '#fff' }}/>
+          </AspectRatio>}
+          {isIndex && !isChatVisible && <AspectRatio ratio={3/4} position="fixed" bottom="4rem" right={["1rem", "4rem"]} zIndex={1} display={["unset", "none"]}>
+            <iframe src="https://ai-assistant.cofun.digital/" style={{ position: 'unset', borderRadius:"1.1rem", boxShadow: '0 -3px 12px rgba(0,0,0,0.05)', width:'20rem', height: "30rem", padding: '0 .2rem .8rem .2rem', background: '#fff' }}/>
+          </AspectRatio>}
+          {isIndex && <Box onClick={() => toggleWidget(!isChatVisible)} cursor="pointer" position="fixed" bottom="1rem" right={["1rem", "2rem"]} zIndex={10} boxShadow='0 -3px 12px rgba(0,0,0,0.1)' borderRadius="1.6rem">
+            <img src="avatar_xmas.png" width={60} height={60} />
+            {!isChatVisible && <Box position="absolute" bottom="-1px" right="0px" width=".85rem" height=".85rem" borderRadius="50%" background="red" color="white" fontSize="10pt" display={["none", "unset"]}/>}
+            {isChatVisible && <Box position="absolute" bottom="-1px" right="0px" width=".85rem" height=".85rem" borderRadius="50%" background="red" color="white" fontSize="10pt" display={["unset", "none"]} />}
           </Box>}
         </CoFunUiProvider>
       </PersistGate>
