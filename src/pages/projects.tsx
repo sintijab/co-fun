@@ -57,7 +57,7 @@ export default function Index() {
         </TextBase>
         <InitiativeOverview {...args} border="1px solid #CCCCCC" borderRadius=".5rem" mt="1rem" isFollowing={null} p={["4rem .5rem", "4rem 2rem"]}>
           <Project title="AI Radio Moderation" description="Based on your listening experience AI algorithm will analyze your stats and give you suggestions from similar playlists on a daily basis. Variety of selection is based on how many active listeners are contributing to this project." isEndorsed={false} width="100%" formId="https://co-fun.us9.list-manage.com/subscribe/post?u=afdf41c218cb20406a176006b&amp;id=5656180439&amp;f_id=00a056e1f0">
-            <TextBase textStyle="project-title" flexBasis="100%" mb="1rem">December breakthrough</TextBase>
+            <TextBase textStyle="project-title" flexBasis="100%" mb="1rem">New Year's breakthrough</TextBase>
             <Carousel cards={chunkedItems} h="300px" />
           </Project>
           <iframe width="560" height="315" src="https://www.youtube.com/embed/clddPytzfwM?si=ECm6GcxfrNYJ7PFc" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen></iframe>
