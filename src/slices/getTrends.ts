@@ -53,7 +53,9 @@ export const getTrends = createAsyncThunk<SoundTechnical[], 'technical' | 'open'
 export const trendsSlice = createSlice({
   name: 'trends',
   initialState,
-  reducers: {},
+  reducers: {
+    reset: () => initialState
+  },
   extraReducers: (builder) => {
     builder.addCase(getTrends.pending, (state, _) => {
       state.loading = true;

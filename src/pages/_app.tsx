@@ -2,7 +2,7 @@
 
 import { Box, CoFunUiProvider, Flex, Footer, NavigationTop } from '@co-fun/ui';
 import { AppProps } from 'next/app';
-import { Provider } from 'react-redux';
+import { Provider, useDispatch } from 'react-redux';
 import { PersistGate } from 'redux-persist/integration/react'
 import { GlobalStyles } from '../providers/GlobalStyles';
 import { store, persistor } from '../store';

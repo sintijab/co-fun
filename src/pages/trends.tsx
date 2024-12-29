@@ -2,7 +2,7 @@ import { Box, Carousel, Flex, InitiativeOverview, Link, ModalBase, Project, Text
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { AppDispatch } from "../store";
-import { getTrends, selectTrends } from "../slices/getTrends";
+import { getTrends, selectTrends, trendsSlice } from "../slices/getTrends";
 import _ from 'lodash';
 import { SoundSourceContext } from "../components/charts/SoundSourceContext";
 import { TempoRhythmicScale } from "../components/charts/TempoRhythmicScale";
@@ -21,6 +21,9 @@ const Sketch = dynamic(() => import('@co-fun/ui').then((data) => data.Sketch), {
 export default function Trends() {
   const trendsList = useSelector(selectTrends);
   const dispatch = useDispatch<AppDispatch>();
+  useEffect(() => {
+    dispatch(trendsSlice.actions.reset())
+  }, [])
 
   useEffect(() => {
     if (!trendsList.length) {
