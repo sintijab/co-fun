@@ -25,21 +25,24 @@ const initialState: { sounds: SoundTechnical[], loading: boolean } = {
   loading: false,
 }
 
-export const getTrends = createAsyncThunk<SoundTechnical[], 'technical' | 'open'>('trends/getTrends', async () => {
+export const getTrends = createAsyncThunk<SoundTechnical[], 'technical' | 'open'>('trends/getTrends', async (endpoint: string) => {
   try {
-  // const response = await fetch(`http://localhost:3331/api/sounds/${endpoint}`, {
-  //   method: 'GET',
-  //   headers: {
-  //     "Content-Type": "application/json",
-  //   },
-  // });
-  // if (!response.ok) {
-  //   throw Error('Sound unavailable')
-  // }
-  const results = await new Promise((resolve, _) => {
-    resolve(technical)
-  })
+  const response = await fetch(`https://sound-master.onrender.com/api/sounds/${endpoint}`, {
+    method: 'GET',
+    headers: {
+      "Content-Type": "application/json",
+    },
+  });
+  if (!response.ok) {
+    throw Error('Sound unavailable')
+  }
+  // const results = await new Promise((resolve, _) => {
+  //   resolve(technical)
+  // })
   // @ts-ignore-next-line
+  const results = await response.json();
+  console.log(response);
+  // @ts-ignore
   const sorted = results.sort((a, b) => new Date(b.date) - new Date(a.date))
   return sorted;
 } catch (e) {
