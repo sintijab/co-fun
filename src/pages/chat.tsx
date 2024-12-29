@@ -48,7 +48,7 @@ export default function Chat() {
       }
       }
     })
-    , 1000);
+    , 2000);
     return () => clearTimeout(timer);
   }, [])
 
