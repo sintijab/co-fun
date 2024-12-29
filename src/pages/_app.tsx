@@ -29,23 +29,23 @@ export default function App({
           {router.asPath !== '/explore' && <NavigationTop links={[
             {
               label: 'Creators',
-              href: '/explore'
+              href: 'https://cofun.digital/explore'
             },
             {
               label: 'Startups',
-              href: '/funding'
+              href: 'https://cofun.digital/funding'
             },
             {
               label: 'Features',
-              href: '/features'
+              href: 'https://cofun.digital/features'
             },
             {
               label: 'Pricing',
-              href: '/#pricing'
+              href: 'https://cofun.digital/#pricing'
             },
             {
               label: 'Contact',
-              href: '/contact',
+              href: 'https://cofun.digital/contact',
             }
           ]} />}
           {!isFullLayout && <Flex direction="column" margin={["3rem .5rem", "5rem 10rem", "5rem 20rem"]} flexWrap="wrap">
