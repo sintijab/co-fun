@@ -6,9 +6,9 @@ import soundTrendsReducer from './slices/getTrends';
 
 const persistConfig = {
   key: 'root',
-  version: 1,
+  version: 2,
   storage,
-  whitelist: ['trends'],
+  whitelist: ['trends', 'sounds'],
 }
 
 const reducers = combineReducers({
