@@ -1,9 +1,9 @@
 import { InputGroup, Input as InputBase, InputRightElement, Flex, Box, FlexProps, FormControl } from "@chakra-ui/react"
-import { MicrophoneIcon, TextBase } from "../../foundations"
+import { SendIcon, TextBase } from "../../foundations"
 import { useForm } from "react-hook-form"
 import { useEffect } from "react"
 
-export const Input = ({ suggestions, onSubmit, onClickSuggestion, ...props }: { suggestions?: { answer: string }[]} & { onSubmit: (data: string) => void; onClickSuggestion?: (i: number) => void} & FlexProps) => {
+export const Input = ({ suggestions, disabled, onSubmit, onClickSuggestion, ...props }: { disabled: boolean; suggestions?: { answer: string }[]} & { onSubmit: (data: string) => void; onClickSuggestion?: (i: number) => void} & FlexProps) => {
   const {
     register,
     handleSubmit,
@@ -21,10 +21,10 @@ export const Input = ({ suggestions, onSubmit, onClickSuggestion, ...props }: { 
       <form onSubmit={handleSubmit((data) => { reset(); return onSubmit(data.chat)} )}>
       <FormControl>
       <InputGroup>
-        <InputBase {...register("chat")} variant="unstyled" padding=".75rem" border="1px" borderColor="chat.authorBg" size="lg" placeholder='Message' focusBorderColor='chat.authorBg' borderRadius="2rem" _placeholder={{ color: 'chat.authorBg', fontFamily: '"Roboto", sans-serif;' }} _focus={{ border: '2px', borderColor: 'navigation.dark'}} />
-        <InputRightElement padding="1.75rem" cursor="pointer">
-          <MicrophoneIcon fill="chat.authorBg" />
-        </InputRightElement>
+        <InputBase disabled={disabled} {...register("chat")} variant="unstyled" padding=".75rem" border="1px" borderColor="chat.authorBg" size="lg" placeholder='Message' focusBorderColor='chat.authorBg' borderRadius="2rem" _placeholder={{ color: 'chat.authorBg', fontFamily: '"Roboto", sans-serif;' }} _focus={{ border: '2px', borderColor: 'navigation.dark'}} />
+        {!disabled && <InputRightElement padding="1.75rem" cursor="pointer">
+          <SendIcon p="0 .1rem .2rem" fill="chat.authorBg" onClick={handleSubmit((data) => { reset(); return onSubmit(data.chat)} )}/>
+        </InputRightElement>}
       </InputGroup>
       </FormControl>
       </form>

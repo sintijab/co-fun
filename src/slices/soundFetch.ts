@@ -33,7 +33,7 @@ const initialState: { sounds: SoundTechnical[], loading: boolean} = {
 export const fetchSounds = createAsyncThunk('soundFetch/fetchSounds', async (req: FetchSounds) => {
   try {
   const { endpoint, data } = req;
-  const response = await fetch(`http://localhost:3331/api/sounds/${endpoint}`, {
+  const response = await fetch(`https://sound-master.onrender.com/api/sounds/${endpoint}`, {
     method: 'POST',
     headers: {
       "Content-Type": "application/json",

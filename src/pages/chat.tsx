@@ -4,7 +4,6 @@ import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { addSound, fetchSounds, selectSounds } from "../slices/soundFetch";
 import { AppDispatch } from "../store";
-import { useSession } from "next-auth/react";
 
 type IButtonSelect = { title: string; description: string; answers: { answer: string; key: string }[] };
 
@@ -35,19 +34,22 @@ export default function Chat() {
   const [id, setId] = useState<string>();
   const [requestType, setType] = useState<"open" | "technical">();
   const soundsList = useSelector(selectSounds);
-  const { data: session } = useSession();
-  const email = session?.user?.email;
   socketInit();
 
   useEffect(() => {
-    socket.volatile.emit('init', (response: { activeKey: string, questions: string[], suggestions: { answer: string; key: string }[] }) => {
+  const timer = setTimeout(() => 
+  socket.volatile.emit('init', (response: { activeKey: string, questions: string[], suggestions: { answer: string; key: string }[] }) => {
+    if (!activeKey || !messages.length) {
       const updated = getQuestions(messages, response);
       setMessages(updated);
       setActiveKey(response.activeKey);
       if (response.suggestions) {
         setSuggestions(response.suggestions);
       }
-    });
+      }
+    })
+    , 1000);
+    return () => clearTimeout(timer);
   }, [])
 
   useEffect(() => {
@@ -90,6 +92,7 @@ export default function Chat() {
     });
 
   };
+  const email = "syntia.birgele@gmail.com";
 
   const onClickSuggestion = (i: number) => {
     const suggestion = suggestions[i].answer;
@@ -143,15 +146,15 @@ export default function Chat() {
     
   }
   const conversation = {
-    title: 'What are you listening now?',
+    title: 'AI Assistant in Moderation',
     category: 'Discovery & Analytics',
     time: '1 min',
     image: <LipsIcon h="2.5rem" w="2.5rem" p=".3rem" borderRadius="50%" border="1px" mr=".75rem" />,
     isActive: true
   };
   return (<>
-    <AIAssistantChat onClickSuggestion={onClickSuggestion} suggestions={suggestions} history={messages} onSubmit={(data) => onSubmit(data as string)} image={<LipsIcon h="2rem" w="2rem" p=".3rem" borderRadius="50%" m="0 .5rem 0 2rem" border="1px" />} conversations={[conversation]} author={""} title={"What are you listening now?"}>
-      {buttonSelect && <Box m="1rem 0 1rem 5rem"><ButtonList title={buttonSelect.title} description={buttonSelect?.description} answers={buttonSelect.answers} onClick={onOptionSelect} /></Box>}
+    <AIAssistantChat onClickSuggestion={onClickSuggestion} suggestions={suggestions} history={messages} onSubmit={(data) => onSubmit(data as string)} image={<LipsIcon h="2.5rem" w="2.5rem" p=".1rem" borderRadius="50%" m="0 .5rem 0 0" />} conversations={[conversation]} title={"AI Assistant in Sound Moderation"} disabled={!!buttonSelect?.answers?.length || !!suggestions.length}>
+      {buttonSelect && <Box m={["1rem 0", "1rem 0 1rem 5rem"]}><ButtonList title={buttonSelect.title} description={buttonSelect?.description} answers={buttonSelect.answers} onClick={onOptionSelect} /></Box>}
     </AIAssistantChat>
   </>)
 }
