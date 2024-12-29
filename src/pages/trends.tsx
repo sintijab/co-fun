@@ -40,8 +40,9 @@ export default function Trends() {
   };
   return <>
       <Flex m={["2rem .5rem", "3.5rem"]} flexWrap="wrap" maxWidth="100%">
-        <a href="https://ai-assistant.cofun.digital/" target="_blank" rel="norefferer noopener"><TextBase textStyle="project-title" textDecoration="underline">Chat with our AI Moderator to update this radio stream</TextBase></a>
+        <a href="https://ai-assistant.cofun.digital/" target="_blank" rel="norefferer noopener"><TextBase textStyle="project-title" textDecoration="underline" mt={["1.2rem", "0"]} mb={["0", ".3rem"]}>Chat with our AI Moderator to update this radio stream</TextBase></a>
         <iframe width="560" height="315" src="https://www.youtube.com/embed/videoseries?si=mq7Ht9ZiSkSIp_P8&amp;list=PLKGWhcWwmOrNjMXPKPjvcqjvP-4LpaU9r" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen></iframe>
+        <TextBase fontStyle="italic">* AI Radio Stream is getting updated once in a day. It plays available sound records selected by AI moderators.</TextBase>
         <InitiativeOverview {...args} border="1px solid #CCCCCC" borderRadius=".5rem" mt="1rem" p={["2rem .5rem", "4rem"]}>
           <Project title="AI Radio Moderation" description="Based on your listening experience AI algorithm will analyze your stats and give you suggestions from similar playlists on a daily basis. Variety of selection is based on how many active listeners are contributing to this project." isEndorsed={false} width="100%" formId="https://co-fun.us9.list-manage.com/subscribe/post?u=afdf41c218cb20406a176006b&amp;id=5656180439&amp;f_id=00a056e1f0">
             <TextBase textStyle="project-title" flexBasis="100%" mb="1rem">December breakthrough</TextBase>
