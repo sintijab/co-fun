@@ -7,7 +7,12 @@ import { useEffect, useRef } from "react";
 // "undefined" means the URL will be computed from the `window.location` object
 const URL = process.env.NODE_ENV === 'production' ? undefined : window.location.protocol + '//socket-io-3i32.onrender.com';
 
-export const socket = io(URL, { path: '/socket.io', 'multiplex': false, addTrailingSlash: false });
+export const socket = io(URL, {
+  host: URL, 
+  path: '/socket.io',
+  multiplex: false,
+  addTrailingSlash: false
+});
 
 export const socketInit = () => {
 
