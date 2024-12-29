@@ -5,10 +5,13 @@ const nextConfig = {
   assetPrefix: process.env.ASSET_PREFIX || "",
   output: 'export',
   images: { unoptimized: true },
-  experimental: {
-    serverActions: {
-      allowedOrigins: ['socket-io-3i32.onrender.com'],
-    },
+  async redirects() {
+    return [
+      {
+        source: '/socket.io',
+        destination: 'https://socket-io-3i32.onrender.com/socket.io',
+      },
+    ]
   },
 };
 module.exports = nextConfig;
