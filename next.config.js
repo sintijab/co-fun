@@ -7,7 +7,7 @@ const nextConfig = {
   images: { unoptimized: true },
   experimental: {
     serverActions: {
-      allowedOrigins: ['https://socket-io-3i32.onrender.com'],
+      allowedOrigins: ['socket-io-3i32.onrender.com'],
     },
   },
 };
