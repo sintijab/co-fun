@@ -14,7 +14,10 @@ export default function App({
   pageProps: { session, ...pageProps },
 }: AppProps) {
   const router = useRouter();
-  const isFullLayout = router.asPath.includes('/explore') || router.asPath.includes('/academy') || router.asPath.includes('/trends') || router.asPath === '/' || router.asPath.includes('/#');
+  const isChat = router.asPath.includes('/chat');
+
+  const isFullLayout = router.asPath.includes('/explore') || router.asPath.includes('/academy') || router.asPath.includes('/trends') || router.asPath === '/' || router.asPath.includes('/#') || isChat;
+
   return (
     <Provider store={store}>
       <PersistGate persistor={persistor}>
@@ -51,6 +54,7 @@ export default function App({
           {isFullLayout &&
             <Component {...pageProps} />
           }
+          {!isChat && 
           <Box m="1rem" position="relative" height="max-content">
             <Footer {
               ...{
@@ -157,7 +161,7 @@ export default function App({
                 ],
               }
             } />
-          </Box>
+          </Box>}
         </CoFunUiProvider>
       </PersistGate>
     </Provider>
