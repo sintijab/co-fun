@@ -56,7 +56,6 @@ export const trendsSlice = createSlice({
       state.loading = true;
     })
     builder.addCase(getTrends.fulfilled, (state, { payload }) => {
-      console.log(payload);
       state.sounds = [...payload];
       state.loading = false;
     })
