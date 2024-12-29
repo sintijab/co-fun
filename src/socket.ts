@@ -36,9 +36,9 @@ export const socketInit = () => {
 
   useEffect(() => {
     socketClient();
-    return ()=> {
-      socketRef?.current?.disconnect();
-    }
+    // return ()=> {
+    //   socketRef?.current?.disconnect();
+    // }
   // eslint-disable-next-line react-hooks/exhaustive-deps
   },[]);
 }
