@@ -1,4 +1,4 @@
-import { Box, Carousel, Flex, InitiativeOverview, Link, ModalBase, Project, TextBase } from "@co-fun/ui";
+import { Box, Carousel, Flex, InitiativeOverview, Link, Loader, ModalBase, Project, TextBase } from "@co-fun/ui";
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { AppDispatch } from "../store";
@@ -30,6 +30,10 @@ export default function Trends() {
       dispatch(getTrends('technical'))
     }
   }, [])
+
+  if (!trendsList?.length) { 
+    return <Loader />
+  }
   const list = trendsList.map((sound, i) =>
     <Flex key={i} justifyContent="center" alignItems="center" position="relative"><Link href={sound?.source || '/trends'} isExternal={true} variant="card" position="absolute" p=".5rem" textAlign="center">{`${sound.author?.toUpperCase()} - ${sound.title?.toUpperCase()}`}</Link>{typeof window !== undefined && <Sketch reset={false} w={300} h={300} customColors={generateColorPalettes} />}</Flex>
   );
