@@ -9,7 +9,7 @@ import {
 } from '@chakra-ui/react';
 
 import { AvatarIcon, BackIcon, ButtonPrimary, CalendarIcon, CertificateIcon, ChatSingleIcon, DiagramIcon, EditIcon, ExploreIcon, HamburgerIcon, HamburgerMenuIcon, Link, Logo, MicrophoneIcon, MonitorIcon, NetworkIcon, PlusIcon, ProfileAvatarIcon, SettingsIcon, StarIcon, StarIconFilled, StarsIcon, TextBase, TrendsIcon, VerticalEllipsisIcon, WalletIcon, } from './foundations';
-import { NavigationTop, Hero, HeroMinimal, Card, Activity, Footer, HeroPersonal, Pagination, NavigationSide, NavigationChat, ConversationsList, ConvoListItem, Messages, Rating, Input, Loader, ButtonList, ModalBase, Sketch, Carousel, StackedSingleBar, Timeline, BearAnimation, ReviewCards, PricingTable } from './components';
+import { NavigationTop, Hero, HeroMinimal, Card, Activity, Footer, HeroPersonal, Pagination, NavigationSide, NavigationChat, ConversationsList, ConvoListItem, Messages, Rating, Input, Loader, ButtonList, ModalBase, Sketch, Carousel, StackedSingleBar, Timeline, BearAnimation, ReviewCards, PricingTable, WordCloud, fluorescentColors } from './components';
 import { CardDeck, SectionLayout, ActivityGroup, ProjectList } from './patterns';
 import { Project, InitiativeOverview, ProjectDetails, AIAssistantChat } from './templates';
 import { buttonTheme } from './foundations/Button/theme';
@@ -21,6 +21,7 @@ import * as iconsBase from './foundations/Icons';
 import { loaderTheme } from './components/Loader/theme';
 import { headlineH1Theme } from './components/Headline/theme';
 import { Poster } from './components/Headline';
+import { getContrastRatio } from './utils';
 
 const theme = extendTheme({
   components: { Button: buttonTheme, Link: linkTheme, TextBase: textTheme, Card: cardTheme, Loader: loaderTheme, Heading: headlineH1Theme },
@@ -209,7 +210,7 @@ export function CoFunUiProvider({ children }: { children: React.ReactNode }) {
 const { SearchIcon, ArrowDownIcon, BellIcon, BookmarkIcon, FilterIcon, GiftIcon, ShareIcon, SupportIcon, UserAddIcon, EndorsementIcon, PinContainerIcon, ChatIcon, LinkedInIcon, InstagramIcon, XIcon, YoutubeIcon, UserPlusIcon, ToggleOnIcon, SearchThinIcon, FilterFollowingIcon, ArrowLeftIcon, ArrowRightIcon, LipsIcon } = iconsBase;
 const icons = [SearchIcon, ArrowDownIcon, BellIcon, BookmarkIcon, FilterIcon, GiftIcon, ShareIcon, SupportIcon, UserAddIcon, EndorsementIcon, PinContainerIcon, ChatIcon, LinkedInIcon, InstagramIcon, XIcon, YoutubeIcon, UserPlusIcon, ToggleOnIcon, SearchThinIcon, FilterFollowingIcon, ArrowLeftIcon, ArrowRightIcon, ProfileAvatarIcon, HamburgerMenuIcon, PlusIcon, ChatSingleIcon, TrendsIcon, ExploreIcon, WalletIcon, SettingsIcon, BackIcon, CalendarIcon, VerticalEllipsisIcon, EditIcon, StarIcon, StarIconFilled, MicrophoneIcon, LipsIcon, MonitorIcon, DiagramIcon, NetworkIcon, NetworkIcon, CertificateIcon, HamburgerIcon];
 
-export { Flex, Box, ButtonPrimary, Link, NavigationTop, SearchIcon, ArrowDownIcon, BellIcon, BookmarkIcon, FilterIcon, GiftIcon, ShareIcon, SupportIcon, UserAddIcon, EndorsementIcon, LinkedInIcon, InstagramIcon, XIcon, YoutubeIcon, Logo, Hero, Card, TextBase, CardDeck, SectionLayout, HeroMinimal, Activity, ActivityGroup, Project, InitiativeOverview, Footer, HeroPersonal, PinContainerIcon, UserPlusIcon, ToggleOnIcon, ChatIcon, ProjectList, ProjectDetails, SearchThinIcon, FilterFollowingIcon, ArrowLeftIcon, ArrowRightIcon, icons, Pagination, ProfileAvatarIcon, HamburgerMenuIcon, PlusIcon, ChatSingleIcon, TrendsIcon, ExploreIcon, WalletIcon, SettingsIcon, BackIcon, CalendarIcon, VerticalEllipsisIcon, NavigationSide, NavigationChat, ConversationsList, AvatarIcon, EditIcon, ConvoListItem, Messages, Rating, Input, AIAssistantChat, Loader, LipsIcon, ButtonList, ModalBase, Sketch, Carousel, StackedSingleBar, Heading, Poster, Timeline, BearAnimation, ReviewCards, MonitorIcon, DiagramIcon, NetworkIcon, CertificateIcon, StarsIcon, PricingTable, InputBase, Textarea, HamburgerIcon };
+export { Flex, Box, ButtonPrimary, Link, NavigationTop, SearchIcon, ArrowDownIcon, BellIcon, BookmarkIcon, FilterIcon, GiftIcon, ShareIcon, SupportIcon, UserAddIcon, EndorsementIcon, LinkedInIcon, InstagramIcon, XIcon, YoutubeIcon, Logo, Hero, Card, TextBase, CardDeck, SectionLayout, HeroMinimal, Activity, ActivityGroup, Project, InitiativeOverview, Footer, HeroPersonal, PinContainerIcon, UserPlusIcon, ToggleOnIcon, ChatIcon, ProjectList, ProjectDetails, SearchThinIcon, FilterFollowingIcon, ArrowLeftIcon, ArrowRightIcon, icons, Pagination, ProfileAvatarIcon, HamburgerMenuIcon, PlusIcon, ChatSingleIcon, TrendsIcon, ExploreIcon, WalletIcon, SettingsIcon, BackIcon, CalendarIcon, VerticalEllipsisIcon, NavigationSide, NavigationChat, ConversationsList, AvatarIcon, EditIcon, ConvoListItem, Messages, Rating, Input, AIAssistantChat, Loader, LipsIcon, ButtonList, ModalBase, Sketch, Carousel, StackedSingleBar, Heading, Poster, Timeline, BearAnimation, ReviewCards, MonitorIcon, DiagramIcon, NetworkIcon, CertificateIcon, StarsIcon, PricingTable, InputBase, Textarea, HamburgerIcon, WordCloud, fluorescentColors, getContrastRatio};
 
 export default CoFunUiProvider;
 

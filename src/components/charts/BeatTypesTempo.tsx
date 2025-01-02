@@ -4,6 +4,9 @@ import { StackedSingleBar } from "@co-fun/ui";
 import { useCallback } from "react";
 
 export const BeatTypesTempo = ({ data }: { data: SoundTechnical[] }) => {
+  if (!data) {
+    return null;
+  }
   const constant = data.filter(sound => sound.tempo_complexity === 'constant');
   const modulating = data.filter(sound => sound.tempo_complexity === 'modulating');
   const metric_modulation = data.filter(sound => sound.tempo_complexity === 'metric_modulation');

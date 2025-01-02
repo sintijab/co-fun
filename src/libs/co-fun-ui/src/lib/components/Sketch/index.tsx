@@ -3,6 +3,19 @@ import React from 'react';
 import dynamic from 'next/dynamic';
 import p5 from 'p5';
 
+  // Extended Fluorescent and expressive palettes with organic tones
+  export const fluorescentColors = [
+    '#ff8a52', '#ff4500', '#ed6500', '#ffffff', '#8b4513', '#72aaff', '#ffa07a', '#ff6347', '#ff4500', '#ffa07a',
+    '#f4a460', '#ffdab9', '#006400', '#8b0000', '#ff8c00', '#ff1493', '#ff7f50', '#3cb371', '#7fffd4', '#66cdaa',
+    '#8fbc8f', '#556b2f', '#40e0d0', '#2e8b57', '#b0e0e6', '#4682b4', '#5f9ea0', '#4682b4', '#00ced1', '#2e8b57',
+    '#ffa500', '#ff6347', '#d2691e', '#b22222', '#ff4500', '#ff7f50', '#9acd32', '#6b8e23', '#8fbc8f', '#556b2f',
+    '#228b22', '#adff2f', '#ffd700', '#f0e68c', '#daa520', '#b8860b', '#ffebcd', '#8b4513', '#deb887', '#bc8f8f',
+    '#a0522d', '#cd853f', '#f5deb3', '#d2b48c', '#ffb6c1', '#db7093', '#c71585', '#ff69b4', '#ff1493', '#ff80bf',
+    '#f08080', '#cd5c5c', '#8b0000', '#dc143c', '#fa8072', '#f5c7b8', '#20b2aa', '#3cb371', '#2e8b57', '#66cdaa',
+    '#8fbc8f', '#98fb98', '#4682b4', '#4169e1', '#0000cd', '#1e90ff', '#6495ed', '#87cefa', '#ffdead', '#ffdab9',
+    '#ffe4b5', '#ffefd5', '#faebd7', '#f5deb3', '#d2691e', '#cd853f', '#8b4513', '#a0522d', '#b8860b', '#f4a460'
+  ];
+
 const P5Wrapper = dynamic(import('./P5Wrapper'), {
   ssr: false
 });

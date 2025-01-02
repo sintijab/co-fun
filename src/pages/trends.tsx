@@ -1,4 +1,4 @@
-import { Box, Carousel, Flex, InitiativeOverview, Link, Loader, ModalBase, Project, TextBase } from "@co-fun/ui";
+import { Box, Carousel, Flex, Heading, InitiativeOverview, Link, Loader, ModalBase, Project, TextBase, WordCloud } from "@co-fun/ui";
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { AppDispatch } from "../store";
@@ -40,8 +40,8 @@ export default function Trends() {
   const chunkedItems = _.chunk(list, 3);
   const info = <Flex cursor="pointer" border="1px" h="1.2rem" w="1.2rem" ml=".5rem" borderRadius="1rem" justifyContent="center" alignContent="center" flexWrap="wrap" _hover={{ boxShadow: "inset 0 0 0 150px rgba(0, 0, 0, 0.05)" }}><TextBase textStyle="button-select-info">{`?`}</TextBase></Flex>
   const args = {
-    title: 'What are you listening now?',
-    author: 'Sintija Birgele',
+    title: '',
+    author: '',
     description: '“Listening helps us communicate and deepen our understanding and appreciation of environment around us. Learning about the sound artists and their work in different contexts helps listeners recognize how location influences sound, and most importantly acknowledge - what brings us joy.”',
     isFollowing: null,
   };
@@ -55,8 +55,20 @@ export default function Trends() {
             <TextBase textStyle="project-title" flexBasis="100%" mb="1rem">New Year's breakthrough</TextBase>
             <Carousel cards={chunkedItems} h="300px" />
             <Flex flexWrap="wrap" width="100%" justifyContent="space-between">
-              <Flex flexBasis="100%" alignItems="center" mb="2rem" mt="1rem">
-                <TextBase textStyle="project-title">Sound Analysis</TextBase>
+              <Flex flexBasis="100%" mb="2rem" mt="1rem" flexDirection="column">
+              <Box m="2rem 0 0">
+                <TextBase fontSize="clamp(2rem, 2.5vw, 4.5rem)" lineHeight="1.1" fontFamily="Poppins" textStyle="heading" mb=".5rem">
+                  The Connections That Stands the Test of Time
+                </TextBase>
+                <TextBase fontSize="clamp(0.75rem, 1vw, 1.5rem)" lineHeight="1.5" textStyle="project-descr" mb=".2rem">
+                  {`This auto-generated layout displays quotes and book recommendations from AI radio moderation. It analyzes open-ended feedback about the sound listening experiences over a period of month and associates responses with similar narratives from selected influential writers.`}
+                </TextBase>
+              </Box>
+                <WordCloud />
+                <TextBase fontStyle="italic">* The layout design has been inspired from generations of players is Tetris. Created by a software engineer Alexey Pajitnov in 1984, it is timeless and has been played by millions worldwide.</TextBase>
+              </Flex>
+              <Flex flexBasis="100%" mb="2rem" mt="1rem" alignItems="center">
+              <TextBase textStyle="project-title">Sound Analysis</TextBase>
                 <ModalBase content={<Flex textStyle="button-select" mb="1rem" flexDirection="column">{<>
                   <TextBase textStyle="project-descr" flexBasis="100%" mb="1rem">Cluster Analysis: Group sounds based on origin and characteristics (e.g., natural vs. synthetic, enclosed vs. open spaces) by using sound sources, spatial context, and their subcategories.</TextBase>
                   <TextBase textStyle="project-descr" flexBasis="100%" mb="1rem">Pattern Recognition in Rhythm: Look at rhythm and tempo variables to identify common rhythmic and temporal patterns, which helps classify sound sources that share rhythmic qualities.</TextBase>

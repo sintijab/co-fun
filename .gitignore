@@ -50,3 +50,4 @@ Thumbs.db
 out
 
 storybook-static
+*storybook.log
