@@ -32,7 +32,7 @@ export default function Trends() {
   }, [])
 
   if (!trendsList?.length) { 
-    return <Loader />
+    return <Loader top={["3.2rem", "0"]} />
   }
   const list = trendsList.map((sound, i) =>
     <Flex key={i} justifyContent="center" alignItems="center" position="relative"><Link href={sound?.source || '/trends'} isExternal={true} variant="card" position="absolute" p=".5rem" textAlign="center">{`${sound.author?.toUpperCase()} - ${sound.title?.toUpperCase()}`}</Link>{typeof window !== undefined && <Sketch reset={false} w={300} h={300} customColors={generateColorPalettes} />}</Flex>

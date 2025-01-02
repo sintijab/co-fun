@@ -1,8 +1,9 @@
 import { Progress } from "@chakra-ui/react"
 
-export const Loader = () => {
+export const Loader = ({ ...props }) => {
   return (
     <Progress
+      {...props}
       size='xs'
       height=".15rem"
       isIndeterminate
