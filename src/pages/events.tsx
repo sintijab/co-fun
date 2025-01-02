@@ -10,19 +10,25 @@ export default function Index() {
         Upcoming Events
       </TextBase>
       <Box display={["block", "flex"]}>
-        <img src="./kan.jpg" alt="gitnation" width="500px" />
+        <img src="./ice-diving.avif" alt="gitnation" width="500px" />
         <TextBase textStyle="project-descr" lineHeight="2" p=".5rem">
-          <u><a href="https://www.tulumcryptofest.com/" target="blank">The Tulum Crypto Fest</a></u> is an event about latest trends in decentralized technologies, investments and web3 innovations. The event will happen from 12 to 15th of December, 2024. Join our team onsite to discuss our future plans and plan new exciting projects at Tulum, Mexico.
+          <u><a href="https://www.weissensee.com/de" target="blank">Weissensee 8-17th of January</a></u> networking, active sports and freediving under the ice. Read about the <u><a href="https://syntia.org/en/weekender/ice-diving-the-ultimate/">event and experience</a></u> from the last year.
         </TextBase>
       </Box>
       <TextBase textStyle="project-title" lineHeight="2" mt="2rem">
         Past Events
       </TextBase>
+      <Box display={["block", "flex"]} mb="2rem">
+        <TextBase textStyle="project-descr" lineHeight="2" p=".5rem">
+          <u><a href="https://www.tulumcryptofest.com/" target="blank">The Tulum Crypto Fest</a></u> is an event about latest trends in decentralized technologies, investments and web3 innovations. The event will happen from 12 to 15th of December, 2024. Join our team onsite to discuss our future plans and plan new exciting projects at Tulum, Mexico.
+        </TextBase>
+        <img src="./kan.jpg" alt="gitnation" width="500px" />
+      </Box>
       <Box display={["block", "flex"]}>
+        <img src="./GitNation_Amsterdam.jpg" alt="gitnation" width="500px" />
         <TextBase textStyle="project-descr" lineHeight="2" p=".5rem 0">
           JSNation is the annual JavaScript conference where our team joined onsite from 13 to 17th of June, 2024. Conference was held in Amsterdam with 50 speakers, 1.5K attendees and social and networking events. Sintija Birgele, founder of CO-FUN was participating at JSNation with her talk about Internationalization (i18n) With AI-Powered Language Model. Watch it on <u><a href="https://gitnation.com/contents/internationalization-i18n-with-ai-powered-language-model" target="blank">GitNation</a></u>.
         </TextBase>
-        <img src="./GitNation_Amsterdam.jpg" alt="gitnation" width="500px" />
       </Box>
     </>
   );
