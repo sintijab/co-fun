@@ -8,7 +8,7 @@ const contentData = [
   { text: "Beauty consists of its own passing, just as we reach for it.", author: "Muriel Barbery, The Elegance of the Hedgehog", colorClass: "yellow" },
   { text: "Going nowhere is not about turning your back on the world; it's about stepping away now and then so that you can see it more clearly and love it more deeply.", author: "Pico Iyer, The Art of Stillness: Adventures in Going Nowhere", colorClass: "cyan" },
   { text: "", colorClass: "cyan" },
-  { text: "There are few misfortunes in this world that you cannot turn into a blessing.", author: "Isabel Wilkerson, The Warmth of Other Suns", colorClass: "red" },
+  { text: "Maybe you had to live through the worst of times to recognize the best of times when they came to you.", author: "Isabel Wilkerson, The Warmth of Other Suns", colorClass: "red" },
   { text: "What's the world for if you can't make it up the way you want it?", author: "Toni Morrison, Jazz", colorClass: "blue", vertical: true },
   { text: "", colorClass: "blue" },
   { text: "Rivers are mirrors of the landscapes they traverse.", author: "Fred Pearce, When the River Runs Dry", colorClass: "yellow" },
