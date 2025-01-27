@@ -1,5 +1,5 @@
 import { createAsyncThunk, createSlice } from '@reduxjs/toolkit'
-import { technical } from '../components/mocks/getSounds';
+import { technical } from '../components/mocks/technical_january';
 
 export interface SoundTechnical {
   id?: string;
@@ -27,21 +27,21 @@ const initialState: { sounds: SoundTechnical[], loading: boolean } = {
 
 export const getTrends = createAsyncThunk<SoundTechnical[], 'technical' | 'open'>('trends/getTrends', async (endpoint: string) => {
   try {
-  const response = await fetch(`https://sound-master.onrender.com/api/sounds/${endpoint}`, {
-    method: 'GET',
-    headers: {
-      "Content-Type": "application/json",
-    },
-  });
-  if (!response.ok) {
-    throw Error('Sound unavailable')
-  }
-  // const results = await new Promise((resolve, _) => {
-  //   resolve(technical)
-  // })
+  // const response = await fetch(`https://sound-master.onrender.com/api/sounds/${endpoint}`, {
+  //   method: 'GET',
+  //   headers: {
+  //     "Content-Type": "application/json",
+  //   },
+  // });
+  // if (!response.ok) {
+  //   throw Error('Sound unavailable')
+  // }
+  const results = await new Promise((resolve, _) => {
+    resolve(technical)
+  })
   // @ts-ignore-next-line
-  const results = await response.json();
-  console.log(response);
+  // const results = await response.json();
+  // console.log(response);
   // @ts-ignore
   const sorted = results.sort((a, b) => new Date(b.date) - new Date(a.date))
   return sorted;
