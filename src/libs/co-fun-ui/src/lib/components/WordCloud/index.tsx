@@ -5,31 +5,32 @@ import { getContrastRatio } from '../../utils';
 import { shadeColor } from '../../utils/colors';
 
 const contentData = [
-  { text: "Beauty consists of its own passing, just as we reach for it.", author: "Muriel Barbery, The Elegance of the Hedgehog", colorClass: "yellow" },
-  { text: "Going nowhere is not about turning your back on the world; it's about stepping away now and then so that you can see it more clearly and love it more deeply.", author: "Pico Iyer, The Art of Stillness: Adventures in Going Nowhere", colorClass: "cyan" },
+  { text: "When journalism is silenced, literature must speak. Because while journalism speaks with facts, literature speaks with truth.", author: "Seno Gumira Ajidarma, Jazz, Perfume & the Incident", colorClass: "yellow" },
+  { text: "When literature is silenced, the soul of a nation is left to wander unspoken.", author: "Pramoedya Ananta Toer", colorClass: "cyan" },
   { text: "", colorClass: "cyan" },
-  { text: "Maybe you had to live through the worst of times to recognize the best of times when they came to you.", author: "Isabel Wilkerson, The Warmth of Other Suns", colorClass: "red" },
-  { text: "What's the world for if you can't make it up the way you want it?", author: "Toni Morrison, Jazz", colorClass: "blue", vertical: true },
+  { text: "Traditional music tells stories that words alone cannot—it carries the soul of a people.", author: "Michael Tenzer, Balinese Gamelan Music", colorClass: "red" },
+  { text: "Whoever sincerely does it, will get it.", author: "Ahmad Fuadi, The Land of Five Towers", colorClass: "blue" },
   { text: "", colorClass: "blue" },
-  { text: "Rivers are mirrors of the landscapes they traverse.", author: "Fred Pearce, When the River Runs Dry", colorClass: "yellow" },
+  { text: "Whoever is serious, will succeed.", author: "Ahmad Fuadi, The Land of Five Towers", colorClass: "yellow" },
   { text: "", colorClass: "orange" },
   { text: "", colorClass: "green" },
-  { text: "The ultimate puzzle-solving challenge", colorClass: "blue" },
+  { text: "Whoever sincerely does it, will get it. Whoever is serious, will succeed.", author: "Ahmad Fuadi, The Land of Five Towers", colorClass: "blue" },
   { text: "", colorClass: "blue" },
   { text: "", colorClass: "yellow" },
   { text: "", colorClass: "blue" },
   { text: "", colorClass: "blue" },
-  { text: "To celebrate music is to celebrate life itself—its joys, struggles, and the love that binds us together.", colorClass: "green", vertical: true },
+  { text: "The colors, the perfumes, the dances, the music of Bali stay with you because they all penetrate deeper into our psychic life.", author: "Anaïs Nin", colorClass: "yellow" },
   { text: "", colorClass: "red" },
   { text: "", colorClass: "blue" },
   { text: "", colorClass: "green" },
   { text: "", colorClass: "green" },
-  { text: "Each note carries a story; each rhythm, a heartbeat—music is the purest form of connection.", author: "Maeve Sullivan, Harmony and Humanity", colorClass: "yellow" },
+  { text: "Music is not bound by time; it carries the essence of the past into the present and beyond.", author: "Michael Tenzer, Balinese Gamelan Music", colorClass: "yellow" },
   { text: "", colorClass: "orange" },
   { text: "", colorClass: "red" },
   { text: "", colorClass: "red" },
-  { text: "Our task must be to free ourselves by widening our circle of compassion to embrace all living creatures and the whole of nature in its beauty.", author: "Albert Einstein, The World As I See It", colorClass: "green" },
+  { text: "The universe is not silent; its music is woven into the fabric of existence.", author: "Carl Sagan, Cosmos", colorClass: "green" },
 ];
+
 
 const getColor = (bg: string) => {
   let randomColor = fluorescentColors[Math.floor(Math.random() * 89)];
