@@ -92,8 +92,8 @@ const WordCloud: React.FC = () => (
         p="1ch"
         textAlign="center"
         sx={{
-          writingMode: item.vertical ? 'vertical-rl' : 'horizontal-tb',
-          textOrientation: item.vertical ? 'mixed' : 'upright',
+          writingMode: 'horizontal-tb',
+          textOrientation: 'upright',
           wordBreak: 'break-word',
           whiteSpace: 'normal',
         }}
