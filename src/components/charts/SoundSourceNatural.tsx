@@ -74,7 +74,7 @@ export const SoundSourceNatural = ({ data }: { data: SoundTechnical[] }) => {
       colors: ['#fff']
     },
     title: {
-      text: 'Streaming by Sound Source in Open Air Spaces'
+      text: 'Streaming by Sound Source in Natural Environments'
     },
     xaxis: {
       categories: getCategories(),
