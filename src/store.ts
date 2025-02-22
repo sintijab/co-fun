@@ -5,7 +5,7 @@ import soundTechnicalReducer from './slices/soundFetch';
 import soundTrendsReducer from './slices/getTrends';
 
 const persistConfig = {
-  key: 'root',
+  key: 'root-v2',
   version: 2,
   storage
 }
