@@ -184,7 +184,7 @@ export default function App({
           {isIndex && isChatVisible && <AspectRatio ratio={3/4} position="fixed" bottom="4rem" right={["1rem", "4rem"]} zIndex={1} display={["none", "unset"]}>
             <iframe ref={iframeWidgetDesktop} src="https://ai-assistant.cofun.digital/" style={{ position: 'unset', borderRadius:"1.1rem", boxShadow: '0 -3px 12px rgba(0,0,0,0.05)', width:'20rem', height: "30rem", padding: '0 .2rem .8rem .2rem', background: '#fff' }}/>
           </AspectRatio>}
-          {isIndex && !isChatVisible && <AspectRatio ratio={3/4} position="fixed" bottom="4rem" right={["1rem", "4rem"]} zIndex={1} display={["unset", "none"]}>
+          {isIndex && isChatVisible && <AspectRatio ratio={3/4} position="fixed" bottom="4rem" right={["1rem", "4rem"]} zIndex={1} display={["unset", "none"]}>
             <iframe src="https://ai-assistant.cofun.digital/" style={{ position: 'unset', borderRadius:"1.1rem", boxShadow: '0 -3px 12px rgba(0,0,0,0.05)', width:'20rem', height: "30rem", padding: '0 .2rem .8rem .2rem', background: '#fff' }}/>
           </AspectRatio>}
           {isIndex && <Box onClick={() => toggleWidget(isChatVisible === null ? true : !isChatVisible)} cursor="pointer" position="fixed" bottom="1rem" right={["1rem", "2rem"]} zIndex={10} boxShadow='0 -3px 12px rgba(0,0,0,0.1)' borderRadius="1.6rem">

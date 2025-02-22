@@ -117,7 +117,7 @@ export default function Index() {
           We are going to launch our services on February 1st, 2025.
         </TextBase>
         <Heading fontFamily="gingerBold" as="h2" size="lg" w="auto" margin="0" color="primary.default" fontSize="2.3em">
-          Sign up to be the first!
+          Sign up to get the latest offers!
         </Heading>
         <div id="mc_embed_shell">
           <link href="//cdn-images.mailchimp.com/embedcode/classic-061523.css" rel="stylesheet" type="text/css" />
