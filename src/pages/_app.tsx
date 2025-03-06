@@ -18,14 +18,14 @@ export default function App({
   const router = useRouter();
   const [isChatVisible, toggleWidget] = useState<boolean | null>(null);
   const iframeWidgetDesktop = useRef(null);
-  const isChat = router.asPath.includes('/chat');
+  const isChat = router.asPath.includes('chat');
   const isIndex = router.asPath === '/' || router.asPath.includes('/#');
   const isFullLayout = router.asPath.includes('/explore') || router.asPath.includes('/academy') || router.asPath.includes('/trends') || isIndex || isChat;
 
   useEffect(() => {
     const healthCheck = async () => {
       try {
-        const res = await fetch(`https://socket-io-3i32.onrender.com/health`);
+        const res = await fetch(`http://localhost:3333/health`);
         const formatted = await res.json();
         if (formatted.message) {
           toggleWidget(true);

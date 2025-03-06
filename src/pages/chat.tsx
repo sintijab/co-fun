@@ -1,9 +1,10 @@
 import { AIAssistantChat, Box, ButtonList, LipsIcon, Loader } from "@co-fun/ui";
-import { socketInit, socket } from "../socket";
+import { socket } from "../utils/socket/socketSoundMaster";
 import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { addSound, fetchSounds, selectSounds } from "../slices/soundFetch";
 import { AppDispatch } from "../store";
+import { socketInit } from "../utils/socket/socketCommon";
 
 type IButtonSelect = { title: string; description: string; answers: { answer: string; key: string }[] };
 

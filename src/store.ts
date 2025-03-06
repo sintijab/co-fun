@@ -3,6 +3,7 @@ import { persistStore, persistReducer } from 'redux-persist'
 import storage from 'redux-persist/lib/storage'
 import soundTechnicalReducer from './slices/soundFetch';
 import soundTrendsReducer from './slices/getTrends';
+import jobOffersReducer from './slices/jobOfferFetch';
 
 const persistConfig = {
   key: 'root-v2',
@@ -12,6 +13,7 @@ const persistConfig = {
 
 const reducers = combineReducers({
   sounds: soundTechnicalReducer,
+  jobOffers: jobOffersReducer,
   trends: soundTrendsReducer
 })
 
