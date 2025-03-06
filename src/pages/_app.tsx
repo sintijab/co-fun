@@ -182,13 +182,13 @@ export default function App({
             } />
           </Box>}
           {isIndex && isChatVisible && <AspectRatio ratio={3/4} position="fixed" bottom="4rem" right={["1rem", "4rem"]} zIndex={1} display={["none", "unset"]}>
-            <iframe ref={iframeWidgetDesktop} src="https://ai-assistant.cofun.digital/" style={{ position: 'unset', borderRadius:"1.1rem", boxShadow: '0 -3px 12px rgba(0,0,0,0.05)', width:'20rem', height: "30rem", padding: '0 .2rem .8rem .2rem', background: '#fff' }}/>
+            <iframe ref={iframeWidgetDesktop} src="https://ai-career-assistant.cofun.digital/" style={{ position: 'unset', borderRadius:"1.1rem", boxShadow: '0 -3px 12px rgba(0,0,0,0.05)', width:'20rem', height: "30rem", padding: '0 .2rem .8rem .2rem', background: '#fff' }}/>
           </AspectRatio>}
           {isIndex && isChatVisible && <AspectRatio ratio={3/4} position="fixed" bottom="4rem" right={["1rem", "4rem"]} zIndex={1} display={["unset", "none"]}>
-            <iframe src="https://ai-assistant.cofun.digital/" style={{ position: 'unset', borderRadius:"1.1rem", boxShadow: '0 -3px 12px rgba(0,0,0,0.05)', width:'20rem', height: "30rem", padding: '0 .2rem .8rem .2rem', background: '#fff' }}/>
+            <iframe src="https://ai-career-assistant.cofun.digital/" style={{ position: 'unset', borderRadius:"1.1rem", boxShadow: '0 -3px 12px rgba(0,0,0,0.05)', width:'20rem', height: "30rem", padding: '0 .2rem .8rem .2rem', background: '#fff' }}/>
           </AspectRatio>}
           {isIndex && <Box onClick={() => toggleWidget(isChatVisible === null ? true : !isChatVisible)} cursor="pointer" position="fixed" bottom="1rem" right={["1rem", "2rem"]} zIndex={10} boxShadow='0 -3px 12px rgba(0,0,0,0.1)' borderRadius="1.7rem">
-            <img src="march_round.png" width={60} height={60} />
+            <img src="career.png" width={60} height={60} />
             {isChatVisible === false && <Box position="absolute" bottom="-1px" right="0px" width=".85rem" height=".85rem" borderRadius="50%" background="red" color="white" fontSize="10pt" display={["none", "unset"]}/>}
             {isChatVisible && <Box position="absolute" bottom="-1px" right="0px" width=".85rem" height=".85rem" borderRadius="50%" background="red" color="white" fontSize="10pt" display={["unset", "none"]} />}
           </Box>}

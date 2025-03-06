@@ -35,7 +35,7 @@ export default function Chat() {
   const [id, setId] = useState<string>();
   const [requestType, setType] = useState<"open" | "technical">();
   const soundsList = useSelector(selectSounds);
-  socketInit();
+  socketInit(socket);
 
   useEffect(() => {
   const timer = setTimeout(() => 

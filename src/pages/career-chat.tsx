@@ -81,7 +81,7 @@ export default function Chat() {
     dispatch(addJobOffer({ connection: "close", ...email && { user_email: email } }))
   };
 
-  socketInit();
+  socketInit(socket);
 
   useEffect(() => {
     const timer = setTimeout(() =>

@@ -3,7 +3,7 @@
 import { useEffect, useRef } from "react";
 
 
-export const socketInit = () => {
+export const socketInit = (socket: any) => {
 
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
     const socketRef = useRef<any>(null);
