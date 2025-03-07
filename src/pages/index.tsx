@@ -165,7 +165,7 @@ export default function Index() {
           </TextBase>
           <InitiativeOverview {...argsCareer} border="1px solid #CCCCCC" borderRadius=".5rem" mt="1rem" isFollowing={null} p={["4rem .5rem", "4rem 2rem"]}>
             <Heading fontFamily="gingerBold" as="h4" size="sm" w="auto" margin="0" marginBottom="2rem" color="primary.default">
-              How to naturally overcome fear of a career change?
+              How to naturally overcome your fear of a career change?
             </Heading>
             <Flex flexDirection={["column", "column", "row"]} overflow="none" flexWrap={["wrap", "wrap", "nowrap"]}>
               {/** @ts-ignore-next-line */}
