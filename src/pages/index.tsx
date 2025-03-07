@@ -74,6 +74,9 @@ export default function Index() {
             <Heading fontFamily="gingerBold" as="h2" size="md" w="auto" margin="0" color="primary.default">Work with us by letting</Heading>
             <Heading fontFamily="gingerBold" as="h2" w="auto" m="0" size="lg" pl={["0", "15rem"]} color="primary.green" textDecoration="underline">AI work for YOU</Heading>
           </Flex>
+        <Flex flexDirection="column" alignItems="center" justifyContent="center" p=".5rem" m="0 0 3rem" display={["flex", "none"]} width={["100%", "60%"]}>
+        <img src="./diagram.png" alt="AI Chat Flow" style={{ height: 'auto', display: 'flex', padding: '2px 0px', zIndex: 1 }} />
+      </Flex>
         <Flex justifyContent="center" p=".5rem" display={["flex", "none"]}>
         <TextBase textStyle="activity-title">
           Learn more from our <u><a href="./academy">AI Academy</a></u>
@@ -105,11 +108,11 @@ export default function Index() {
           Learn more from our <u><a href="./academy">AI Academy</a></u>
         </TextBase>
         <Heading fontFamily="gingerBold" as="h3" size="lg" w="auto" margin="0" marginTop="1rem" color="primary.default">
-            REAL time AI Analysis
-          </Heading>
+          REAL time AI Analysis
+        </Heading>
         <img src="./diagram.png" alt="AI Chat Flow" style={{ marginTop: '3rem', width: '60%', height: 'auto', display: 'flex', padding: '2px 0px', zIndex: 1 }} />
       </Flex>
-      <Flex justifyContent="center" p={["1rem 0", "unset"]} id="pricing">
+      <Flex flexDirection="column" justifyContent="center" p={["1rem 0", "unset"]} id="pricing">
         <a href="./funding">
           <Heading fontFamily="gingerBold" as="h2" size="lg" w="auto" margin="0" color="primary.default">
             Get Started for <u>FREE</u>
@@ -164,7 +167,7 @@ export default function Index() {
             <Heading fontFamily="gingerBold" as="h4" size="sm" w="auto" margin="0" marginBottom="2rem" color="primary.default">
               How to naturally overcome fear of a career change?
             </Heading>
-            <Flex flexDirection="row" overflow="none">
+            <Flex flexDirection={["column", "row"]} overflow="none">
               {/** @ts-ignore-next-line */}
               <Box width={["100%", "400px"]}>
                 <img src="./a51bca33-ab7c-445d-b403-cb46a80b2ff5.jpeg" alt="web-crawler" />
