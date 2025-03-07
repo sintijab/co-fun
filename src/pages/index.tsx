@@ -114,10 +114,10 @@ export default function Index() {
       <div id="signup" />
       <Flex direction="column" alignItems="center">
         <TextBase textStyle="activity-title" color="#7e00ff" pt={["1rem", ".5rem"]} pb="1rem" textAlign="center">
-          We are going to launch our services on February 1st, 2025.
+          We are developing our product benchmark in 2025
         </TextBase>
         <Heading fontFamily="gingerBold" as="h2" size="lg" w="auto" margin="0" color="primary.default" fontSize="2.3em">
-          Sign up to get the latest offers!
+          Follow us to be the first becoming an AI expert
         </Heading>
         <div id="mc_embed_shell">
           <link href="//cdn-images.mailchimp.com/embedcode/classic-061523.css" rel="stylesheet" type="text/css" />

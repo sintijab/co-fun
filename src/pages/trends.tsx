@@ -47,7 +47,7 @@ export default function Trends() {
   };
   return <>
       <Flex m={["2rem .5rem", "3.5rem"]} flexWrap="wrap" maxWidth="100%">
-        <a href="https://ai-assistant.cofun.digital/" target="_blank" rel="norefferer noopener"><TextBase textStyle="project-title" textDecoration="underline" mt={["1.2rem", "0"]} mb={["0", ".3rem"]}>Chat with our AI Moderator to update this radio stream</TextBase></a>
+        <a href="https://socket-io-3i32.onrender.com" target="_blank" rel="norefferer noopener"><TextBase textStyle="project-title" textDecoration="underline" mt={["1.2rem", "0"]} mb={["0", ".3rem"]}>Chat with our AI Moderator to update this radio stream</TextBase></a>
         <iframe width="560" height="315" src="https://www.youtube.com/embed/videoseries?si=T1-rgZ1Ro-1BU_HH&amp;list=PLKGWhcWwmOrP7pW62wyS0qR5Os1wmgWfc" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen></iframe>
         <TextBase fontStyle="italic">* AI Radio Stream is getting updated once in a day. It plays available sound records selected by AI moderators.</TextBase>
         <InitiativeOverview {...args} border="1px solid #CCCCCC" borderRadius=".5rem" mt="1rem" p={["2rem .5rem", "4rem"]}>
