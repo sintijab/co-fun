@@ -10,7 +10,7 @@ export default function CareerDiscover() {
   };
   return <>
     <Flex direction="column" margin={["0 .5rem", "1rem 10rem", "1rem 20rem 0"]} flexWrap="wrap">
-      <Flex m={["0 .5rem .5rem", "0 2rem"]} flexWrap="wrap" maxWidth="100%">
+      <Flex m={["3rem .5rem .5rem", "0 2rem"]} flexWrap="wrap" maxWidth="100%">
         <Heading margin="auto" fontFamily="gingerBold" as="h1" textStyle="project-title" mt={["1.2rem", "0"]} mb={["0", ".3rem"]}>AI Assistance in Your Career Discovery</Heading>
         <Flex position="relative" justifySelf="center">
           <Box width={["100%", "auto"]} maxWidth={["100%", "90%"]} margin="auto">
