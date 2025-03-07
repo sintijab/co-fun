@@ -5,7 +5,7 @@ export default function Document() {
   const meta = {
     title: "CO-FUN",
     description: "Recruit AI assistant team for your business in seconds.",
-    image: "https://images.prismic.io/syntia/Zvx8DrVsGrYSwQnL_CO-FUN.png?auto=format,compress",
+    image: "https://cofun.digital/career-bot-5.jpg",
   };
 
   return (

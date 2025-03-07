@@ -21,7 +21,7 @@ export default function CareerDiscover() {
         </Flex>
         <InitiativeOverview {...args} border="1px solid #CCCCCC" borderRadius=".5rem" mt="1rem" isFollowing={null} p={["4rem .5rem", "3rem 2rem 2rem"]}>
           <Heading fontFamily="gingerBold" as="h4" size="sm" w="auto" margin="0" marginBottom="2rem" color="primary.default">
-            How to naturally overcome your fear of a career change?
+            How to naturally overcome fear of a career change?
           </Heading>
           <Flex flexDirection={["column", "column", "row"]} overflow="none" flexWrap={["wrap", "wrap", "nowrap"]}>
             <Project title="Career Discovery with AI recruiter" description="The sudden emergence of remote work during the pandemic has become a fixture of work life in many European countries. As many as half the world's employees (52%) were looking for a new job in 2024, and yet navigating through job offers online often is comparable with archival work. The AI assistants overlooking recruitment platforms enables personalized job search and recommendations with AI." isEndorsed={false} width="100%" formId="https://co-fun.us9.list-manage.com/subscribe/post?u=afdf41c218cb20406a176006b&amp;id=5656180439&amp;f_id=00a056e1f0">
