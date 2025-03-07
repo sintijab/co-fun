@@ -112,7 +112,7 @@ export default function Index() {
         </Heading>
         <img src="./diagram.png" alt="AI Chat Flow" style={{ marginTop: '3rem', width: '60%', height: 'auto', display: 'flex', padding: '2px 0px', zIndex: 1 }} />
       </Flex>
-      <Flex flexDirection="column" justifyContent="center" p={["1rem 0", "unset"]} id="pricing">
+      <Flex flexDirection="column" alignItems="center" justifyContent="center" p={["1rem 0", "unset"]} id="pricing">
         <a href="./funding">
           <Heading fontFamily="gingerBold" as="h2" size="lg" w="auto" margin="0" color="primary.default">
             Get Started for <u>FREE</u>
