@@ -130,7 +130,7 @@ export default function Index() {
         <TextBase textStyle="activity-title" color="#7e00ff" pt={["1rem", ".5rem"]} pb="1rem" textAlign="center">
           We are developing our product benchmark in 2025
         </TextBase>
-        <Heading fontFamily="gingerBold" as="h2" size="lg" w="auto" margin="0" color="primary.default" fontSize="2.3em">
+        <Heading fontFamily="gingerBold" as="h2" size="lg" w="auto" margin="0" color="primary.default" fontSize="2.3em" textAlign="center">
           Sign up for FREE AI training
         </Heading>
         <div id="mc_embed_shell">
@@ -167,9 +167,9 @@ export default function Index() {
             <Heading fontFamily="gingerBold" as="h4" size="sm" w="auto" margin="0" marginBottom="2rem" color="primary.default">
               How to naturally overcome fear of a career change?
             </Heading>
-            <Flex flexDirection={["column", "row"]} overflow="none">
+            <Flex flexDirection={["column", "column", "row"]} overflow="none" flexWrap={["wrap", "wrap", "nowrap"]}>
               {/** @ts-ignore-next-line */}
-              <Box width={["100%", "400px"]}>
+              <Box width={["100%", "auto"]} maxWidth={["100%", "400px"]}>
                 <img src="./a51bca33-ab7c-445d-b403-cb46a80b2ff5.jpeg" alt="web-crawler" />
               </Box>
               <Project title="Career Discovery with AI recruiter" description="The sudden emergence of remote work during the pandemic has become a fixture of work life in many European countries. As many as half the world's employees (52%) were looking for a new job in 2024, and yet navigating through job offers online often is comparable with archival work. The AI assistants overlooking recruitment platforms enables personalized job search and recommendations with AI." isEndorsed={false} width="100%" formId="https://co-fun.us9.list-manage.com/subscribe/post?u=afdf41c218cb20406a176006b&amp;id=5656180439&amp;f_id=00a056e1f0">
