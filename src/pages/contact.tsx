@@ -1,4 +1,5 @@
 import { Flex, InputBase, Textarea, TextBase } from "@co-fun/ui";
+import Head from "next/head";
 import { useForm } from "react-hook-form";
 
 export default function Index() {
@@ -7,6 +8,9 @@ export default function Index() {
   } = useForm()
   return (
     <>
+    <Head>
+      <title>Contact us</title>
+    </Head>
       <Flex alignItems="center" flexDirection="column" maxWidth="100%">
         <TextBase textStyle="heading" lineHeight="2" alignSelf="center" mt="2rem">
           Contact Us

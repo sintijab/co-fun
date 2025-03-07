@@ -1,8 +1,12 @@
 import { ActivityGroup, Box, Flex, Heading, TextBase } from "@co-fun/ui";
+import Head from "next/head";
 
 export default function Index() {
   return (
     <>
+      <Head>
+        <title>Learn from AI Academy</title>
+      </Head>
       <Flex direction="column" margin={["3rem 0", "1rem 4rem"]}>
         <Box>
           <Flex justifyContent="space-around">

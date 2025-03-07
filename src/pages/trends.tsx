@@ -15,6 +15,7 @@ import { RhythmicScaleContext } from "../components/charts/RhythmicScaleContext"
 import { TempoComplexityContext } from "../components/charts/TempoComplexityContext";
 import { generateColorPalettes } from '../components/utils/p5_utils';
 import dynamic from "next/dynamic";
+import Head from "next/head";
 const Sketch = dynamic(() => import('@co-fun/ui').then((data) => data.Sketch), {ssr: false});
 
 
@@ -46,6 +47,9 @@ export default function Trends() {
     isFollowing: null,
   };
   return <>
+      <Head>
+        <title>The Connections That Stands the Test of Time</title>
+      </Head>
       <Flex m={["2rem .5rem", "3.5rem"]} flexWrap="wrap" maxWidth="100%">
         <a href="https://socket-io-3i32.onrender.com" target="_blank" rel="norefferer noopener"><TextBase textStyle="project-title" textDecoration="underline" mt={["1.2rem", "0"]} mb={["0", ".3rem"]}>Chat with our AI Moderator to update this radio stream</TextBase></a>
         <iframe width="560" height="315" src="https://www.youtube.com/embed/videoseries?si=T1-rgZ1Ro-1BU_HH&amp;list=PLKGWhcWwmOrP7pW62wyS0qR5Os1wmgWfc" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen></iframe>

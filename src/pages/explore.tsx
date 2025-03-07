@@ -1,4 +1,5 @@
 import { BearAnimation, Box, Link, NavigationChat, Poster, ReviewCards, Timeline } from "@co-fun/ui";
+import Head from "next/head";
 
 const timelineData: { text: string; alignment: 'left' | 'right'; color: string; content: string }[] = [
   {
@@ -44,6 +45,9 @@ const reviewData: { text: string; alignment: 'left' | 'right'; color: string; co
 export default function Explore() {
   return (
     <>
+    <Head>
+      <title>The Ultimate AI Adventure</title>
+    </Head>
     <Box width="100%" bg="primary.white" position="fixed" zIndex="10">
       <NavigationChat />
     </Box>

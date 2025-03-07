@@ -1,8 +1,12 @@
 import { TextBase } from "@co-fun/ui";
+import Head from "next/head";
 
 export default function Index() {
   return (
     <>
+      <Head>
+        <title>CO-FUN Leading Integrations</title>
+      </Head>
       <TextBase textStyle="heading" lineHeight="2" alignSelf="center">
         Integrations
       </TextBase>

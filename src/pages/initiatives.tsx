@@ -1,8 +1,12 @@
 import { Flex, TextBase } from "@co-fun/ui";
+import Head from "next/head";
 
 export default function Index() {
   return (
     <>
+      <Head>
+        <title>AI Role in Situational Leadership</title>
+      </Head>
       <TextBase textStyle="heading" lineHeight="2" alignSelf="center">
         AI Role in Situational Leadership
       </TextBase>

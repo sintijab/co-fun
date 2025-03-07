@@ -6,6 +6,7 @@ import { useEffect } from "react";
 import { AppDispatch } from "../store";
 import { generateColorPalettes } from '../components/utils/p5_utils';
 import dynamic from "next/dynamic";
+import Head from "next/head";
 const Sketch = dynamic(() => import('@co-fun/ui').then((data) => data.Sketch), {ssr: false});
 
 
@@ -30,6 +31,9 @@ export default function Index() {
   };
   return (
     <>
+      <Head>
+        <title>Learning with Second-Order Observation</title>
+      </Head>
       <TextBase textStyle="heading" lineHeight="2" alignSelf="center">
         Active Project Phase
       </TextBase>

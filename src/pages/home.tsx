@@ -8,6 +8,7 @@ import { generateColorPalettes } from '../components/utils/p5_utils';
 import _ from 'lodash';
 import useScrollToHash from "../components/utils/scroll";
 import dynamic from "next/dynamic";
+import Head from "next/head";
 const Sketch = dynamic(() => import('@co-fun/ui').then((data) => data.Sketch), { ssr: false });
 
 export default function Index() {
@@ -46,6 +47,9 @@ export default function Index() {
   };
   return (
     <>
+    <Head>
+      <title>AI career discovery</title>
+    </Head>
       <Hero {
         ...{
           heading: <><TextBase color="primary.green" textStyle="hero-h1">plan your business</TextBase><TextBase color="primary.default" textStyle="hero-h2" pl=".8rem">with</TextBase><br /><TextBase color="primary.default" textStyle="hero-h1">AI and automation</TextBase></>,
