@@ -23,22 +23,6 @@ const initialState: { jobOffers: JobOfferTechnical[], loading: boolean} = {
   loading: false
 }
 
-export const fetchJobOffers = createAsyncThunk('soundFetch/fetchSounds', async (req: FetchJobOffers) => {
-  try {
-  const { endpoint, data } = req;
-  const response = await fetch(`http://localhost:5000/scrape-jobs?country=${endpoint}`, {
-    method: 'POST',
-    headers: {
-      "Content-Type": "application/json",
-    },
-    body: JSON.stringify(data),
-  })
-  return response;
-} catch (e) {
-  console.log(e)
-}
-})
-
 export const jobOfferFetchSlice = createSlice({
   name: 'jobOfferFetch',
   initialState,
@@ -63,21 +47,7 @@ export const jobOfferFetchSlice = createSlice({
     closeOffers: (state) => {
       state.jobOffers = []
     }
-  },
-  extraReducers: (builder) => {
-    builder.addCase(fetchJobOffers.pending, (state, action) => {
-      state.loading = true
-    })
-    builder.addCase(fetchJobOffers.fulfilled, (state, action) => {
-      state.jobOffers = []
-      state.loading = false
-    })
-    builder.addCase(fetchJobOffers.rejected, (state, action) => {
-      console.log(action)
-      state.jobOffers = []
-      state.loading = false
-    })
-  },
+  }
 })
 
 export const selectJobOffers = (state: { jobOffers: { jobOffers: JobOfferTechnical[] }}) => state.jobOffers.jobOffers;

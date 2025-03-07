@@ -25,7 +25,7 @@ export default function App({
   useEffect(() => {
     const healthCheck = async () => {
       try {
-        const res = await fetch(`http://localhost:3333/health`);
+        const res = await fetch(`https://socket-io-3i32.onrender.com/health`);
         const formatted = await res.json();
         if (formatted.message) {
           toggleWidget(true);
