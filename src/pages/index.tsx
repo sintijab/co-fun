@@ -1,189 +1,136 @@
-import { ActivityGroup, Box, Carousel, CertificateIcon, DiagramIcon, Flex, Heading, Hero, InitiativeOverview, InputBase, Link, MonitorIcon, NetworkIcon, PricingTable, Project, StarsIcon, TextBase } from "@co-fun/ui";
-import { useForm } from "react-hook-form";
-import { useDispatch, useSelector } from "react-redux";
-import { getTrends, selectTrends } from "../slices/getTrends";
-import { useEffect } from "react";
-import { AppDispatch } from "../store";
-import { generateColorPalettes } from '../components/utils/p5_utils';
-import _ from 'lodash';
-import useScrollToHash from "../components/utils/scroll";
-import dynamic from "next/dynamic";
-const Sketch = dynamic(() => import('@co-fun/ui').then((data) => data.Sketch), {ssr: false});
+import { Box, Flex, Heading, InitiativeOverview, Project, TextBase } from "@co-fun/ui";
 
-export default function Index() {
+export default function CareerDiscover() {
 
-  const {
-    register,
-  } = useForm()
-  const trendsList = useSelector(selectTrends);
-  const dispatch = useDispatch<AppDispatch>();
-
-  useEffect(() => {
-    if (!trendsList.length) {
-      dispatch(getTrends('technical'))
-    }
-  }, [])
-
-  useScrollToHash()
-
-  const list = trendsList.map((sound, i) =>
-    <Flex key={i} justifyContent="center" alignItems="center" position="relative"><Link href={sound?.source || '/trends'} isExternal={true} variant="card" position="absolute" p=".5rem" textAlign="center">{`${sound.author?.toUpperCase()} - ${sound.title?.toUpperCase()}`}</Link>{typeof window !== undefined && <Sketch reset={false} w={300} h={300} customColors={generateColorPalettes} />}</Flex>
-  );
-  const chunkedItems = _.chunk(list, 3);
-  const argsSound = {
-    title: 'AI Assistants in Sound Moderation',
-    link: './trends',
-    author: 'Sintija Birgele',
-    description: '“Listening helps us communicate and deepen our understanding and appreciation of environment around us. Learning about the sound artists and their work in different contexts helps listeners recognize how location influences sound, and most importantly acknowledge - what brings us joy.”',
-    isFollowing: true,
-  };
-  const argsCareer = {
-    title: 'AI Assistants in Career Discovery',
+  const args = {
     link: 'http://ai-career-assistant.cofun.digital/',
-    author: 'Sintija Birgele',
-    description: "The Europe labor market in 2024 is the tightest it has been with unemployment in the EU down falling to lowest. It has contributed to a decline in the job vacancy rate, which is largely attributed to the overall slowdown of the European economies following the period of high inflation between 2022 and 2023.",
+    description: "The Europe labor market in 2024 is the tightest with unemployment in the EU falling down to lowest. It has contributed to a decline in the job vacancy rate, which is largely attributed to the overall slowdown of the European economies following the period of high inflation between 2022 and 2023.",
     isFollowing: true,
   };
-  return (
-    <>
-      <Hero {
-        ...{
-          heading: <><TextBase color="primary.green" textStyle="hero-h1">plan your business</TextBase><TextBase color="primary.default" textStyle="hero-h2" pl=".8rem">with</TextBase><br /><TextBase color="primary.default" textStyle="hero-h1">AI and automation</TextBase></>,
-          subheading: <><TextBase color="primary.default" textStyle="hero-h2" ml="1rem">funding and growth</TextBase><br /><TextBase color="primary.white" textStyle="hero-h1">in co-creation</TextBase></>,
-          link: {
-            label: 'Get started',
-            href: '/explore'
-          },
-          image: '/treetop_walk rugen.avif'
-        }
-      } />
-      <Flex alignItems="center" justifyContent="space-around" p=".3rem" mb="1.5rem" borderBottom="1px solid #e0e0e0" display={["none", "flex"]}>
-        <MonitorIcon />
-        <Heading fontFamily="gingerBold" as="p" size="s" w="auto" margin="0" color="primary.default">Learn from industry experts</Heading>
-        <DiagramIcon />
-        <Heading fontFamily="gingerBold" as="p" size="s" w="auto" margin="0" color="primary.default">Grow your portfolio</Heading>
-        <NetworkIcon />
-        <Heading fontFamily="gingerBold" as="p" size="s" w="auto" margin="0" color="primary.default">Discover market needs</Heading>
-        <StarsIcon />
-        <Heading fontFamily="gingerBold" as="p" size="s" w="auto" margin="0" color="primary.default">Lead by example</Heading>
-        <CertificateIcon />
-        <Heading fontFamily="gingerBold" as="p" size="s" w="auto" margin="0" color="primary.default">Become trusted</Heading>
-      </Flex>
-      <Box>
-      <Flex alignItems="center" justifyContent="center" flexDirection="column" display={["flex", "flex"]} p={["1rem", "0"]}>
-            <Heading fontFamily="gingerBold" as="h2" size="md" w="auto" margin="0" color="primary.default">Work with us by letting</Heading>
-            <Heading fontFamily="gingerBold" as="h2" w="auto" m="0" size="lg" pl={["0", "15rem"]} color="primary.green" textDecoration="underline">AI work for YOU</Heading>
-          </Flex>
-        <Flex flexDirection="column" alignItems="center" justifyContent="center" p=".5rem" m="0 0 3rem" display={["flex", "none"]} width={["100%", "60%"]}>
-        <img src="./diagram.png" alt="AI Chat Flow" style={{ height: 'auto', display: 'flex', padding: '2px 0px', zIndex: 1 }} />
-      </Flex>
-        <Flex justifyContent="center" p=".5rem" display={["flex", "none"]}>
-        <TextBase textStyle="activity-title">
-          Learn more from our <u><a href="./academy">AI Academy</a></u>
-        </TextBase>
-      </Flex>
-        <ActivityGroup justifyContent="space-around" border="none" hasFilter={false} activity={[
-          {
-            image: './situational_leadership.jpg',
-            title: 'situational leadership',
-            description: '“Learn how AI can encourage self-evaluation in the team to learn about your strengths and capabilities towards more successful collaboration and outperforming teamwork.”',
-            href: "https://youtu.be/mJGgYGx6Qcg"
-          },
-          {
-            image: './second_order.jpg',
-            title: 'second-order observation',
-            description: '“Developing second-order observation skills breaks the existing behavioral patterns and is a strong psychological technique known to succesful leaders and advanced freedivers.”',
-            href: "https://youtu.be/DxDsYawE6Vo"
-          },
-          {
-            image: './intro.png',
-            title: 'Appreciative Inquiry',
-            description: '“Most people think that they know what they are good at but what if they are wrong? Learn how to advance your communication skills with AI to approach feedback with authenticity and prompt taking more impactful decisions.”',
-            href: "https://youtu.be/P9jfHhUlLCE"
-          },
-        ]} />
-      </Box>
-      <Flex flexDirection="column" alignItems="center" justifyContent="center" p=".5rem" m="0 0 3rem" display={["none", "flex"]}>
-        <TextBase textStyle="activity-title">
-          Learn more from our <u><a href="./academy">AI Academy</a></u>
-        </TextBase>
-        <Heading fontFamily="gingerBold" as="h3" size="lg" w="auto" margin="0" marginTop="1rem" color="primary.default">
-          REAL time AI Analysis
-        </Heading>
-        <img src="./diagram.png" alt="AI Chat Flow" style={{ marginTop: '3rem', width: '60%', height: 'auto', display: 'flex', padding: '2px 0px', zIndex: 1 }} />
-      </Flex>
-      <Flex flexDirection="column" alignItems="center" justifyContent="center" p={["1rem 0", "unset"]} id="pricing">
-        <a href="./funding">
-          <Heading fontFamily="gingerBold" as="h2" size="lg" w="auto" margin="0" color="primary.default">
-            Get Started for <u>FREE</u>
+  return <>
+    <Flex direction="column" margin={["0 .5rem", "1rem 10rem", "1rem 20rem 0"]} flexWrap="wrap">
+      <Flex m={["0 .5rem .5rem", "0 2rem"]} flexWrap="wrap" maxWidth="100%">
+        <Heading margin="auto" fontFamily="gingerBold" as="h1" textStyle="project-title" mt={["1.2rem", "0"]} mb={["0", ".3rem"]}>AI Assistance in Your Career Discovery</Heading>
+        <Flex position="relative" justifySelf="center">
+          <Box width={["100%", "auto"]} maxWidth={["100%", "90%"]} margin="auto">
+            <img src="./preview_bot2.jpg" alt="web-crawler" />
+          </Box>
+          <Box position="absolute" bottom="0" left="0" right="0" margin="auto" color="primary.white" width="100%">
+            <a href={args.link} style={{ display: "block" }}><TextBase textAlign="center" textStyle="project-title" pb="0.5rem" textDecoration="underline">Chat with our AI Agent to make your dream career</TextBase></a>
+          </Box>
+        </Flex>
+        <InitiativeOverview {...args} border="1px solid #CCCCCC" borderRadius=".5rem" mt="1rem" isFollowing={null} p={["4rem .5rem", "3rem 2rem 2rem"]}>
+          <Heading fontFamily="gingerBold" as="h4" size="sm" w="auto" margin="0" marginBottom="2rem" color="primary.default">
+            How to naturally overcome your fear of a career change?
           </Heading>
-          <TextBase textStyle="activity-title" color="#7e00ff">
-            & hire us for your new AI Assistant
-          </TextBase>
-        </a>
+          <Flex flexDirection={["column", "column", "row"]} overflow="none" flexWrap={["wrap", "wrap", "nowrap"]}>
+            <Project title="Career Discovery with AI recruiter" description="The sudden emergence of remote work during the pandemic has become a fixture of work life in many European countries. As many as half the world's employees (52%) were looking for a new job in 2024, and yet navigating through job offers online often is comparable with archival work. The AI assistants overlooking recruitment platforms enables personalized job search and recommendations with AI." isEndorsed={false} width="100%" formId="https://co-fun.us9.list-manage.com/subscribe/post?u=afdf41c218cb20406a176006b&amp;id=5656180439&amp;f_id=00a056e1f0">
+            </Project>
+          </Flex>
+        </InitiativeOverview>
       </Flex>
       <Flex justifyContent="center">
-        <PricingTable />
+        <Box>
+          <TextBase textStyle="activity-title" pt={["1rem", ".5rem"]} pb={["1rem", "2.5rem"]} textAlign="center">Our trusted partners</TextBase>
+          <Flex justifyContent="center" alignSelf="center">
+            <Box width={["3rem", "4rem"]} borderRadius="2rem" overflow="hidden">
+              <a href="https://openai.com/" target="_blank"><img src="./open-ai.png" /></a>
+            </Box>
+            <Box width={["3rem", "4rem"]} borderRadius="1rem" overflow="hidden">
+              <a href="https://puter.com/" target="_blank"><img src="./puter.png" /></a>
+            </Box>
+            <Box width={["3rem", "5rem"]} borderRadius="2rem" overflow="hidden">
+              <a href="https://render.com/" target="_blank"><img src="./render.png" /></a>
+            </Box>
+            <Box width={["3rem", "5rem"]} borderRadius="2rem" overflow="hidden">
+              <a href="https://aws.amazon.com/" target="_blank"><img src="./aws.png" /></a>
+            </Box>
+            <Box width={["3rem", "5rem"]} borderRadius="2rem" overflow="hidden">
+              <a href="https://ploomber.io/" target="_blank"><img src="./ploomber.png" /></a>
+            </Box>
+          </Flex>
+        </Box>
+        <Box>
+          <TextBase textStyle="activity-title" pt={["1rem", ".5rem"]} pb={["1rem", "2.5rem"]} textAlign="center">Job platforms</TextBase>
+          <Flex justifyContent="center" alignSelf="center">
+            <Box width={["3rem", "4rem"]} borderRadius="2rem" overflow="hidden">
+              <a href="https://www.computerfutures.com/" target="_blank"><img src="./computerfutures.jpeg" /></a>
+            </Box>
+          </Flex>
+        </Box>
       </Flex>
-      <div id="signup" />
-      <Flex direction="column" alignItems="center">
-        <TextBase textStyle="activity-title" color="#7e00ff" pt={["1rem", ".5rem"]} pb="1rem" textAlign="center">
-          We are developing our product benchmark in 2025
+    </Flex>
+    <Flex alignItems="center" flexDirection="column" mt="2rem">
+      <Heading textAlign="center" fontFamily="gingerBold" as="h1" textStyle="project-title" mt={["1.2rem", "0"]} mb={["0", ".3rem"]}>First AI recruiter that <u>understands</u> you</Heading>
+      <TextBase textStyle="activity-title" color="#7e00ff" pt={["1rem", ".5rem"]} pb="1rem" textAlign="center">
+        & encourages you to <u>tame higher</u>
+      </TextBase>
+    </Flex>
+    <Flex flexWrap="wrap" justifyContent="center">
+      <Box width={["100%", "49%"]} borderRadius="2rem" overflow="hidden" margin=".5rem .3rem" position="relative">
+        <Heading fontFamily="gingerBold" position="absolute" textStyle="project-title" top="50%" margin="auto" left="10%" mb={["0", ".3rem"]}>Ready where you need</Heading>
+        <img src="./career-bot-1.jpg" alt="career bot" />
+      </Box>
+      <Box width={["100%", "40%"]} borderRadius="2rem" overflow="hidden" margin=".5rem .3rem" position="relative">
+        <Heading fontFamily="gingerBold" position="absolute" textStyle="project-title" bottom="20%" margin="auto" left="5%" mb={["0", ".3rem"]}>Learns & grows <u>with you</u></Heading>
+        <img src="./career-bot-2.jpg" alt="career bot" />
+      </Box>
+      <Box width={["100%", "49%"]} h={["auto", "40%"]} borderRadius="2rem" overflow="hidden" margin=".5rem .3rem" position="relative">
+        <Heading fontFamily="gingerBold" position="absolute" textStyle="project-title" top="20%" margin="auto" left="5%" mb={["0", ".3rem"]}>Reflects & discovers <u>best</u> offers</Heading>
+        <img src="./career-bot-3.jpg" alt="career bot" />
+      </Box>
+      <Box width={["100%", "40%"]} borderRadius="2rem" overflow="hidden" margin=".5rem .3rem" position="relative">
+        <Heading fontFamily="gingerBold" position="absolute" textStyle="project-title" bottom="20%" margin="auto" right="5%" mb={["0", ".3rem"]}>Forwards <u>call to action</u></Heading>
+        <img src="./career-bot-04.jpg" alt="career bot" />
+      </Box>
+    </Flex>
+    <Box>
+      <Flex direction="column" margin={["3rem .5rem", "5rem 10rem", "5rem 20rem 0"]} flexWrap="wrap">
+        <Heading textAlign="center" fontFamily="gingerBold" textStyle="project-title" mt={["1.2rem", "0"]} mb={["0", ".3rem"]}>Why should professionals explore their career options</Heading>
+        <TextBase textStyle="activity-title" pt={["1rem", ".5rem"]} pb={["1rem", "2.5rem"]} textAlign="center">
+          & how it impacts entrepreneurship?
         </TextBase>
-        <Heading fontFamily="gingerBold" as="h2" size="lg" w="auto" margin="0" color="primary.default" fontSize="2.3em" textAlign="center">
-          Sign up for FREE AI training
-        </Heading>
-        <div id="mc_embed_shell">
-          <link href="//cdn-images.mailchimp.com/embedcode/classic-061523.css" rel="stylesheet" type="text/css" />
-          <div id="mc_embed_signup">
-            <form action="https://co-fun.us9.list-manage.com/subscribe/post?u=afdf41c218cb20406a176006b&amp;id=5656180439&amp;v_id=3&amp;f_id=00b856e1f0" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" className="validate" target="_blank">
-              <div id="mc_embed_signup_scroll">
-                <div className="mc-field-group">
-                  <InputBase {...register("EMAIL")} placeholder="Email address" variant="unstyled" required={true} id="mce-EMAIL" padding=".5rem!important" border="1px" borderColor="chat.authorBg!important" size="lg" focusBorderColor='chat.authorBg!important' borderRadius="2rem!important" _placeholder={{ color: 'chat.authorBg!important', fontFamily: '"Jost", sans-serif;!important' }} _focus={{ border: '2px!important', borderColor: 'navigation.dark!important' }} /></div>
-                <div aria-hidden="true" style={{ position: 'absolute', left: '-5000px' }}>
-                  /* real people should not fill this in and expect good things - do not remove this or risk form bot signups */
-                  <input type="text" tabIndex={-1} {...register("b_afdf41c218cb20406a176006b_5656180439")} />
-                </div>
-                <div className="optionalParent">
-                  <div hidden={true}><input type="hidden" name="tags" value="11843562" /></div>
-                  <div className="clear foot">
-                    <input type="submit" name="subscribe" id="mc-embedded-subscribe" className="button" value="Sign up" />
-                    <p style={{ margin: '0px auto' }}><a href="http://eepurl.com/i53tms" title="Mailchimp - email marketing made easy and fun"><span style={{ display: 'inline-block', backgroundColor: 'transparent', borderRadius: '4px' }}><img className="refferal_badge" src="https://digitalasset.intuit.com/render/content/dam/intuit/mc-fe/en_us/images/intuit-mc-rewards-text-dark.svg" alt="Intuit Mailchimp" style={{ width: '220px', height: '40px', display: 'flex', padding: '2px 0px', justifyContent: 'center', alignItems: 'center' }} /></span></a></p>
-                  </div>
-                </div>
-              </div>
-              <div id="mce-responses" className="clear foot">
-                <div className="response" id="mce-error-response" style={{ display: 'none' }}></div>
-                <div className="response" id="mce-success-response" style={{ display: 'none' }}></div>
-              </div>
-            </form>
-          </div>
-        </div>
-        <Flex mb="3.5rem" flexWrap="wrap" width={["100%", "60%"]}>
-          <TextBase textStyle="project-title" lineHeight="2">
-            Latest Projects
-          </TextBase>
-          <InitiativeOverview {...argsCareer} border="1px solid #CCCCCC" borderRadius=".5rem" mt="1rem" isFollowing={null} p={["4rem .5rem", "4rem 2rem"]}>
-            <Heading fontFamily="gingerBold" as="h4" size="sm" w="auto" margin="0" marginBottom="2rem" color="primary.default">
-              How to naturally overcome your fear of a career change?
-            </Heading>
-            <Flex flexDirection={["column", "column", "row"]} overflow="none" flexWrap={["wrap", "wrap", "nowrap"]}>
-              {/** @ts-ignore-next-line */}
-              <Box width={["100%", "auto"]} maxWidth={["100%", "400px"]}>
-                <img src="./a51bca33-ab7c-445d-b403-cb46a80b2ff5.jpeg" alt="web-crawler" />
-              </Box>
-              <Project title="Career Discovery with AI recruiter" description="The sudden emergence of remote work during the pandemic has become a fixture of work life in many European countries. As many as half the world's employees (52%) were looking for a new job in 2024, and yet navigating through job offers online often is comparable with archival work. The AI assistants overlooking recruitment platforms enables personalized job search and recommendations with AI." isEndorsed={false} width="100%" formId="https://co-fun.us9.list-manage.com/subscribe/post?u=afdf41c218cb20406a176006b&amp;id=5656180439&amp;f_id=00a056e1f0">
-              </Project>
-            </Flex>
-          </InitiativeOverview>
-          <InitiativeOverview {...argsSound} border="1px solid #CCCCCC" borderRadius=".5rem" mt="1rem" isFollowing={null} p={["4rem .5rem", "4rem 2rem"]}>
-            <Project title="AI Radio Moderation" description="Based on your listening experience AI algorithm will analyze your stats and give you suggestions from similar playlists on a daily basis. Variety of selection is based on how many active listeners are contributing to this project." isEndorsed={false} width="100%" formId="https://co-fun.us9.list-manage.com/subscribe/post?u=afdf41c218cb20406a176006b&amp;id=5656180439&amp;f_id=00a056e1f0">
-              <TextBase textStyle="project-title" flexBasis="100%" mb="1rem">Wisdom, intuition and growth</TextBase>
-              <Carousel cards={chunkedItems} h="300px" />
-            </Project>
-          </InitiativeOverview>
-        </Flex>
+        <TextBase textStyle="initiative-descr" lineHeight={["1.5", "2"]} mb="1rem">
+          Reflecting on your actions and learning from them sounds simple, but it's almost impossible. This theory is based on idea of a 'second-order' observation. Where does it lead?
+        </TextBase>
+        <TextBase textStyle="initiative-descr" lineHeight={["1.5", "2"]}>
+          Risking economic certainty and security
+        </TextBase>
+        <TextBase textStyle="project-descr" lineHeight="2" p=".5rem 0">
+          55% of employees expressed a desire to change jobs in Germany , but this willingness has declined reducing also the professional growth to secure the future position and increase to desired level of income.
+        </TextBase>
+        <TextBase textStyle="initiative-descr" lineHeight={["1.5", "2"]}>
+          Fear of stepping out of comfort zone
+        </TextBase>
+        <TextBase textStyle="project-descr" lineHeight="2" p=".5rem 0">
+          A UK survey revealed that 64% of employees who regretted at least one past job changes are now more cautious and reserved about seeking new opportunities, fearing sacrifices in work-life balance and flexibility.
+        </TextBase>
+        <TextBase textStyle="initiative-descr" lineHeight={["1.5", "2"]}>
+          "Job lock"
+        </TextBase>
+        <TextBase textStyle="project-descr" lineHeight="2" p=".5rem 0">
+          The phenomenon of "job lock" occurs when employees feel unable to leave their jobs because doing so would result in the loss of crucial benefits, such as health insurance or retirement plans.
+        </TextBase>
+        <TextBase textStyle="initiative-descr" lineHeight={["1.5", "2"]}>
+          Staying agile
+        </TextBase>
+        <TextBase textStyle="project-descr" lineHeight="2" p=".5rem 0">
+          Insufficient career exploration can result in a limited view on industry dynamics. Slowing down on career goals and lack of interpersonal skills that comes from engagement and networking might block entrepreneurs in their business planning and risk management.
+        </TextBase>
+        <TextBase textStyle="initiative-descr" lineHeight={["1.5", "2"]}>
+          Impact on career progression
+        </TextBase>
+        <TextBase textStyle="project-descr" lineHeight="2" p=".5rem 0">
+          "Resenteeism" refers to employees staying in unfulfilling jobs due to perceived risks associated with changing employment, which in longer term can lead to decreased performance, hindering both personal and organizational growth.
+        </TextBase>
       </Flex>
-    </>
-  );
+    </Box>
+    <Flex background="button.action" color="primary.white" padding={[".5rem .5rem", "1rem 10rem", "1rem 20rem 0"]} alignItems="center">
+      <TextBase textStyle="activity-title" lineHeight={["1.5", "2"]} mb="1rem" width="60%">
+        Would you risk your job for most passionate and ambitious goals if you knew that career after one or two startup failures brings you the most exciting business and relationships in your lifetime?
+      </TextBase>
+      <a href="http://ai-career-assistant.cofun.digital/"><Heading fontFamily="gingerBold" textStyle="project-title" pb="0.5rem" textDecoration="underline">Start your best chapter NOW</Heading></a>
+    </Flex>
+
+  </>
 }

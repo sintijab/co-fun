@@ -6,7 +6,7 @@ export const Poster = ({ headline, description, button }: { headline: string, de
     <Flex width="100%" flexWrap="wrap" alignItems="center" flexDirection="column">
       <Flex alignItems="center"><Logo /> <Heading variant="headline" as="h1" textAlign="center" size="lg" pl=".7rem">{headline}</Heading></Flex>
       <TextBase textStyle="poster-descr" textAlign="center" pb="1.5rem">{description}</TextBase>
-      <Link variant="poster" isExternal={false} href="/#pricing" textStyle="poster-btn">{button}</Link>
+      <Link variant="poster" isExternal={false} href="/home#pricing" textStyle="poster-btn">{button}</Link>
     </Flex>
   </Flex>
 )
