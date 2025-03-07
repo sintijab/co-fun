@@ -128,8 +128,8 @@ export default function CareerDiscover() {
         </TextBase>
       </Flex>
     </Box>
-    <Flex background="button.action" color="primary.white" padding={[".5rem .5rem", "1rem 10rem", "1rem 20rem 0"]} alignItems="center">
-      <TextBase textStyle="activity-title" lineHeight={["1.5", "2"]} mb="1rem" width="60%">
+    <Flex background="button.action" color="primary.white" padding={[".5rem .5rem", "1rem 10rem", "1rem 20rem 0"]} alignItems="center" flexDirection={["column", "row"]}>
+      <TextBase textStyle="activity-title" lineHeight={["1.5", "2"]} mb="1rem" width={["100%", "60%"]}>
         Would you risk your job for most passionate and ambitious goals if you knew that career after one or two startup failures brings you the most exciting business and relationships in your lifetime?
       </TextBase>
       <a href="http://ai-career-assistant.cofun.digital/"><Heading fontFamily="gingerBold" textStyle="project-title" pb="0.5rem" textDecoration="underline">Start your best chapter NOW</Heading></a>
