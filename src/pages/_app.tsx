@@ -60,7 +60,7 @@ export default function App({
             },
             {
               label: 'Pricing',
-              href: 'https://cofun.digital/#pricing'
+              href: 'https://cofun.digital/home#pricing'
             },
             {
               label: 'Contact',
