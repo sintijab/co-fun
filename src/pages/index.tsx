@@ -1,4 +1,5 @@
 import { Box, Flex, Heading, InitiativeOverview, Project, TextBase } from "@co-fun/ui";
+import { Fade } from "react-awesome-reveal";
 
 export default function CareerDiscover() {
 
@@ -13,7 +14,9 @@ export default function CareerDiscover() {
         <Heading margin="auto" fontFamily="gingerBold" as="h1" textStyle="project-title" mt={["1.2rem", "0"]} mb={["0", ".3rem"]}>AI Assistance in Your Career Discovery</Heading>
         <Flex position="relative" justifySelf="center">
           <Box width={["100%", "auto"]} maxWidth={["100%", "90%"]} margin="auto">
-            <img src="./preview_bot2.jpg" alt="web-crawler" />
+            <Fade duration={400}>
+              <img src="./preview_bot2.jpg" alt="web-crawler" />
+            </Fade>
           </Box>
           <Box position="absolute" bottom="0" left="0" right="0" margin="auto" color="primary.white" width="100%">
             <a href={args.link} style={{ display: "block" }}><TextBase textAlign="center" textStyle="project-title" pb="0.5rem" textDecoration="underline">Chat with our AI Agent to make your dream career</TextBase></a>
@@ -34,19 +37,19 @@ export default function CareerDiscover() {
           <TextBase textStyle="activity-title" pt={["1rem", ".5rem"]} pb={["1rem", "2.5rem"]} textAlign="center">Our trusted partners</TextBase>
           <Flex justifyContent="center" alignSelf="center">
             <Box width={["3rem", "4rem"]} borderRadius="2rem" overflow="hidden">
-              <a href="https://openai.com/" target="_blank"><img src="./open-ai.png" /></a>
+              <a href="https://openai.com/" target="_blank"><img src="./open-ai.png" loading="lazy" /></a>
             </Box>
             <Box width={["3rem", "4rem"]} borderRadius="1rem" overflow="hidden">
-              <a href="https://puter.com/" target="_blank"><img src="./puter.png" /></a>
+              <a href="https://puter.com/" target="_blank"><img src="./puter.png" loading="lazy" /></a>
             </Box>
             <Box width={["3rem", "5rem"]} borderRadius="2rem" overflow="hidden">
-              <a href="https://render.com/" target="_blank"><img src="./render.png" /></a>
+              <a href="https://render.com/" target="_blank"><img src="./render.png" loading="lazy" /></a>
             </Box>
             <Box width={["3rem", "5rem"]} borderRadius="2rem" overflow="hidden">
-              <a href="https://aws.amazon.com/" target="_blank"><img src="./aws.png" /></a>
+              <a href="https://aws.amazon.com/" target="_blank"><img src="./aws.png" loading="lazy" /></a>
             </Box>
             <Box width={["3rem", "5rem"]} borderRadius="2rem" overflow="hidden">
-              <a href="https://ploomber.io/" target="_blank"><img src="./ploomber.png" /></a>
+              <a href="https://ploomber.io/" target="_blank"><img src="./ploomber.png" loading="lazy" /></a>
             </Box>
           </Flex>
         </Box>
@@ -54,7 +57,7 @@ export default function CareerDiscover() {
           <TextBase textStyle="activity-title" pt={["1rem", ".5rem"]} pb={["1rem", "2.5rem"]} textAlign="center">Job platforms</TextBase>
           <Flex justifyContent="center" alignSelf="center">
             <Box width={["3rem", "4rem"]} borderRadius="2rem" overflow="hidden">
-              <a href="https://www.computerfutures.com/" target="_blank"><img src="./computerfutures.jpeg" /></a>
+              <a href="https://www.computerfutures.com/" target="_blank"><img src="./computerfutures.jpeg" loading="lazy" /></a>
             </Box>
           </Flex>
         </Box>
@@ -69,19 +72,19 @@ export default function CareerDiscover() {
     <Flex flexWrap="wrap" justifyContent="center">
       <Box width={["100%", "49%"]} borderRadius="2rem" overflow="hidden" margin=".5rem .3rem" position="relative">
         <Heading fontFamily="gingerBold" position="absolute" textStyle="project-title" top="50%" margin="auto" left="10%" mb={["0", ".3rem"]}>Ready where you need</Heading>
-        <img src="./career-bot-1.jpg" alt="career bot" />
+        <img src="./career-bot-1.jpg" alt="career bot" loading="lazy" />
       </Box>
       <Box width={["100%", "40%"]} borderRadius="2rem" overflow="hidden" margin=".5rem .3rem" position="relative">
         <Heading fontFamily="gingerBold" position="absolute" textStyle="project-title" bottom="20%" margin="auto" left="5%" mb={["0", ".3rem"]}>Learns & grows <u>with you</u></Heading>
-        <img src="./career-bot-2.jpg" alt="career bot" />
+        <img src="./career-bot-2.jpg" alt="career bot" loading="lazy" />
       </Box>
       <Box width={["100%", "49%"]} h={["auto", "40%"]} borderRadius="2rem" overflow="hidden" margin=".5rem .3rem" position="relative">
         <Heading fontFamily="gingerBold" position="absolute" textStyle="project-title" top="20%" margin="auto" left="5%" mb={["0", ".3rem"]}>Reflects & discovers <u>best</u> offers</Heading>
-        <img src="./career-bot-3.jpg" alt="career bot" />
+        <img src="./career-bot-3.jpg" alt="career bot" loading="lazy" />
       </Box>
       <Box width={["100%", "40%"]} borderRadius="2rem" overflow="hidden" margin=".5rem .3rem" position="relative">
         <Heading fontFamily="gingerBold" position="absolute" textStyle="project-title" bottom="20%" margin="auto" right="5%" mb={["0", ".3rem"]}>Forwards <u>call to action</u></Heading>
-        <img src="./career-bot-04.jpg" alt="career bot" />
+        <img src="./career-bot-04.jpg" alt="career bot" loading="lazy" />
       </Box>
     </Flex>
     <Box>
