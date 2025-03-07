@@ -181,7 +181,7 @@ export default function App({
                 }
               } />
             </Box>}
-          {isIndex && isChatVisible && <AspectRatio ratio={3 / 4} position="fixed" bottom="4rem" right={["1rem", "4rem"]} zIndex={1} display={["none", "unset"]}>
+          {/* {isIndex && isChatVisible && <AspectRatio ratio={3 / 4} position="fixed" bottom="4rem" right={["1rem", "4rem"]} zIndex={1} display={["none", "unset"]}>
             <iframe ref={iframeWidgetDesktop} src="https://ai-career-assistant.cofun.digital/" style={{ position: 'unset', borderRadius: "1.1rem", boxShadow: '0 -3px 12px rgba(0,0,0,0.05)', width: '20rem', height: "30rem", padding: '0 .2rem .8rem .2rem', background: 'primary.white' }} />
           </AspectRatio>}
           {isIndex && isChatVisible && <AspectRatio ratio={3 / 4} position="fixed" bottom="4rem" right={["1rem", "4rem"]} zIndex={1} display={["unset", "none"]}>
@@ -191,7 +191,7 @@ export default function App({
             <img src="career.png" width={60} height={60} />
             {isChatVisible === null && <Box position="absolute" bottom="-1px" right="0px" width=".85rem" height=".85rem" borderRadius="50%" background="button.action" color="white" fontSize="10pt" display={["none", "unset"]} />}
             {isChatVisible && <Box position="absolute" bottom="-1px" right="0px" width=".85rem" height=".85rem" borderRadius="50%" background="button.action" color="white" fontSize="10pt" display={["unset", "none"]} />}
-          </Box>}
+          </Box>} */}
         </CoFunUiProvider>
       </PersistGate>
     </Provider>
