@@ -147,10 +147,10 @@ const PricingTable = () => {
                 <Link
                   variant="link"
                   size="sm"
-                  href="/#signup"
+                  href="https://cofun.digital/contact"
                   fontFamily="Poppins"
                 >
-                  Sign Up
+                  Let's talk
                 </Link>
               </Box>
             </Box>

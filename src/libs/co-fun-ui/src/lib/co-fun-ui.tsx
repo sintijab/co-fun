@@ -5,7 +5,7 @@ import {
   Flex,
   Heading,
   Input as InputBase,
-  Textarea
+  Textarea,
 } from '@chakra-ui/react';
 
 import { AvatarIcon, BackIcon, ButtonPrimary, CalendarIcon, CertificateIcon, ChatSingleIcon, DiagramIcon, EditIcon, ExploreIcon, HamburgerIcon, HamburgerMenuIcon, Link, Logo, MicrophoneIcon, MonitorIcon, NetworkIcon, PlusIcon, ProfileAvatarIcon, SettingsIcon, StarIcon, StarIconFilled, StarsIcon, TextBase, TrendsIcon, VerticalEllipsisIcon, WalletIcon, } from './foundations';

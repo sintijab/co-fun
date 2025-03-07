@@ -30,11 +30,18 @@ export default function Index() {
     <Flex key={i} justifyContent="center" alignItems="center" position="relative"><Link href={sound?.source || '/trends'} isExternal={true} variant="card" position="absolute" p=".5rem" textAlign="center">{`${sound.author?.toUpperCase()} - ${sound.title?.toUpperCase()}`}</Link>{typeof window !== undefined && <Sketch reset={false} w={300} h={300} customColors={generateColorPalettes} />}</Flex>
   );
   const chunkedItems = _.chunk(list, 3);
-  const args = {
+  const argsSound = {
     title: 'AI Assistants in Sound Moderation',
     link: './trends',
     author: 'Sintija Birgele',
     description: '“Listening helps us communicate and deepen our understanding and appreciation of environment around us. Learning about the sound artists and their work in different contexts helps listeners recognize how location influences sound, and most importantly acknowledge - what brings us joy.”',
+    isFollowing: true,
+  };
+  const argsCareer = {
+    title: 'AI Assistants in Career Discovery',
+    link: 'http://ai-career-assistant.cofun.digital/',
+    author: 'Sintija Birgele',
+    description: "The Europe labor market in 2024 is the tightest it has been with unemployment in the EU down falling to lowest. It has contributed to a decline in the job vacancy rate, which is largely attributed to the overall slowdown of the European economies following the period of high inflation between 2022 and 2023.",
     isFollowing: true,
   };
   return (
@@ -63,10 +70,10 @@ export default function Index() {
         <Heading fontFamily="gingerBold" as="p" size="s" w="auto" margin="0" color="primary.default">Become trusted</Heading>
       </Flex>
       <Box>
-        <Flex alignItems="center" justifyContent="center" flexDirection="column" display={["flex", "flex"]} p={["1rem", "0"]}>
-          <Heading fontFamily="gingerBold" as="h2" size="md" w="auto" margin="0" color="primary.default">Work with us by letting</Heading>
-          <Heading fontFamily="gingerBold" as="h2" w="auto" m="0" size="lg" pl={["0", "15rem"]} color="primary.green" textDecoration="underline">AI work for YOU</Heading>
-        </Flex>
+      <Flex alignItems="center" justifyContent="center" flexDirection="column" display={["flex", "flex"]} p={["1rem", "0"]}>
+            <Heading fontFamily="gingerBold" as="h2" size="md" w="auto" margin="0" color="primary.default">Work with us by letting</Heading>
+            <Heading fontFamily="gingerBold" as="h2" w="auto" m="0" size="lg" pl={["0", "15rem"]} color="primary.green" textDecoration="underline">AI work for YOU</Heading>
+          </Flex>
         <Flex justifyContent="center" p=".5rem" display={["flex", "none"]}>
         <TextBase textStyle="activity-title">
           Learn more from our <u><a href="./academy">AI Academy</a></u>
@@ -93,10 +100,14 @@ export default function Index() {
           },
         ]} />
       </Box>
-      <Flex justifyContent="center" p=".5rem" m="0 0 3rem" display={["none", "flex"]}>
+      <Flex flexDirection="column" alignItems="center" justifyContent="center" p=".5rem" m="0 0 3rem" display={["none", "flex"]}>
         <TextBase textStyle="activity-title">
           Learn more from our <u><a href="./academy">AI Academy</a></u>
         </TextBase>
+        <Heading fontFamily="gingerBold" as="h3" size="lg" w="auto" margin="0" marginTop="1rem" color="primary.default">
+            REAL time AI Analysis
+          </Heading>
+        <img src="./diagram.png" alt="AI Chat Flow" style={{ marginTop: '3rem', width: '60%', height: 'auto', display: 'flex', padding: '2px 0px', zIndex: 1 }} />
       </Flex>
       <Flex justifyContent="center" p={["1rem 0", "unset"]} id="pricing">
         <a href="./funding">
@@ -117,7 +128,7 @@ export default function Index() {
           We are developing our product benchmark in 2025
         </TextBase>
         <Heading fontFamily="gingerBold" as="h2" size="lg" w="auto" margin="0" color="primary.default" fontSize="2.3em">
-          Follow us to be the first becoming an AI expert
+          Sign up for FREE AI training
         </Heading>
         <div id="mc_embed_shell">
           <link href="//cdn-images.mailchimp.com/embedcode/classic-061523.css" rel="stylesheet" type="text/css" />
@@ -149,7 +160,20 @@ export default function Index() {
           <TextBase textStyle="project-title" lineHeight="2">
             Latest Projects
           </TextBase>
-          <InitiativeOverview {...args} border="1px solid #CCCCCC" borderRadius=".5rem" mt="1rem" isFollowing={null} p={["4rem .5rem", "4rem 2rem"]}>
+          <InitiativeOverview {...argsCareer} border="1px solid #CCCCCC" borderRadius=".5rem" mt="1rem" isFollowing={null} p={["4rem .5rem", "4rem 2rem"]}>
+            <Heading fontFamily="gingerBold" as="h4" size="sm" w="auto" margin="0" marginBottom="2rem" color="primary.default">
+              How to naturally overcome fear of a career change?
+            </Heading>
+            <Flex flexDirection="row" overflow="none">
+              {/** @ts-ignore-next-line */}
+              <Box width={["100%", "400px"]}>
+                <img src="./a51bca33-ab7c-445d-b403-cb46a80b2ff5.jpeg" alt="web-crawler" />
+              </Box>
+              <Project title="Career Discovery with AI recruiter" description="The sudden emergence of remote work during the pandemic has become a fixture of work life in many European countries. As many as half the world's employees (52%) were looking for a new job in 2024, and yet navigating through job offers online often is comparable with archival work. The AI assistants overlooking recruitment platforms enables personalized job search and recommendations with AI." isEndorsed={false} width="100%" formId="https://co-fun.us9.list-manage.com/subscribe/post?u=afdf41c218cb20406a176006b&amp;id=5656180439&amp;f_id=00a056e1f0">
+              </Project>
+            </Flex>
+          </InitiativeOverview>
+          <InitiativeOverview {...argsSound} border="1px solid #CCCCCC" borderRadius=".5rem" mt="1rem" isFollowing={null} p={["4rem .5rem", "4rem 2rem"]}>
             <Project title="AI Radio Moderation" description="Based on your listening experience AI algorithm will analyze your stats and give you suggestions from similar playlists on a daily basis. Variety of selection is based on how many active listeners are contributing to this project." isEndorsed={false} width="100%" formId="https://co-fun.us9.list-manage.com/subscribe/post?u=afdf41c218cb20406a176006b&amp;id=5656180439&amp;f_id=00a056e1f0">
               <TextBase textStyle="project-title" flexBasis="100%" mb="1rem">Wisdom, intuition and growth</TextBase>
               <Carousel cards={chunkedItems} h="300px" />
