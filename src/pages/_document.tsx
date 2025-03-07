@@ -89,6 +89,7 @@ export default function Document() {
               `,
             }}
           />
+          <script src="https://analytics.ahrefs.com/analytics.js" data-key="2C3CMC5hIIGCixuOSZRwTw" async></script>
       </Head>
       <body>
         <Main />
