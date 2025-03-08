@@ -60,6 +60,9 @@ export default function Index() {
         <iframe src="https://docs.google.com/presentation/d/e/2PACX-1vSiC2j9Y0U0ervOqeDSFZJ1vEE2EDPX5qlrB1DWUaSOsxZwJO1OoGM9cWiYfTxZb7FXpqkZBzR4G-ck/embed?start=false&loop=false&delayms=3000" frameBorder="0" width="1440" height="839"></iframe>    </TextBase>
       <TextBase textStyle="project-descr" lineHeight="2" p=".5rem 0">
         To every conflict there are different types of reactions. Flight, fight or give up categorizes in emotional responses and may tell about the maturity of the individual by their approach to finding a resolution. Reaching a consensus, evade responsibly or offering a compromise is more rational reaction and is more important in understanding the both sides and aim towards resolution.</TextBase>
+      <TextBase textStyle="project-descr" lineHeight="2">
+        Networking is essential in building trustful relationships, understanding dynamics in social context and enhancing leadership skills. Join us in our <a href="https://cofun.digital/events"><u>upcoming events</u></a> to learn more about it.
+      </TextBase>
     </>
   );
 }

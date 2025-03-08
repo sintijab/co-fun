@@ -16,7 +16,7 @@ export default function Index() {
       <Flex><TextBase textStyle="project-descr" lineHeight="2">Invitation link to <u><a href="https://join.slack.com/t/co-fun/shared_invite/zt-2w1cfh47p-PGP6lU3l0JAuP4Z6_EEEQw" target="_blank" rel="noreferrer noopener">Slack workspace</a></u></TextBase></Flex>
 
       <Flex><TextBase textStyle="project-descr" lineHeight="2">Follow official media channels <u><a href="https://www.instagram.com/co__fun/" target="_blank" rel="noreferrer noopener">@co__fun</a></u></TextBase></Flex>
-      <Flex><TextBase textStyle="project-descr" lineHeight="2">Find about the planned events on our <u><a href="./events" target="_blank" rel="noreferrer noopener">website</a></u></TextBase></Flex>
+      <Flex><TextBase textStyle="project-descr" lineHeight="2">Find about the planned events on our <u><a href="https://cofun.digital/events" target="_blank" rel="noreferrer noopener">website</a></u></TextBase></Flex>
       <TextBase textStyle="initiative-descr" lineHeight="2" p=".5rem 0">
         Our Team
       </TextBase>

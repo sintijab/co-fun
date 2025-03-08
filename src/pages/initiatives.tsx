@@ -32,6 +32,9 @@ export default function Index() {
       <TextBase textStyle="initiative-descr" lineHeight="2">
         Lead your employees in such a way that you yourself become superfluous. And lead your employees to be successful, so that one day they can be in leadership position themselves.
       </TextBase>
+      <TextBase textStyle="initiative-descr" lineHeight="2">
+        Networking is essential in building trustful relationships, understanding dynamics in social context and enhancing leadership skills. Join us in <u><a href="https://cofun.digital/events">upcoming events</a></u> to learn more about it.
+      </TextBase>
       <iframe width="560" height="315" src="https://www.youtube.com/embed/mJGgYGx6Qcg?si=EGE66EwCcvTNZu5O" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin"></iframe>
     </>
   );

@@ -31,6 +31,9 @@ export default function Index() {
       <TextBase textStyle="project-descr" lineHeight="2" p=".5rem 0">
         When was the last time you broke a familiar pattern in your life and really did something differently? Which pattern would you like to break?  is preventing you from breaking it?
       </TextBase>
+      <TextBase textStyle="project-descr" lineHeight="2" p=".5rem 0">
+        If you can't do something, you have to work at it. See also performance through <u><a href="https://cofun.digital/analysis">Action Analysis</a></u>
+      </TextBase>
       <iframe width="560" height="315" src="https://www.youtube.com/embed/DxDsYawE6Vo?si=GjxzjBU3HMmvDKwX" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen></iframe>
     </>
   );

@@ -60,7 +60,7 @@ export default function Explore() {
       <BearAnimation />
     </Box>
     <ReviewCards data={reviewData} />
-    <Link href="./community" variant="action">Sign Me Up</Link>
+    <Link href="https://cofun.digital/community" variant="action">Sign Me Up</Link>
     </>
   </>)
 }

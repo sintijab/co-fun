@@ -29,6 +29,9 @@ export default function Index() {
       <TextBase textStyle="project-descr" lineHeight="2" p=".5rem 0">
         One thing is undisputed- the world around us becomes increasingly fast-paced and complex, the amount that we really know -- that we can rarely grasp and understand-- decreases. Today it is more or less taken for granted that we do not understand many of the things that surround us and that we use believing we know that it works, for instance, our smartphones. As a result, we tend to assign more importance to those who can actually explain something than to their actual explenation. It has become the norm to convince the people with images and emotions rather than with the arguments, because we are no longer able to understand increasingly complex explanations.
       </TextBase>
+      <TextBase textStyle="project-descr" lineHeight="2" p=".5rem 0">
+        Make an impact and join our <u><a href="https://cofun.digital/academy">AI Academy</a></u>, and follow our <a href="https://cofun.digital/projects"><u>latest initiatives</u></a>, <a href="https://cofun.digital/projects"><u>foundations</u></a>, <a href="https://cofun.digital/features"><u>features</u></a>, and join us in <u><a href="https://cofun.digital/events">upcoming events</a></u>.
+      </TextBase>
       <iframe width="560px" height="315" src="https://www.youtube.com/embed/EZEOSj25xMY?si=tVp6_9LydnTcC4zZ" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen></iframe>
     </>
   );

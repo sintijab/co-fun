@@ -1,4 +1,4 @@
-import { Carousel, Flex, InitiativeOverview, Link, Project, TextBase } from "@co-fun/ui";
+import { Box, Carousel, Flex, Heading, InitiativeOverview, Link, Project, TextBase } from "@co-fun/ui";
 import { getTrends, selectTrends } from "../slices/getTrends";
 import _ from 'lodash';
 import { useDispatch, useSelector } from "react-redux";
@@ -27,6 +27,13 @@ export default function Index() {
     title: 'What are you listening now?',
     author: 'Sintija Birgele',
     description: '“Listening helps us communicate and deepen our understanding and appreciation of environment around us. Learning about the sound artists and their work in different contexts helps listeners recognize how location influences sound, and most importantly acknowledge - what brings us joy.”',
+    isFollowing: true,
+  };
+  const argsCareer = {
+    title: 'AI Assistants in Career Discovery',
+    link: 'http://ai-career-assistant.cofun.digital/',
+    author: 'Sintija Birgele',
+    description: "The Europe labor market in 2024 is the tightest with unemployment in the EU falling down to lowest. It has contributed to a decline in the job vacancy rate, which is largely attributed to the overall slowdown of the European economies following the period of high inflation between 2022 and 2023.",
     isFollowing: true,
   };
   return (
@@ -59,6 +66,22 @@ export default function Index() {
         <TextBase textStyle="project-title" lineHeight="2">
           Latest Projects
         </TextBase>
+        <TextBase textStyle="project-descr" lineHeight="2" p=".5rem 0">
+          See our latest features and projects on our <u><a href="https://cofun.digital">website</a></u>.
+        </TextBase>
+        <InitiativeOverview {...argsCareer} border="1px solid #CCCCCC" borderRadius=".5rem" mt="1rem" isFollowing={null} p={["4rem .5rem", "4rem 2rem"]}>
+          <Heading fontFamily="gingerBold" as="h4" size="sm" w="auto" margin="0" marginBottom="2rem" color="primary.default">
+            How to naturally overcome fear of a career change?
+          </Heading>
+          <Flex flexDirection={["column", "column", "row"]} overflow="none" flexWrap={["wrap", "wrap", "nowrap"]}>
+            {/** @ts-ignore-next-line */}
+            <Box width={["100%", "auto"]} maxWidth={["100%", "400px"]}>
+              <img src="./a51bca33-ab7c-445d-b403-cb46a80b2ff5.jpeg" alt="web-crawler" />
+            </Box>
+            <Project title="Career Discovery with AI recruiter" description="The sudden emergence of remote work during the pandemic has become a fixture of work life in many European countries. As many as half the world's employees (52%) were looking for a new job in 2024, and yet navigating through job offers online often is comparable with archival work. The AI assistants overlooking recruitment platforms enables personalized job search and recommendations with AI." isEndorsed={false} width="100%" formId="https://co-fun.us9.list-manage.com/subscribe/post?u=afdf41c218cb20406a176006b&amp;id=5656180439&amp;f_id=00a056e1f0">
+            </Project>
+          </Flex>
+        </InitiativeOverview>
         <InitiativeOverview {...args} border="1px solid #CCCCCC" borderRadius=".5rem" mt="1rem" isFollowing={null} p={["4rem .5rem", "4rem 2rem"]}>
           <Project title="AI Radio Moderation" description="Based on your listening experience AI algorithm will analyze your stats and give you suggestions from similar playlists on a daily basis. Variety of selection is based on how many active listeners are contributing to this project." isEndorsed={false} width="100%" formId="https://co-fun.us9.list-manage.com/subscribe/post?u=afdf41c218cb20406a176006b&amp;id=5656180439&amp;f_id=00a056e1f0">
             <TextBase textStyle="project-title" flexBasis="100%" mb="1rem">Wisdom, intuition and growth</TextBase>

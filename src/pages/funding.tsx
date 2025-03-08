@@ -1,4 +1,4 @@
-import { Flex, TextBase } from "@co-fun/ui";
+import { Flex, Link, TextBase } from "@co-fun/ui";
 import Head from "next/head";
 
 export default function Index() {
@@ -40,6 +40,9 @@ export default function Index() {
       </TextBase>
       <TextBase textStyle="initiative-descr" lineHeight="2">
         The task is not so much to see what everybody has seen, but to think what nobody has thought about that which everybody sees.
+      </TextBase>
+      <TextBase textStyle="project-descr" lineHeight="2" p=".5rem 0">
+        Make an impact and join our <u><a href="https://cofun.digital/academy">AI Academy</a></u>, and follow our <a href="https://cofun.digital/projects"><u>latest initiatives</u></a>, <a href="https://cofun.digital/projects"><u>foundations</u></a>, <a href="https://cofun.digital/features"><u>features</u></a>, and join us in our <u><a href="https://cofun.digital/events">upcoming events</a></u>.
       </TextBase>
     </>
   );

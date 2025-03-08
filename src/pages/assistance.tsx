@@ -10,13 +10,13 @@ export default function Index() {
       <TextBase textStyle="heading" lineHeight="2" alignSelf="center">
         AI Assistance in Work Process Modelling
       </TextBase>
-      <TextBase textStyle="project-descr" lineHeight="2" p=".5rem 0">
-
-      </TextBase>
       <TextBase textStyle="project-title" lineHeight="2">
         How to turn a group into the team?      </TextBase>
       <TextBase textStyle="project-descr" lineHeight="2" p=".5rem 0">
         If you are leading or coordinating a team, you should present the team performance model at the beginning of every project. One of the performance models was developed by Allan Dexter, and it illustrates seven different stages that participants in a project typically go through. After the project has started, follow up to your team members regularly:
+      </TextBase>
+      <TextBase textStyle="project-descr" lineHeight="2" p=".5rem 0">
+        See our work process and get impression from our <u><a href="https://cofun.digital/academy">AI Academy</a></u>, <a href="https://cofun.digital/projects"><u>latest initiatives</u></a>, <a href="https://cofun.digital/projects"><u>foundations</u></a> and list of <a href="https://cofun.digital/features"><u>features</u></a>.
       </TextBase>
       <TextBase textStyle="project-descr" lineHeight="2" p=".5rem 0">
         1. How far along are you? (at which stage of the project?)

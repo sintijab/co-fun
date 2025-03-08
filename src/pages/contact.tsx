@@ -15,6 +15,9 @@ export default function Index() {
         <TextBase textStyle="heading" lineHeight="2" alignSelf="center" mt="2rem">
           Contact Us
         </TextBase>
+        <TextBase textStyle="project-descr" lineHeight="2" p=".5rem 0">
+          For other inquiries please join our <u><a href="https://cofun.digital/community">community</a></u>,contact our team <u><a href="sintija.birgele@syntia.org">sintija.birgele@syntia.org</a></u> or use the following contact form.
+        </TextBase>
         <div id="mc_embed_shell">
           <link href="//cdn-images.mailchimp.com/embedcode/classic-061523.css" rel="stylesheet" type="text/css" />
           <div id="mc_embed_signup">

@@ -98,7 +98,7 @@ export default function CareerDiscover() {
           & how it impacts entrepreneurship?
         </TextBase>
         <TextBase textStyle="initiative-descr" lineHeight={["1.5", "2"]} mb="1rem">
-          Reflecting on your actions and learning from them sounds simple, but it's almost impossible. This theory is based on idea of a 'second-order' observation. Where does it lead?
+          Reflecting on your actions and learning from them sounds simple, but it's almost impossible. This theory is based on idea of a <a href="https://cofun.digital/optimization"><u>'second-order' observation</u></a>. Where does it lead?
         </TextBase>
         <TextBase textStyle="initiative-descr" lineHeight={["1.5", "2"]}>
           Risking economic certainty and security

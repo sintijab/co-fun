@@ -18,6 +18,9 @@ export default function Index() {
           <TextBase textStyle="heading" lineHeight="2" textAlign="center">
             AI Academy
           </TextBase>
+          <Box padding={[".5rem", "0 5rem"]}>
+          <TextBase textStyle="project-descr" lineHeight="2" p=".5rem 0">Join us in our <u><a href="https://cofun.digital/academy">AI Academy</a></u> and <u><a href="https://cofun.digital/events">upcoming events</a></u> if you're interested in contributing to our vision. We're looking for educators, developers, leaders, speakers and cross-industry experts to share the knwoledge about technology, leadership, science and psychology. We are offering promotions and contributions to our platform and branding. Reach us on social media, <a href="https://cofun.digital/developers">slack channels</a> or <a href="https://cofun.digital/contact">contact form.</a></TextBase>
+          </Box>
           <ActivityGroup justifyContent="flex-start" flexWrap="wrap" border="none" hasFilter={false} activity={[
             {
               image: './situational_leadership.jpg',
