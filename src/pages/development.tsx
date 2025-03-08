@@ -12,7 +12,7 @@ export default function Index() {
       </TextBase>
       <TextBase textStyle="project-descr" lineHeight="2" p=".5rem 0">
         Set yourself an attainable goals and relates to the performance, and methods towards measuring long-term goals.</TextBase>
-        <TextBase textStyle="project-descr" lineHeight="2" p=".5rem 0">Join us in our <u><a href="https://cofun.digital/academy">AI Academy</a></u> and <u><a href="https://cofun.digital/events">upcoming events</a></u> if you're interested in contributing to our vision. We're looking for educators, developers, leaders, speakers and cross-industry experts to share the knwoledge about AI in technology, and we're offering promotions and contributions to our platform. Reach us on social media, <a href="https://cofun.digital/developers">slack channels</a> or <a href="https://cofun.digital/contact">contact form.</a></TextBase>
+        <TextBase textStyle="project-descr" lineHeight="2" p=".5rem 0">Join our <u><a href="https://cofun.digital/academy">AI Academy</a></u> and <u><a href="https://cofun.digital/events">upcoming events</a></u> if you're interested in contributing to our vision. We're celebrating and welcoming educators, developers, leaders, speakers and cross-industry experts to share the knwoledge about AI in technology, and we're offering promotions and contributions to our platform. Reach us on <u><a href="https://www.instagram.com/co__fun/">social media</a></u>, <u><a href="https://cofun.digital/developers">slack</a></u> or <u><a href="https://cofun.digital/contact">contact form.</a></u></TextBase>
       <TextBase textStyle="initiative-descr" lineHeight="2">
         Act intuitevily
       </TextBase>

@@ -59,6 +59,10 @@ export default function App({
               href: 'https://cofun.digital/features'
             },
             {
+              label: 'Products',
+              href: 'https://cofun.digital/products'
+            },
+            {
               label: 'Pricing',
               href: 'https://cofun.digital/home#pricing'
             },
