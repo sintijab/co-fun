@@ -25,7 +25,7 @@ export default function App({
   useEffect(() => {
     const healthCheck = async () => {
       try {
-        const res = await fetch(`https://socket-io-3i32.onrender.com/health`);
+        const res = await fetch(`https://sound-master-chat.onrender.com/health`);
         const formatted = await res.json();
         if (formatted.message) {
           toggleWidget(true);
