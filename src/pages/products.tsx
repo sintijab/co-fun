@@ -11,7 +11,7 @@ export default function Index() {
         Product roadmap in 2025
       </TextBase>
       <TextBase textStyle="initiative-descr" lineHeight={["1.5", "2"]}>
-        We are excited about this new pathway of researching, networking and re-learning to make AI Agents "better version of ourselves" one chat at the time. &#9749; 
+        We are excited about this new pathway of researching, networking and re-learning to make AI Agents "better version of ourselves" one chat at the time. It's a state of an art mastering to find the right questions instead of just looking for an answer.&#9749; 
       </TextBase>
       <TextBase textStyle="initiative-descr" fontSize="17pt" fontWeight="regular" lineHeight="2" p=".5rem 0">We're celebrating and welcoming educators, developers, leaders, speakers and cross-industry experts to share the knwoledge about technology, leadership, science and business psychology. We are offering promotions and contributions to our platform and branding. Join our <u><a href="https://cofun.digital/academy">AI Academy</a></u> and <u><a href="https://cofun.digital/events">upcoming events</a></u> for collaborations, or reach us on <u><a href="https://www.instagram.com/co__fun/">social media</a></u>, <u><a href="https://cofun.digital/developers">slack</a></u> or <u><a href="https://cofun.digital/contact">contact form.</a></u></TextBase>
       <Heading fontFamily="gingerBold" size={["sm", "md"]} w="auto" margin={["1.5rem 0", "3rem 0 1.5rem"]} color="primary.default" textAlign="center">AI Assistant Builder</Heading>
