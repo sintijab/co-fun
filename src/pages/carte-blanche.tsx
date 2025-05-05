@@ -37,6 +37,9 @@ export default function Index() {
     <>
     <Head>
       <title>Carte Blanche to Spiders</title>
+      <meta name="og:site_name" content='Carte Blanche to Spiders' />
+      <meta name="og:description" content='Project of Carte Blanche to Spiders' />
+      <meta name="og:image" content='https://cofun.digital/spider-preview.jpg' />
     </Head>
       <TextBase textStyle="heading" lineHeight="2" alignSelf="center">
       Carte Blanche to Spiders
