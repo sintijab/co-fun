@@ -36,7 +36,7 @@ export const Project = ({ title, description, isEndorsed, formId, children, ...p
           <Flex alignItems="center" pb="0.75rem">
             <TextBase textStyle="project-title">{title}</TextBase>
           </Flex>
-          <TextBase textStyle="project-descr" mb="1rem">{description}</TextBase>
+          <TextBase textStyle="project-descr" mb="1rem" lineHeight="1.5">{description}</TextBase>
         </Box>
         <Flex direction="column" justifyContent="space-between" alignItems="flex-end" pl="1rem">
           {formId && <ModalBase content={signUp} title={'Subscribe'} button={subscribe} />}

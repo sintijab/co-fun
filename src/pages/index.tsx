@@ -1,12 +1,12 @@
-import { Box, Flex, Hero, ImpactTable, TextBase } from "@co-fun/ui";
+import { Box, Flex, Hero, ImpactTable, InitiativeOverview, Project, TextBase } from "@co-fun/ui";
 import Head from "next/head";
-import { Image } from '@chakra-ui/react';
+import { Heading, Image } from '@chakra-ui/react';
 
 export default function Index() {
 
   const args = {
     link: 'http://ai-career-assistant.cofun.digital/',
-    description: "The Europe labor market in 2024 is the tightest with unemployment in the EU falling down to lowest. It has contributed to a decline in the job vacancy rate, which is largely attributed to the overall slowdown of the European economies following the period of high inflation between 2022 and 2023.",
+    description: null,
     isFollowing: true,
   };
   return <>
@@ -107,6 +107,13 @@ export default function Index() {
           Our approach is focused on solving real-world problems with strategic analysis and domain expertise to support our clients innovate and reduce operational costs. We offer conversational chat and search automation with hybrid approach to graph and vector search algorithms in order to achieve refined data observability and maximize product capabilities.
         </TextBase>
       </Flex>
+        <InitiativeOverview {...args} border="1px solid #CCCCCC" borderRadius=".5rem" mt="1rem" isFollowing={null} p={["4rem .5rem", "3rem 2rem 2rem"]}>
+          <Flex flexDirection={["column", "column", "row"]} overflow="none" flexWrap={["wrap", "wrap", "nowrap"]}>
+            <Project title="Emerging opportunities of generative AI" description="Our work is embodied by nature with its ecological and sustainable approach. Our clients build IoT business projections with highly-performant operations aligned with social construct and impact-awareness. We explore human and machine interaction and share replicas of their assets, processes and people by simulating real situations, allowing them to build future with more informed decisions." isEndorsed={false} width="100%">
+            </Project>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/fZY8J8Y6KMM?si=YTex1ii-karn0W0n" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+          </Flex>
+        </InitiativeOverview>
     </Flex>
   </>
 }

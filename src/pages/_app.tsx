@@ -1,6 +1,6 @@
 'use client';
 
-import { Box, CoFunUiProvider, Flex, Footer, NavigationTop } from '@co-fun/ui';
+import { Box, CoFunUiProvider, Flex, Footer, NavigationTop, TextBase } from '@co-fun/ui';
 import { AppProps } from 'next/app';
 import { Provider } from 'react-redux';
 import { PersistGate } from 'redux-persist/integration/react'
@@ -185,6 +185,7 @@ export default function App({
                 }
               } />
             </Box>}
+            <TextBase textAlign="right" pr=".5rem">© 2024 Sintija Birgele</TextBase>
           {/* {isIndex && isChatVisible && <AspectRatio ratio={3 / 4} position="fixed" bottom="4rem" right={["1rem", "4rem"]} zIndex={1} display={["none", "unset"]}>
             <iframe ref={iframeWidgetDesktop} src="https://ai-career-assistant.cofun.digital/" style={{ position: 'unset', borderRadius: "1.1rem", boxShadow: '0 -3px 12px rgba(0,0,0,0.05)', width: '20rem', height: "30rem", padding: '0 .2rem .8rem .2rem', background: 'primary.white' }} />
           </AspectRatio>}
