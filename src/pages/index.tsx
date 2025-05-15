@@ -1,8 +1,8 @@
-import { Box, Flex, Heading, InitiativeOverview, Project, TextBase } from "@co-fun/ui";
+import { Box, Flex, Hero, ImpactTable, TextBase } from "@co-fun/ui";
 import Head from "next/head";
-import { Fade } from "react-awesome-reveal";
+import { Image } from '@chakra-ui/react';
 
-export default function CareerDiscover() {
+export default function Index() {
 
   const args = {
     link: 'http://ai-career-assistant.cofun.digital/',
@@ -13,131 +13,100 @@ export default function CareerDiscover() {
     <Head>
       <title>AI career discovery</title>
     </Head>
-    <Flex direction="column" margin={["0 .5rem", "1rem 10rem", "1rem 20rem 0"]} flexWrap="wrap">
-      <Flex m={["3rem .5rem .5rem", "0 2rem"]} flexWrap="wrap" maxWidth="100%">
-        <Heading margin="auto" fontFamily="gingerBold" as="h1" textStyle="project-title" mt={["1.2rem", "0"]} mb={["0", ".3rem"]}>AI Assistance in Your Career Discovery</Heading>
-        <Flex position="relative" justifySelf="center">
-          <Box width={["100%", "auto"]} maxWidth={["100%", "90%"]} margin="auto">
-            <Fade duration={400}>
-              <img src="./preview_bot2.jpg" alt="web-crawler" />
-            </Fade>
-          </Box>
-          <Box position="absolute" bottom="0" left="0" right="0" margin="auto" color="primary.white" width="100%">
-            <a href={args.link} style={{ display: "block" }}><TextBase textAlign="center" textStyle="project-title" pb="0.5rem" textDecoration="underline">Chat with our AI Agent to make your dream career</TextBase></a>
-          </Box>
-        </Flex>
-        <InitiativeOverview {...args} border="1px solid #CCCCCC" borderRadius=".5rem" mt="1rem" isFollowing={null} p={["4rem .5rem", "3rem 2rem 2rem"]}>
-          <Heading fontFamily="gingerBold" as="h4" size="sm" w="auto" margin="0" marginBottom="2rem" color="primary.default">
-            How to naturally overcome fear of a career change?
-          </Heading>
-          <Flex flexDirection={["column", "column", "row"]} overflow="none" flexWrap={["wrap", "wrap", "nowrap"]}>
-            <Project title="Career Discovery with AI recruiter" description="The sudden emergence of remote work during the pandemic has become a fixture of work life in many European countries. As many as half the world's employees (52%) were looking for a new job in 2024, and yet navigating through job offers online often is comparable with archival work. The AI assistants overlooking recruitment platforms enables personalized job search and recommendations with AI." isEndorsed={false} width="100%" formId="https://co-fun.us9.list-manage.com/subscribe/post?u=afdf41c218cb20406a176006b&amp;id=5656180439&amp;f_id=00a056e1f0">
-            </Project>
-          </Flex>
-        </InitiativeOverview>
+    <Hero {
+      ...{
+        heading: <><TextBase color="primary.green" textStyle="hero-h1">power</TextBase><TextBase color={["primary.white", "primary.default"]} textStyle="hero-h2" pl=".8rem">of</TextBase><br /><TextBase color="primary.default" display={["none", "block"]} textStyle="hero-h1">intelligence</TextBase><TextBase color="primary.white" display={["block", "none"]} textStyle="hero-h1">co-creation</TextBase></>,
+        subheading: <><TextBase textStyle="hero-h2" ml="1rem" color="primary.white">accelerating impact</TextBase><br /><TextBase color="primary.white" textStyle="hero-h1">in co-creation</TextBase></>,
+        link: {
+          label: 'Get started',
+          href: '/explore'
+        },
+        image: '/weissensee.png',
+      }
+    } />
+    <Flex direction="column" margin="auto" flexWrap="wrap" maxWidth="100%">
+      <Flex justifyContent="center" alignItems="center" p=".5rem" display={["flex", "flex"]} m="0 0 3rem">
+        <TextBase textStyle="project-title" textAlign="center">
+          CO-FUN enhances capabilities of AI Agents by human insight and collaboration. We envision a world where AI seamlessly integrates into daily business operations with human-like interactions and natural language.
+        </TextBase>
       </Flex>
-      <Flex justifyContent="center">
-        <Box>
-          <TextBase textStyle="activity-title" pt={["1rem", ".5rem"]} pb={["1rem", "2.5rem"]} textAlign="center">Our trusted partners</TextBase>
-          <Flex justifyContent="center" alignSelf="center">
-            <Box width={["3rem", "4rem"]} borderRadius="2rem" overflow="hidden">
-              <a href="https://openai.com/" target="_blank"><img src="./open-ai.png" loading="lazy" /></a>
-            </Box>
-            <Box width={["3rem", "4rem"]} borderRadius="1rem" overflow="hidden">
-              <a href="https://puter.com/" target="_blank"><img src="./puter.png" loading="lazy" /></a>
-            </Box>
-            <Box width={["3rem", "5rem"]} borderRadius="2rem" overflow="hidden">
-              <a href="https://render.com/" target="_blank"><img src="./render.png" loading="lazy" /></a>
-            </Box>
-            <Box width={["3rem", "5rem"]} borderRadius="2rem" overflow="hidden">
-              <a href="https://aws.amazon.com/" target="_blank"><img src="./aws.png" loading="lazy" /></a>
-            </Box>
-            <Box width={["3rem", "5rem"]} borderRadius="2rem" overflow="hidden">
-              <a href="https://ploomber.io/" target="_blank"><img src="./ploomber.png" loading="lazy" /></a>
-            </Box>
-          </Flex>
+      <Flex justifyContent="center" alignItems="center" p="1rem" display={["flex", "flex"]} m="0 0 3rem" flexWrap="wrap">
+        <Box width={["100%", "33%"]} p=".5rem">
+          <TextBase textStyle='project-list-title'>Infrastructure for AI chat workflows</TextBase>
+          <TextBase textStyle='project-list-descr'>Designing and optimizing cloud-native infrastructure to support high-performance conversational agents—ensuring low latency, high availability, and cost efficiency at scale.
+          </TextBase>
         </Box>
-        <Box>
-          <TextBase textStyle="activity-title" pt={["1rem", ".5rem"]} pb={["1rem", "2.5rem"]} textAlign="center">Job platforms</TextBase>
-          <Flex justifyContent="center" alignSelf="center">
-            <Box width={["3rem", "4rem"]} borderRadius="2rem" overflow="hidden">
-              <a href="https://www.computerfutures.com/" target="_blank"><img src="./computerfutures.jpeg" loading="lazy" /></a>
-            </Box>
-          </Flex>
+        <Box width={["100%", "33%"]} p=".5rem">
+          <TextBase textStyle='project-list-title'>Simulating real conversations</TextBase>
+          <TextBase textStyle='project-list-descr'>Building modular, AI-native chat systems that integrate seamlessly with enterprise platforms to enable real-time responsiveness and long-term extensibility.</TextBase>
+        </Box>
+        <Box width={["100%", "33%"]} p=".5rem">
+          <TextBase textStyle='project-list-title'>Securing digital assets</TextBase>
+          <TextBase textStyle='project-list-descr'>Designing a framework that safeguard data, manage access, and support secure integration across sensitive applications.</TextBase>
+        </Box>
+        <Box width={["100%", "33%"]} p=".5rem">
+          <TextBase textStyle='project-list-title'>Deploying and iterating chat workflows</TextBase>
+          <TextBase textStyle='project-list-descr'>Launching, testing, and refining AI chat experiences through streamlined pipelines and adaptive tooling to accelerate time to value.</TextBase>
+        </Box>
+        <Box width={["100%", "33%"]} p=".5rem">
+          <TextBase textStyle='project-list-title'>Integrating smart tools and APIs</TextBase>
+          <TextBase textStyle='project-list-descr'>Selecting and connecting the most effective AI models, APIs, and orchestration layers to deliver scalable, domain-specific conversational solutions.</TextBase>
+        </Box>
+        <Box width={["100%", "33%"]} p=".5rem">
+          <TextBase textStyle='project-list-title'>Analyzing and improving chat performance</TextBase>
+          <TextBase textStyle='project-list-descr'>Capturing and interpreting interaction data to optimize AI agent behavior, enhance user experience, and create feedback loops for continuous improvement.</TextBase>
         </Box>
       </Flex>
-    </Flex>
-    <Flex alignItems="center" flexDirection="column" mt="2rem">
-      <Heading textAlign="center" fontFamily="gingerBold" as="h1" textStyle="project-title" mt={["1.2rem", "0"]} mb={["0", ".3rem"]}>First AI recruiter that <u>understands</u> you</Heading>
-      <TextBase textStyle="activity-title" color="#7e00ff" pt={["1rem", ".5rem"]} pb="1rem" textAlign="center">
-        & encourages you to <u>tame higher</u>
-      </TextBase>
-    </Flex>
-    <Flex flexWrap="wrap" justifyContent="center">
-      <Box width={["100%", "49%"]} borderRadius="2rem" overflow="hidden" margin=".5rem .3rem" position="relative">
-        <Heading fontFamily="gingerBold" position="absolute" textStyle="project-title" top="50%" margin="auto" left="10%" mb={["0", ".3rem"]}>Ready where you need</Heading>
-        <img src="./career-bot-1.jpg" alt="career bot" loading="lazy" />
-      </Box>
-      <Box width={["100%", "40%"]} borderRadius="2rem" overflow="hidden" margin=".5rem .3rem" position="relative">
-        <Heading fontFamily="gingerBold" position="absolute" textStyle="project-title" bottom="20%" margin="auto" left="5%" mb={["0", ".3rem"]}>Learns & grows <u>with you</u></Heading>
-        <img src="./career-bot-2.jpg" alt="career bot" loading="lazy" />
-      </Box>
-      <Box width={["100%", "49%"]} h={["auto", "40%"]} borderRadius="2rem" overflow="hidden" margin=".5rem .3rem" position="relative">
-        <Heading fontFamily="gingerBold" position="absolute" textStyle="project-title" top="20%" margin="auto" left="5%" mb={["0", ".3rem"]}>Reflects & discovers <u>best</u> offers</Heading>
-        <img src="./career-bot-3.jpg" alt="career bot" loading="lazy" />
-      </Box>
-      <Box width={["100%", "40%"]} borderRadius="2rem" overflow="hidden" margin=".5rem .3rem" position="relative">
-        <Heading fontFamily="gingerBold" position="absolute" textStyle="project-title" bottom="20%" margin="auto" right="5%" mb={["0", ".3rem"]}>Forwards <u>call to action</u></Heading>
-        <img src="./career-bot-04.jpg" alt="career bot" loading="lazy" />
-      </Box>
-    </Flex>
-    <Box>
-      <Flex direction="column" margin={["3rem .5rem", "5rem 10rem", "5rem 20rem 0"]} flexWrap="wrap">
-        <Heading textAlign="center" fontFamily="gingerBold" textStyle="project-title" mt={["1.2rem", "0"]} mb={["0", ".3rem"]}>Why should professionals explore their career options</Heading>
-        <TextBase textStyle="activity-title" pt={["1rem", ".5rem"]} pb={["1rem", "2.5rem"]} textAlign="center">
-          & how it impacts entrepreneurship?
-        </TextBase>
-        <TextBase textStyle="initiative-descr" lineHeight={["1.5", "2"]} mb="1rem">
-          Reflecting on your actions and learning from them sounds simple, but it's almost impossible. This theory is based on idea of a <a href="https://cofun.digital/optimization"><u>'second-order' observation</u></a>. Where does it lead?
-        </TextBase>
-        <TextBase textStyle="initiative-descr" lineHeight={["1.5", "2"]}>
-          Risking economic certainty and security
-        </TextBase>
-        <TextBase textStyle="project-descr" lineHeight="2" p=".5rem 0">
-          55% of employees expressed a desire to change jobs in Germany , but this willingness has declined reducing also the professional growth to secure the future position and increase to desired level of income.
-        </TextBase>
-        <TextBase textStyle="initiative-descr" lineHeight={["1.5", "2"]}>
-          Fear of stepping out of comfort zone
-        </TextBase>
-        <TextBase textStyle="project-descr" lineHeight="2" p=".5rem 0">
-          A UK survey revealed that 64% of employees who regretted at least one past job changes are now more cautious and reserved about seeking new opportunities, fearing sacrifices in work-life balance and flexibility.
-        </TextBase>
-        <TextBase textStyle="initiative-descr" lineHeight={["1.5", "2"]}>
-          "Job lock"
-        </TextBase>
-        <TextBase textStyle="project-descr" lineHeight="2" p=".5rem 0">
-          The phenomenon of "job lock" occurs when employees feel unable to leave their jobs because doing so would result in the loss of crucial benefits, such as health insurance or retirement plans.
-        </TextBase>
-        <TextBase textStyle="initiative-descr" lineHeight={["1.5", "2"]}>
-          Staying agile
-        </TextBase>
-        <TextBase textStyle="project-descr" lineHeight="2" p=".5rem 0">
-          Insufficient career exploration can result in a limited view on industry dynamics. Slowing down on career goals and lack of interpersonal skills that comes from engagement and networking might block entrepreneurs in their business planning and risk management.
-        </TextBase>
-        <TextBase textStyle="initiative-descr" lineHeight={["1.5", "2"]}>
-          Impact on career progression
-        </TextBase>
-        <TextBase textStyle="project-descr" lineHeight="2" p=".5rem 0">
-          "Resenteeism" refers to employees staying in unfulfilling jobs due to perceived risks associated with changing employment, which in longer term can lead to decreased performance, hindering both personal and organizational growth.
+      <Flex justifyContent="center" alignItems="center" p=".5rem" display={["flex", "flex"]} m="0 0 3rem">
+        <TextBase textStyle="project-title">
+          It unlocks competitive advantage enabling focus on strategic growth and user experience.
         </TextBase>
       </Flex>
-    </Box>
-    <Flex background="button.action" color="primary.white" padding={[".5rem .5rem", "1rem 10rem", "1rem 20rem 0"]} alignItems="center" flexDirection={["column", "row"]}>
-      <TextBase textStyle="activity-title" lineHeight={["1.5", "2"]} mb="1rem" width={["100%", "60%"]}>
-        Would you risk your job for most passionate and ambitious goals if you knew that career after one or two startup failures brings you the most exciting business and relationships in your lifetime?
-      </TextBase>
-      <a href="http://ai-career-assistant.cofun.digital/"><Heading fontFamily="gingerBold" textStyle="project-title" pb="0.5rem" textDecoration="underline">Start your best chapter NOW</Heading></a>
+      <Flex justifyContent="center" alignItems="center" p=".5rem" display={["flex", "flex"]} m="0 0 3rem" flexDirection="column">
+        <Box p=".5rem">
+          <TextBase color="primary.default" textStyle="hero-h2">A single-founder workforce –</TextBase>
+        </Box>
+        <Box p=".5rem">
+          <TextBase color="primary.green" textStyle="hero-h2">Challenges and opportunities for growth</TextBase>
+        </Box>
+      </Flex>
+      <Flex m="0 0 3rem" flexWrap="wrap" justifyContent="space-around">
+        <Box width={["100%", "33%"]} p="0 1rem" mb="1rem" textAlign="center">
+          <Image src="clock.png" w="5rem" h="5rem" margin="auto" />
+          <TextBase textStyle='project-list-title'>Manual Processes</TextBase>
+          <TextBase textStyle='project-list-descr'>Businesses struggle with time-consuming manual operations that hinder productivity and efficiency.</TextBase>
+        </Box>
+        <Box width={["100%", "33%"]} p="0 1rem" mb="1rem" textAlign="center">
+          <Image src="data.png" w="4.6rem" h="4.6rem" margin="auto" />
+          <TextBase textStyle='project-list-title'>Data Analysis</TextBase>
+          <TextBase textStyle='project-list-descr'>Companies face challenges in managing and analyzing vast amounts of data effectively.</TextBase>
+        </Box>
+        <Box width={["100%", "33%"]} p="0 1rem" mb="1rem" textAlign="center">
+          <Image src="exchange.png" w="4.5rem" h="4.5rem" margin="auto" />
+          <TextBase textStyle='project-list-title'>Point Of Access</TextBase>
+          <TextBase textStyle='project-list-descr'>Lack of seamless integration with existing systems leads to operational inefficiencies.</TextBase>
+        </Box>
+      </Flex>
+      <ImpactTable />
+      <Flex justifyContent="center" alignItems="center" p=".5rem" display={["flex", "flex"]} m="0 0 3rem" flexDirection="column">
+        <Box p=".5rem">
+          <TextBase color="primary.default" textStyle="hero-h2" pr=".5rem"> when we build </TextBase>
+          <TextBase color="primary.green" textStyle="hero-h2">with</TextBase>
+          <TextBase color="primary.default" textStyle="hero-h2" pl={["0", ".5rem"]}> clients, not for them</TextBase>
+        </Box>
+        <Box p=".5rem">
+          <TextBase color="primary.default" textStyle="hero-h2" pr=".5rem">we deliver</TextBase>
+          <TextBase color="primary.green" textStyle="hero-h2">lasting impact</TextBase>
+        </Box>
+      </Flex>
+      <Flex justifyContent="center" alignItems="center" textAlign="center" lineHeight="2" display={["flex", "flex"]} m="0 0 3rem" flexDirection="column">
+        <TextBase textStyle="project-title" w={["90%", "50%"]} mb="1rem">
+          We offer business founders to double their teams by exceling digital transformation with cutting-edge AI solutions.
+        </TextBase>
+        <TextBase textStyle='project-list-descr' w={["90%", "50%"]} >
+          Our approach is focused on solving real-world problems with strategic analysis and domain expertise to support our clients innovate and reduce operational costs. We offer conversational chat and search automation with hybrid approach to graph and vector search algorithms in order to achieve refined data observability and maximize product capabilities.
+        </TextBase>
+      </Flex>
     </Flex>
-
   </>
 }

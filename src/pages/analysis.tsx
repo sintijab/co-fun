@@ -59,7 +59,7 @@ export default function Index() {
       <TextBase textStyle="project-descr" lineHeight="2" p=".5rem 0">
         If you can't do something, you have to work at it.
       </TextBase>
-      <Link href="https://cofun.digital/community" variant="action">Sign Me Up</Link>
+      <Link href="https://cofun.digital/home" variant="action">Sign Me Up</Link>
       <iframe src="https://docs.google.com/presentation/d/e/2PACX-1vSouyFuM3DKeKRtupxk2GYhq4BDAM3EIzEpNkN1hDCr4PTPVuICklBdGMmrXGZofrKXanhMDPd5-EQV/embed?start=false&loop=false&delayms=3000" frameBorder="0" width="1440" height="839"></iframe>
       <iframe width="560" height="615" src="https://www.youtube.com/embed/44gUAM5yz0o?si=p5UbWcSQ3T0onWZB" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen></iframe>
       <iframe width="560" height="615" src="https://www.youtube.com/embed/BgCkt7uma3k?si=yW6FECki-agPNwu6" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen></iframe>

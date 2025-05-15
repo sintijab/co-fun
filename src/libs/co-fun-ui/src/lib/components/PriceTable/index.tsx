@@ -21,8 +21,7 @@ const PricingTable = () => {
     {
       title: "Business",
       label: 'most popular',
-      price: 300,
-      secondPrice: 360,
+      price: 'Contact Us',
       features: [
         "Creators features plus:",
         "Weekly AI courses",
