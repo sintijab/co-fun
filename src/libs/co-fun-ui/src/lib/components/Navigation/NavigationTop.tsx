@@ -10,6 +10,9 @@ export const NavigationTop = ({ links }: { links: { label: string; href: string,
   const url = router.asPath;
   const isIndex = url === '/';
   const isHome = url.includes('/home')
+  if (isIndex) {
+    return <Flex justifyContent='flex-start' alignItems='left' top={["0", "unset"]} right={["0", "unset"]} position={["fixed", "fixed"]} direction={["row", "row"]} p={['.5rem', '1.5rem 1.8rem']} zIndex={1} width={["100%"]}><Logo pl={["36px", "unset"]} margin="auto" height={["15px", "17px"]} /></Flex>
+  }
   return (
     <Flex justifyContent='space-between' alignItems='center' top={["0", "unset"]} right={["0", "unset"]} position={["fixed", "unset"]} direction={["row", "row"]} p={['.5rem', '1.5rem 1.8rem']} boxShadow='0 3px 2px -2px rgba(32, 33, 36, 0.1)' zIndex={1} width={["100%"]}>
       <Box display={["flex", "inline-block"]} margin={["auto", "unset"]} pl={["36px", ".7rem"]}>

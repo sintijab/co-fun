@@ -54,10 +54,6 @@ export default function Index() {
         ...{
           heading: <><TextBase color="primary.green" textStyle="hero-h1">plan your business</TextBase><TextBase color="primary.default" textStyle="hero-h2" pl=".8rem">with</TextBase><br /><TextBase color="primary.default" textStyle="hero-h1">AI and automation</TextBase></>,
           subheading: <><TextBase color="primary.default" textStyle="hero-h2" ml="1rem">funding and growth</TextBase><br /><TextBase color="primary.white" textStyle="hero-h1">in co-creation</TextBase></>,
-          link: {
-            label: 'Get started',
-            href: '/explore'
-          },
           image: '/treetop_walk rugen.avif'
         }
       } />
