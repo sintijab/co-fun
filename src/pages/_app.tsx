@@ -20,7 +20,7 @@ export default function App({
   const iframeWidgetDesktop = useRef(null);
   const isChat = router.asPath.includes('chat');
   const isIndex = router.asPath === '/';
-  const isFullLayout = router.asPath.includes('/explore') || router.asPath.includes('/academy') || router.asPath.includes('/trends') || isIndex || isChat || router.asPath === '/home' || router.asPath.includes('/home#');;
+  const isFullLayout = router.asPath.includes('/explore') || router.asPath.includes('/academy') || router.asPath.includes('/trends') || isIndex || isChat || router.asPath === '/home' || router.asPath.includes('/home#') || router.asPath.includes('/career-discovery');
 
   useEffect(() => {
     const healthCheck = async () => {
