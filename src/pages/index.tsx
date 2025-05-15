@@ -111,7 +111,7 @@ export default function Index() {
           <Flex flexDirection={["column", "column", "row"]} overflow="none" flexWrap={["wrap", "wrap", "nowrap"]}>
             <Project title="Emerging opportunities of generative AI" description="Our work is embodied by nature with its ecological and sustainable approach. Our clients build IoT business projections with highly-performant operations aligned with social construct and impact-awareness. We explore human and machine interaction and share replicas of their assets, processes and people by simulating real situations, allowing them to build future with more informed decisions." isEndorsed={false} width="100%">
             </Project>
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/fZY8J8Y6KMM?si=YTex1ii-karn0W0n" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/fZY8J8Y6KMM?si=YTex1ii-karn0W0n" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen></iframe>
           </Flex>
         </InitiativeOverview>
     </Flex>

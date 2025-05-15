@@ -2,7 +2,7 @@ import { Flex, FlexProps} from "@chakra-ui/react";
 import { ButtonPrimary, TextBase, UserAddIcon } from "../../foundations";
 import { Image } from '@chakra-ui/react';
 
-export const InitiativeOverview = ({ title, link, description, author, isFollowing, profile, children, ...props }: { title?: string; link?: string, description?: string; author?: string, profile?: string, isFollowing: boolean | null;} & FlexProps) => (
+export const InitiativeOverview = ({ title, link, description, author, isFollowing, profile, children, ...props }: { title?: string; link?: string, description?: string | null; author?: string, profile?: string, isFollowing: boolean | null;} & FlexProps) => (
   <Flex p="4rem" flexWrap="wrap" width="100%" {...props}>
     <Flex justifyContent="space-between" flexBasis="100%">
       {!link && !!title && <TextBase textStyle="project-title" pb="0.5rem">{title}</TextBase>}
