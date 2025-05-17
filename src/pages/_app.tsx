@@ -1,6 +1,6 @@
 'use client';
 
-import { Box, CoFunUiProvider, Flex, Footer, NavigationTop, TextBase } from '@co-fun/ui';
+import { Box, CoFunUiProvider, Flex, Footer, LipsIcon, NavigationTop, TextBase } from '@co-fun/ui';
 import { AppProps } from 'next/app';
 import { Provider } from 'react-redux';
 import { PersistGate } from 'redux-persist/integration/react'
@@ -186,17 +186,17 @@ export default function App({
               } />
             </Box>}
             <TextBase textAlign="right" pr=".5rem">© 2024 Sintija Birgele</TextBase>
-          {/* {isIndex && isChatVisible && <AspectRatio ratio={3 / 4} position="fixed" bottom="4rem" right={["1rem", "4rem"]} zIndex={1} display={["none", "unset"]}>
-            <iframe ref={iframeWidgetDesktop} src="https://ai-career-assistant.cofun.digital/" style={{ position: 'unset', borderRadius: "1.1rem", boxShadow: '0 -3px 12px rgba(0,0,0,0.05)', width: '20rem', height: "30rem", padding: '0 .2rem .8rem .2rem', background: 'primary.white' }} />
+          {isIndex && isChatVisible && <AspectRatio ratio={3 / 4} position="fixed" bottom="4rem" right={["1rem", "4rem"]} zIndex={1} display={["none", "unset"]}>
+            <iframe ref={iframeWidgetDesktop} src="https://sound-master-chat.onrender.com/" style={{ position: 'unset', borderRadius: "1.1rem", boxShadow: '0 -3px 12px rgba(0,0,0,0.05)', width: '20rem', height: "30rem", padding: '0 .2rem .8rem .2rem', background: 'primary.white' }} />
           </AspectRatio>}
           {isIndex && isChatVisible && <AspectRatio ratio={3 / 4} position="fixed" bottom="4rem" right={["1rem", "4rem"]} zIndex={1} display={["unset", "none"]}>
-            <iframe src="https://ai-career-assistant.cofun.digital/" style={{ position: 'unset', borderRadius: "1.1rem", boxShadow: '0 -3px 12px rgba(0,0,0,0.05)', width: '20rem', height: "30rem", padding: '0 .2rem .8rem .2rem', background: 'primary.white' }} />
+            <iframe src="https://sound-master-chat.onrender.com/" style={{ position: 'unset', borderRadius: "1.1rem", boxShadow: '0 -3px 12px rgba(0,0,0,0.05)', width: '20rem', height: "30rem", padding: '0 .2rem .8rem .2rem', background: 'primary.white' }} />
           </AspectRatio>}
           {isIndex && <Box background='primary.white' onClick={() => toggleWidget(isChatVisible === null ? true : !isChatVisible)} cursor="pointer" position="fixed" bottom="1rem" right={["1rem", "2rem"]} zIndex={10} boxShadow='0 -3px 12px rgba(0,0,0,0.1)' borderRadius="1.7rem">
-            <img src="career.png" width={60} height={60} />
+            <LipsIcon width="60px" height="60px" />
             {isChatVisible === null && <Box position="absolute" bottom="-1px" right="0px" width=".85rem" height=".85rem" borderRadius="50%" background="button.action" color="white" fontSize="10pt" display={["none", "unset"]} />}
             {isChatVisible && <Box position="absolute" bottom="-1px" right="0px" width=".85rem" height=".85rem" borderRadius="50%" background="button.action" color="white" fontSize="10pt" display={["unset", "none"]} />}
-          </Box>} */}
+          </Box>}
         </CoFunUiProvider>
       </PersistGate>
     </Provider>
