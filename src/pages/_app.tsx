@@ -194,8 +194,8 @@ export default function App({
           </AspectRatio>}
           {isIndex && <Box background='primary.white' onClick={() => toggleWidget(isChatVisible === null ? true : !isChatVisible)} cursor="pointer" position="fixed" bottom="1rem" right={["1rem", "2rem"]} zIndex={10} boxShadow='0 -3px 12px rgba(0,0,0,0.1)' borderRadius="1.7rem">
             <LipsIcon width="60px" height="60px" />
-            {isChatVisible === null && <Box position="absolute" bottom="-1px" right="0px" width=".85rem" height=".85rem" borderRadius="50%" background="button.action" color="white" fontSize="10pt" display={["none", "unset"]} />}
-            {isChatVisible && <Box position="absolute" bottom="-1px" right="0px" width=".85rem" height=".85rem" borderRadius="50%" background="button.action" color="white" fontSize="10pt" display={["unset", "none"]} />}
+            {isChatVisible === null && <Box position="absolute" bottom="-1px" right="0px" width=".75rem" height=".75rem" borderRadius="50%" background="#bd2e95" color="white" fontSize="10pt" display={["none", "unset"]} />}
+            {isChatVisible && <Box position="absolute" bottom="-1px" right="0px" width=".75rem" height=".75rem" borderRadius="50%" background="#bd2e95" color="white" fontSize="10pt" display={["unset", "none"]} />}
           </Box>}
         </CoFunUiProvider>
       </PersistGate>
