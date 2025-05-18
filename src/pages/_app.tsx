@@ -194,7 +194,7 @@ export default function App({
             <iframe src="./chat-general" style={{ position: 'unset', borderRadius: "1.1rem", boxShadow: '0 -3px 12px rgba(0,0,0,0.05)', width: '20rem', height: "30rem", padding: '0 .2rem .8rem .2rem', background: 'primary.white' }} />
           </AspectRatio>}
           {isIndex && <Box background='primary.white' onClick={() => toggleWidget(isChatVisible === null ? true : !isChatVisible)} cursor="pointer" position="fixed" bottom="1rem" right={["1rem", "2rem"]} zIndex={10} boxShadow='0 -3px 12px rgba(0,0,0,0.1)' borderRadius="1.7rem">
-            <Image src="./assistant_logo.png" width="45px" height="45px" />
+            <Image src="./assistant_logo.png" maxWidth="45px" width="45px" height="45px" />
             {isChatVisible === null && <Box position="absolute" bottom="-1px" right="0px" width=".75rem" height=".75rem" borderRadius="50%" background="#bd2e95" color="white" fontSize="10pt" display={["none", "unset"]} />}
             {isChatVisible && <Box position="absolute" bottom="-1px" right="0px" width=".75rem" height=".75rem" borderRadius="50%" background="#bd2e95" color="white" fontSize="10pt" display={["unset", "none"]} />}
           </Box>}

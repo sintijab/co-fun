@@ -44,7 +44,7 @@ export default function Chat() {
     title: 'AI Assistant in Q&A',
     category: 'Discovery & Analytics',
     time: '1 min',
-    image: <Avatar src="./assistant_logo.png" h="2.5rem" w="2.5rem" p=".3rem" borderRadius="50%" border="1px" mr=".75rem" />,
+    image: <Avatar src="./assistant_logo.png" h="2.5rem" w="2.5rem" p=".3rem" maxWidth="2.5rem" borderRadius="50%" border="1px" mr=".75rem" />,
     isActive: true
   };
   
@@ -52,6 +52,6 @@ export default function Chat() {
     return <Loader />
   }
   return (<>
-    <AIAssistantChat onClickSuggestion={onClickSuggestion} suggestions={suggestions} history={messages} onSubmit={(data) => onSubmit(data as string)} image={<Avatar src="./assistant_logo.png" h="2.5rem" w="2.5rem" p=".1rem" borderRadius="50%" m="0 .5rem 0 0" />} conversations={[conversation]} title={"AI Assistant in Q&A"} disabled={Array.isArray(suggestions) && !!suggestions.length || chatCompleted} />
+    <AIAssistantChat onClickSuggestion={onClickSuggestion} suggestions={suggestions} history={messages} onSubmit={(data) => onSubmit(data as string)} image={<Avatar src="./assistant_logo.png" h="2.5rem" w="2.5rem" maxWidth="2.5rem" p=".1rem" borderRadius="50%" m="0 .5rem 0 0" />} conversations={[conversation]} title={"AI Assistant in Q&A"} disabled={Array.isArray(suggestions) && !!suggestions.length || chatCompleted} />
   </>)
 }
