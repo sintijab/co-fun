@@ -9,7 +9,7 @@ export default function Index() {
         <title>Product roadmap for 2025</title>
       </Head>
       <TextBase textStyle="heading" lineHeight="2" alignSelf="center">
-        Product roadmap in 2025
+        Products
       </TextBase>
       <TextBase textStyle="initiative-descr" lineHeight={["1.5", "2"]}>
         We are excited about this new pathway of researching, networking and re-learning to make AI Agents "better version of ourselves" one chat at the time. It's a state of an art mastering to find the right questions instead of just looking for an answer.
