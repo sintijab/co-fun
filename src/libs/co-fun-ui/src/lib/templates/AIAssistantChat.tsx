@@ -5,7 +5,7 @@ import { IConversationsList } from "../components/Chat/ConversationsList";
 import { IMessages } from "../components/Chat/Messages";
 import { INavigationBase } from "../components/Navigation/NavigationSide";
 
-export const AIAssistantChat = ({ author, image, history, title, suggestions = [], onSubmit, onClickSuggestion, disabled, children }: IConversationsList & IMessages & { disabled: boolean, links?: INavigationBase[] } & { suggestions?: { answer: string }[]} & { onSubmit: (data: string) => void; onClickSuggestion?: (i: number) => void } & FlexProps) => {
+export const AIAssistantChat = ({ author, image, history, title, suggestions = [], onSubmit, onClickSuggestion, disabled, children }: IConversationsList & IMessages & { disabled: boolean, links?: INavigationBase[]} & { suggestions?: { answer: string }[]} & { onSubmit: (data: string) => void; onClickSuggestion?: (i: number) => void } & FlexProps) => {
   return ( 
   <>
     <Box width="100%" bg="primary.white" position="fixed" zIndex="10">

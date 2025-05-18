@@ -4,7 +4,7 @@ import { AvatarIcon, TextBase } from "../../foundations";
 import { useEffect, useRef } from "react";
 
 type IMessage = { response: string; widget?: any; author?: string }
-export type IMessages = { author?: string; image?: string | React.ReactNode; history?: IMessage[]; title: string; children: any; } & FlexProps;
+export type IMessages = { author?: string; image?: string | React.ReactNode; history?: IMessage[]; title: string; children?: any; } & FlexProps;
 
 export const Messages = ({ author, image, history, children, ...props }: IMessages) => {
   const messageRef = useRef<HTMLDivElement>(null);

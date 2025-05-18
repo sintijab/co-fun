@@ -1,5 +1,5 @@
-import { Box, Carousel, Flex, Heading, InitiativeOverview, Link, Loader, ModalBase, Project, TextBase, WordCloud } from "@co-fun/ui";
-import { useEffect } from "react";
+import { Box, Carousel, Flex, Heading, InitiativeOverview, Link, LipsIcon, Loader, ModalBase, Project, TextBase, WordCloud } from "@co-fun/ui";
+import { useEffect, useRef, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { AppDispatch } from "../store";
 import { getTrends, selectTrends, trendsSlice } from "../slices/getTrends";
@@ -16,10 +16,13 @@ import { TempoComplexityContext } from "../components/charts/TempoComplexityCont
 import { generateColorPalettes } from '../components/utils/p5_utils';
 import dynamic from "next/dynamic";
 import Head from "next/head";
+import { AspectRatio } from "@chakra-ui/react";
 const Sketch = dynamic(() => import('@co-fun/ui').then((data) => data.Sketch), {ssr: false});
 
 
 export default function Trends() {
+  const [isChatVisible, toggleWidget] = useState<boolean | null>(null);
+  const iframeWidgetDesktop = useRef(null);
   const trendsList = useSelector(selectTrends);
   const dispatch = useDispatch<AppDispatch>();
   useEffect(() => {
@@ -122,5 +125,16 @@ export default function Trends() {
           </Project>
         </InitiativeOverview>
       </Flex>
+      {isChatVisible && <AspectRatio ratio={3 / 4} position="fixed" bottom="4rem" right={["1rem", "4rem"]} zIndex={1} display={["none", "unset"]}>
+        <iframe ref={iframeWidgetDesktop} src="https://sound-master-chat.onrender.com/" style={{ position: 'unset', borderRadius: "1.1rem", boxShadow: '0 -3px 12px rgba(0,0,0,0.05)', width: '20rem', height: "30rem", padding: '0 .2rem .8rem .2rem', background: 'primary.white' }} />
+      </AspectRatio>}
+      {isChatVisible && <AspectRatio ratio={3 / 4} position="fixed" bottom="4rem" right={["1rem", "4rem"]} zIndex={1} display={["unset", "none"]}>
+        <iframe src="https://sound-master-chat.onrender.com/" style={{ position: 'unset', borderRadius: "1.1rem", boxShadow: '0 -3px 12px rgba(0,0,0,0.05)', width: '20rem', height: "30rem", padding: '0 .2rem .8rem .2rem', background: 'primary.white' }} />
+      </AspectRatio>}
+      {<Box background='primary.white' onClick={() => toggleWidget(isChatVisible === null ? true : !isChatVisible)} cursor="pointer" position="fixed" bottom="1rem" right={["1rem", "2rem"]} zIndex={10} boxShadow='0 -3px 12px rgba(0,0,0,0.1)' borderRadius="1.7rem">
+        <LipsIcon width="60px" height="60px" />
+        {isChatVisible === null && <Box position="absolute" bottom="-1px" right="0px" width=".75rem" height=".75rem" borderRadius="50%" background="#bd2e95" color="white" fontSize="10pt" display={["none", "unset"]} />}
+        {isChatVisible && <Box position="absolute" bottom="-1px" right="0px" width=".75rem" height=".75rem" borderRadius="50%" background="#bd2e95" color="white" fontSize="10pt" display={["unset", "none"]} />}
+      </Box>}
   </>
 }
