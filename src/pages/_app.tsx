@@ -9,7 +9,8 @@ import { store, persistor } from '../store';
 import { useRouter } from 'next/router';
 import Head from 'next/head';
 import { AspectRatio } from '@chakra-ui/react';
-import { useRef, useState, useEffect } from 'react';
+import { useRef, useState } from 'react';
+import { Image } from '@chakra-ui/react';
 
 export default function App({
   Component,
@@ -185,15 +186,15 @@ export default function App({
                 }
               } />
             </Box>}
-            <TextBase textAlign="right" pr=".5rem">© 2024 Sintija Birgele</TextBase>
+            {!isChat && <TextBase textAlign="right" pr=".5rem">© 2024 Sintija Birgele</TextBase>}
           {isIndex && isChatVisible && <AspectRatio ratio={3 / 4} position="fixed" bottom="4rem" right={["1rem", "4rem"]} zIndex={1} display={["none", "unset"]}>
-            <iframe ref={iframeWidgetDesktop} src="https://sound-master-chat.onrender.com/" style={{ position: 'unset', borderRadius: "1.1rem", boxShadow: '0 -3px 12px rgba(0,0,0,0.05)', width: '20rem', height: "30rem", padding: '0 .2rem .8rem .2rem', background: 'primary.white' }} />
+            <iframe ref={iframeWidgetDesktop} src="./chat-general" style={{ position: 'unset', borderRadius: "1.1rem", boxShadow: '0 -3px 12px rgba(0,0,0,0.05)', width: '20rem', height: "30rem", padding: '0 .2rem .8rem .2rem', background: 'primary.white' }} />
           </AspectRatio>}
           {isIndex && isChatVisible && <AspectRatio ratio={3 / 4} position="fixed" bottom="4rem" right={["1rem", "4rem"]} zIndex={1} display={["unset", "none"]}>
-            <iframe src="https://sound-master-chat.onrender.com/" style={{ position: 'unset', borderRadius: "1.1rem", boxShadow: '0 -3px 12px rgba(0,0,0,0.05)', width: '20rem', height: "30rem", padding: '0 .2rem .8rem .2rem', background: 'primary.white' }} />
+            <iframe src="./chat-general" style={{ position: 'unset', borderRadius: "1.1rem", boxShadow: '0 -3px 12px rgba(0,0,0,0.05)', width: '20rem', height: "30rem", padding: '0 .2rem .8rem .2rem', background: 'primary.white' }} />
           </AspectRatio>}
           {isIndex && <Box background='primary.white' onClick={() => toggleWidget(isChatVisible === null ? true : !isChatVisible)} cursor="pointer" position="fixed" bottom="1rem" right={["1rem", "2rem"]} zIndex={10} boxShadow='0 -3px 12px rgba(0,0,0,0.1)' borderRadius="1.7rem">
-            <LipsIcon width="60px" height="60px" />
+            <Image src="./assistant_logo.png" width="45px" height="45px" />
             {isChatVisible === null && <Box position="absolute" bottom="-1px" right="0px" width=".75rem" height=".75rem" borderRadius="50%" background="#bd2e95" color="white" fontSize="10pt" display={["none", "unset"]} />}
             {isChatVisible && <Box position="absolute" bottom="-1px" right="0px" width=".75rem" height=".75rem" borderRadius="50%" background="#bd2e95" color="white" fontSize="10pt" display={["unset", "none"]} />}
           </Box>}

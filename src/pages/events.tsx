@@ -16,11 +16,7 @@ export default function Index() {
       <TextBase textStyle="project-title" lineHeight="2" p="1rem 0">
         Upcoming Events
       </TextBase>
-        <a href="https://www.eventbrite.de/e/consumer-ai-founders-network-demos-and-drinks-tickets-1097350628269"><TextBase fontWeight="bold" textStyle="project-descr" p=".5rem">Friday March 14th. Consumer AI Founders - Network & Demos</TextBase></a>
-
-      <TextBase textStyle="initiative-descr" lineHeight="2" p=".5rem 0" textAlign="center" mt="2rem">
-        March
-      </TextBase>
+        <a href="https://www.gitex-europe.com"><TextBase fontWeight="bold" textStyle="project-descr" p=".5rem">Week of May 19th - 23th, GITEX EUROPE, Berlin</TextBase></a>
       <TextBase textStyle="project-title" lineHeight="2" mt="2rem">
         Past Events
       </TextBase>
