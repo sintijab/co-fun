@@ -19,7 +19,7 @@ export default function Index() {
         subheading: <><TextBase textStyle="hero-h2" ml="1rem" color="primary.white">accelerating impact</TextBase><br /><TextBase color="primary.white" textStyle="hero-h1">in co-creation</TextBase></>,
         link: {
           label: 'Get started',
-          href: '/explore'
+          href: '/products'
         },
         image: '/weissensee.png',
       }
