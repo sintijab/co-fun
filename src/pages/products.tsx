@@ -28,6 +28,11 @@ export default function Index() {
         <Box width= {["100%", "48%"]}><img src="./02-form-builder.jpg" style={{ height: "100%", objectFit: "cover"}} /></Box>
         <Box width= {["100%", "48%"]}><img src="./03-form-builder.jpg" style={{ height: "100%", objectFit: "cover" }} /></Box>
       </Flex>
+      <Heading fontFamily="gingerBold" size={["sm", "md"]} w="auto" margin={["1.5rem 0", "3rem 0 1.5rem"]} color="primary.default" textAlign="center">AI Assistants for Marketplaces</Heading>
+      <Image src="https://images.prismic.io/syntia/aCpA7CdWJ-7kSQ2w_Screenshot2025-05-18at22.19.37.png?auto=format,compress" />
+      <TextBase textStyle="initiative-descr" lineHeight={["1.5", "2"]}>
+        CO-FUN AI assistant experts generate leads in a green market economy by enabling intelligent, data-driven decision-making, particularly in high-value sectors like the automotive and transportation industries. By analyzing user preferences, environmental impact data, and lifecycle costs, AI can advise buyers on their most suitable buying practices, calculating fuel efficiency, low-emission technologies, or refurbished options.
+      </TextBase>
       <Heading fontFamily="gingerBold" size={["sm", "md"]} w="auto" margin={["1.5rem 0", "3rem 0 1.5rem"]} color="primary.default" textAlign="center">AI Assistants in Data Moderation</Heading>
       <Image src="https://images.prismic.io/syntia/aCoe6ydWJ-7kSQyY_Screenshot2025-05-18at19.54.32.png?auto=format,compress" />
       <TextBase textStyle="initiative-descr" lineHeight={["1.5", "2"]}>
