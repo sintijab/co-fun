@@ -22,20 +22,20 @@ export default function App({
   const isIndex = router.asPath === '/';
   const isFullLayout = router.asPath.includes('/explore') || router.asPath.includes('/academy') || router.asPath.includes('/trends') || isIndex || isChat || router.asPath === '/home' || router.asPath.includes('/home#') || router.asPath.includes('/career-discovery');
 
-  useEffect(() => {
-    const healthCheck = async () => {
-      try {
-        const res = await fetch(`https://sound-master-chat.onrender.com/health`);
-        const formatted = await res.json();
-        if (formatted.message) {
-          toggleWidget(true);
-        }
-      } catch (e) {
-        console.log(e)
-      }
-    }
-    healthCheck();
-  }, [])
+  // useEffect(() => {
+  //   const healthCheck = async () => {
+  //     try {
+  //       const res = await fetch(`https://sound-master-chat.onrender.com/health`);
+  //       const formatted = await res.json();
+  //       if (formatted.message) {
+  //         toggleWidget(true);
+  //       }
+  //     } catch (e) {
+  //       console.log(e)
+  //     }
+  //   }
+  //   healthCheck();
+  // }, [])
 
   return (
     <Provider store={store}>
