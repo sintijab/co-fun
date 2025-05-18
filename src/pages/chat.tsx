@@ -73,8 +73,6 @@ export default function Chat() {
       try {
         setId(response.id);
         if (response.type) {
-          console.log(requestType)
-          debugger;
           setType(response.type as "open" | "technical");
         }
         dispatch(addSound({ [id as string]: data }))

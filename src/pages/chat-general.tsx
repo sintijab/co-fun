@@ -14,7 +14,6 @@ export default function Chat() {
   }, [])
 
   const onSubmit = (data: string) => {
-    debugger;
     let updated = [
       ...messages,
       { response: data, author: 'Sintija' }
