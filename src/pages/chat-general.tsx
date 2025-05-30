@@ -24,7 +24,7 @@ export default function Chat() {
   const onClickSuggestion = (i: number) => {
     const options = {
       offers: "https://cofun.digital/products",
-      call: "https://calendly.com/sintija-birgele",
+      call: "https://calendar.app.google/sGKt6RNAb9E5Qhkf9",
       message: "https://cofun.digital/contact"
     }
     type OptionKey = keyof typeof options;
