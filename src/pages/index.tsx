@@ -11,7 +11,7 @@ export default function Index() {
   };
   return <>
     <Head>
-      <title>AI career discovery</title>
+      <title>Agentic AI chat builder</title>
     </Head>
     <Hero {
       ...{
