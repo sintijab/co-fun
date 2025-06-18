@@ -20,8 +20,10 @@ export default function Index() {
         List of Technologies
       </TextBase>
       <ul>
-        <li><u><a href="https://openai.com/" target="_blank" rel="norefferer noopener">AWS</a></u> Cloud provider for managing infrastructure and web instances.</li>
-        <li><u><a href="https://openai.com/" target="_blank" rel="norefferer noopener">Open AI</a></u> Large Language Model for search with AI and integrations with our software.</li>
+        <li><u><a href="https://aws.amazon.com/" target="_blank" rel="norefferer noopener">AWS</a></u> Cloud provider for managing infrastructure and web instances.</li>
+        <li><u><a href="https://render.com/" target="_blank" rel="norefferer noopener">Render.io</a></u> Cloud provider for scaling infrastructure and resources.</li>
+        <li><u><a href="https://mistral.ai/" target="_blank" rel="norefferer noopener">Mistral AI</a></u> Large Language Model for search with AI and integrations with our software.</li>
+        <li><u><a href="https://fireflies.ai/" target="_blank" rel="norefferer noopener">Fireflies AI</a></u> Transcribe, summarize, search, and analyze video calls and audio files.</li>
         <li><u><a href="https://socket.io/" target="_blank" rel="norefferer noopener">Socket.IO</a></u> Event-based communication framework for our chatbot systems with low-overhead communication channels.</li>
         <li><u><a href="https://developer.mozilla.org/en-US/docs/Web/API/WebSockets_API" target="_blank" rel="norefferer noopener">WebSockets API</a></u> Protocol for two-way interactive connection between the browser and a server. </li>
         <li><u><a href="https://expressjs.com/" target="_blank" rel="norefferer noopener">Express JS</a></u> Node.js web application framework that provides a robust features for web and mobile applications.</li>
