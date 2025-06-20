@@ -15,7 +15,7 @@ export const Hero = ({ heading, subheading, link, image }: { heading?: React.Rea
       <Fade><Image src={image} width="100vW" height="100%"/></Fade>
       </AspectRatio>}
     {!!heading && <GridItem colStart={[2, 3]} colEnd={8} rowStart={2} rowEnd={3}>{heading}</GridItem>}
-    {!!subheading && <GridItem colStart={4} colEnd={8} rowStart={3} rowEnd={4} display={["none", "grid"]}>{subheading}</GridItem>}
+    {!!subheading && <GridItem colStart={4} colEnd={8} rowStart={3} rowEnd={4} display={["grid", "grid"]}>{subheading}</GridItem>}
     {!!link && <GridItem colStart={4} colEnd={5} rowStart={4} rowEnd={5} alignSelf='end'><ButtonPrimary onClick={() => typeof window !== 'undefined' && window.open(link.href)} size='lg' href={link.href}>{link.label}</ButtonPrimary></GridItem>}
   </Grid>
 )

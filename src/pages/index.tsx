@@ -15,11 +15,11 @@ export default function Index() {
     </Head>
     <Hero {
       ...{
-        heading: <><TextBase color="primary.green" textStyle="hero-h1">power</TextBase><TextBase color={["primary.white", "primary.default"]} textStyle="hero-h2" pl=".8rem">of</TextBase><br /><TextBase color="primary.default" display={["none", "block"]} textStyle="hero-h1">intelligence</TextBase><TextBase color="primary.white" display={["block", "none"]} textStyle="hero-h1">co-creation</TextBase></>,
-        subheading: <><TextBase textStyle="hero-h2" ml="1rem" color="primary.white">accelerating impact</TextBase><br /><TextBase color="primary.white" textStyle="hero-h1">in co-creation</TextBase></>,
+        heading: <><TextBase color="primary.green" textStyle="hero-h1">power</TextBase><TextBase color={["primary.white", "primary.default"]} textStyle="hero-h2" pl=".8rem">of</TextBase><br /><TextBase color="primary.default" display={["none", "block"]} textStyle="hero-h1">intelligence</TextBase></>,
+        subheading: <><TextBase textStyle="hero-h2" ml="1rem" color="primary.white">accelerating</TextBase><TextBase textStyle="hero-h2" ml="1rem" color={["primary.green", "primary.white"]}>impact</TextBase><br /><TextBase color="primary.white" textStyle="hero-h1">in co-creation</TextBase></>,
         link: {
           label: 'Get started',
-          href: '/products'
+          href: '/explore'
         },
         image: '/weissensee.png',
       }
@@ -27,8 +27,19 @@ export default function Index() {
     <Flex direction="column" margin="auto" flexWrap="wrap" maxWidth="100%">
       <Flex justifyContent="center" alignItems="center" p=".5rem" display={["flex", "flex"]} m="0 0 3rem">
         <TextBase textStyle="project-title" textAlign="center">
-          CO-FUN enhances capabilities of AI Agents by human insight and collaboration. We envision a world where AI seamlessly integrates into daily business operations with human-like interactions and natural language.
+          Our AI agents automate business operations, automating manual work processes, cutting costs and enhancing capabilities of human insight and collaboration.
         </TextBase>
+      </Flex>
+      <Flex justifyContent="center" alignItems="center" p=".5rem" display={["flex", "flex"]} m="0 0 3rem" flexDirection="column">
+        <Box p=".5rem">
+          <TextBase color="primary.default" textStyle="hero-h2" pr=".5rem"> when we build </TextBase>
+          <TextBase color="primary.green" textStyle="hero-h2">with</TextBase>
+          <TextBase color="primary.default" textStyle="hero-h2" pl={["0", ".5rem"]}> clients, not for them</TextBase>
+        </Box>
+        <Box p=".5rem">
+          <TextBase color="primary.default" textStyle="hero-h2" pr=".5rem">we deliver</TextBase>
+          <TextBase color="primary.green" textStyle="hero-h2">lasting impact</TextBase>
+        </Box>
       </Flex>
       <Flex justifyContent="center" alignItems="center" p="1rem" display={["flex", "flex"]} m="0 0 3rem" flexWrap="wrap">
         <Box width={["100%", "33%"]} p=".5rem">
@@ -57,55 +68,96 @@ export default function Index() {
           <TextBase textStyle='project-list-descr'>Capturing and interpreting interaction data to optimize AI agent behavior, enhance user experience, and create feedback loops for continuous improvement.</TextBase>
         </Box>
       </Flex>
-      <Flex justifyContent="center" alignItems="center" p=".5rem" display={["flex", "flex"]} m="0 0 3rem">
-        <TextBase textStyle="project-title">
-          It unlocks competitive advantage enabling focus on strategic growth and user experience.
-        </TextBase>
-      </Flex>
       <Flex justifyContent="center" alignItems="center" p=".5rem" display={["flex", "flex"]} m="0 0 3rem" flexDirection="column">
         <Box p=".5rem">
-          <TextBase color="primary.default" textStyle="hero-h2">A single-founder workforce –</TextBase>
+          <TextBase color="primary.default" textStyle="hero-h2">Advantages of Agent-Supervisor workforce</TextBase>
         </Box>
         <Box p=".5rem">
-          <TextBase color="primary.green" textStyle="hero-h2">Challenges and opportunities for growth</TextBase>
+          <TextBase color="primary.green" textStyle="hero-h2">Our solutions help businesses</TextBase>
         </Box>
       </Flex>
       <Flex m="0 0 3rem" flexWrap="wrap" justifyContent="space-around">
         <Box width={["100%", "33%"]} p="0 1rem" mb="1rem" textAlign="center">
           <Image src="clock.png" w="5rem" h="5rem" margin="auto" />
-          <TextBase textStyle='project-list-title'>Manual Processes</TextBase>
+          <TextBase textStyle='project-list-title'>Manual operations slowing growth</TextBase>
           <TextBase textStyle='project-list-descr'>Businesses struggle with time-consuming manual operations that hinder productivity and efficiency.</TextBase>
         </Box>
         <Box width={["100%", "33%"]} p="0 1rem" mb="1rem" textAlign="center">
           <Image src="data.png" w="4.6rem" h="4.6rem" margin="auto" />
-          <TextBase textStyle='project-list-title'>Data Analysis</TextBase>
+          <TextBase textStyle='project-list-title'>Data overload for business analysis</TextBase>
           <TextBase textStyle='project-list-descr'>Companies face challenges in managing and analyzing vast amounts of data effectively.</TextBase>
         </Box>
         <Box width={["100%", "33%"]} p="0 1rem" mb="1rem" textAlign="center">
           <Image src="exchange.png" w="4.5rem" h="4.5rem" margin="auto" />
-          <TextBase textStyle='project-list-title'>Point Of Access</TextBase>
+          <TextBase textStyle='project-list-title'>Disconnected tools and systems</TextBase>
           <TextBase textStyle='project-list-descr'>Lack of seamless integration with existing systems leads to operational inefficiencies.</TextBase>
         </Box>
       </Flex>
-      <ImpactTable />
+        <Flex justifyContent="center" alignItems="center" p=".5rem" display={["flex", "flex"]} m="0 0 3rem">
+        <TextBase textStyle="project-title">
+          Our solutions are built to help you scale efficiently—without needing a full in-house AI team, enabling focus on strategic growth and user experience.
+        </TextBase>
+      </Flex>
       <Flex justifyContent="center" alignItems="center" p=".5rem" display={["flex", "flex"]} m="0 0 3rem" flexDirection="column">
         <Box p=".5rem">
-          <TextBase color="primary.default" textStyle="hero-h2" pr=".5rem"> when we build </TextBase>
-          <TextBase color="primary.green" textStyle="hero-h2">with</TextBase>
-          <TextBase color="primary.default" textStyle="hero-h2" pl={["0", ".5rem"]}> clients, not for them</TextBase>
+          <TextBase color="primary.green" textStyle="hero-h2">Our solutions drives higher profitability</TextBase>
         </Box>
         <Box p=".5rem">
-          <TextBase color="primary.default" textStyle="hero-h2" pr=".5rem">we deliver</TextBase>
-          <TextBase color="primary.green" textStyle="hero-h2">lasting impact</TextBase>
+          <TextBase color="primary.default" textStyle="hero-h2">with competitive advantage</TextBase>
         </Box>
       </Flex>
-      <Flex justifyContent="center" alignItems="center" textAlign="center" lineHeight="2" display={["flex", "flex"]} m="0 0 3rem" flexDirection="column">
-        <TextBase textStyle="project-title" w={["90%", "50%"]} mb="1rem">
-          We offer business founders to double their teams by exceling digital transformation with cutting-edge AI solutions.
-        </TextBase>
-        <TextBase textStyle='project-list-descr' w={["90%", "50%"]} >
-          Our approach is focused on solving real-world problems with strategic analysis and domain expertise to support our clients innovate and reduce operational costs. We offer conversational chat and search automation with hybrid approach to graph and vector search algorithms in order to achieve refined data observability and maximize product capabilities.
-        </TextBase>
+      <ImpactTable />
+      <Head>
+        <title>Product roadmap for 2025</title>
+      </Head>
+      <Flex justifyContent="center" alignItems="center" p=".5rem" display={["flex", "flex"]} m="0 0 3rem" flexDirection="column">
+        <Box p=".5rem">
+          <TextBase color="primary.default" textStyle="hero-h2">Our offers</TextBase>
+        </Box>
+      </Flex>
+      <Flex flexWrap="wrap" justifyContent="center">
+      <Box width={["100%", "100%"]} margin="auto" textAlign="center">
+        <TextBase flex='1' textStyle="activity-title" mt="1rem" mb=".5rem" width={["100%", "93%"]}>AI Assistants at glance</TextBase>
+        <TextBase flex='1' textStyle="initiative-descr" fontSize="17pt" fontWeight="regular" lineHeight="2" p=".5rem 0">CO-FUN chat-based AI agents allows us to communicate in the most human, intuitive way—through conversation, instructing conversations to access information and perform actions to achieve certain business goals.</TextBase>
+      </Box>
+      <Box width={["100%", "49%"]}>
+        <TextBase textStyle="activity-title" mt="1rem" mb=".5rem">AI Chat Assistant in Q&A</TextBase>
+        <Image src="https://images.prismic.io/syntia/aCoTSSdWJ-7kSQwU_Screenshot2025-05-18at19.04.36.png?auto=format,compress" width={["100%", "93%"]} />
+      </Box>
+      <Box width={["100%", "49%"]}>
+        <TextBase textStyle="activity-title" mt="1rem" mb=".5rem">AI Chat Agent in Quoting and Transactions</TextBase>
+        <Flex position="relative" overflow="hidden" height={["auto", "300px"]} width="100%" margin="auto" justifyContent="space-between" flexDirection={["column", "row"]}>
+          <Box width= {["100%", "48%"]}><img src="./03-form-builder.jpg" style={{ height: "100%", objectFit: "cover" }} /></Box>
+        </Flex>
+      </Box>
+      <Box width={["100%", "49%"]}>
+        <TextBase textStyle="activity-title" mt="1rem" mb=".5rem">AI Agents for Marketplaces</TextBase>
+        <Image src="https://images.prismic.io/syntia/aCpA7CdWJ-7kSQ2w_Screenshot2025-05-18at22.19.37.png?auto=format,compress" width={["100%", "93%"]} />
+      </Box>
+      <Box width={["100%", "49%"]}>
+        <TextBase textStyle="activity-title" mt="1rem" mb=".5rem">AI Agents for Data Moderation</TextBase>
+        <Image src="https://images.prismic.io/syntia/aCoe6ydWJ-7kSQyY_Screenshot2025-05-18at19.54.32.png?auto=format,compress" width={["100%", "93%"]}/>
+      </Box>
+      <Box width={["100%", "49%"]}>
+        <TextBase textStyle="activity-title" mt="1rem" mb=".5rem">AI Assistants in Augmented Reality</TextBase>
+        <Image src="https://images.prismic.io/syntia/aCmztydWJ-7kSQio_Screenshot2025-05-18at12.13.28.png?auto=format,compress" width={["100%", "93%"]} />
+      </Box>
+      <Box width={["100%", "49%"]}>
+        <TextBase textStyle="activity-title" mt="1rem" mb=".5rem">AI Analysis for Behavioral and Psychometric Analysis</TextBase>
+        <Image src="https://images.prismic.io/syntia/aCnS2CdWJ-7kSQlN_Screenshot2025-05-18at14.21.59.jpg?auto=format,compress" width={["100%", "93%"]} />
+      </Box>
+      <Box width={["100%", "49%"]}>
+        <TextBase textStyle="activity-title" mt="1rem" mb=".5rem">AI Agents in Real-World Models</TextBase>
+        <Image src="https://images.prismic.io/syntia/aCnlmSdWJ-7kSQoJ_Screenshot2025-05-18at15.49.32.png?auto=format,compress" width={["100%", "93%"]} />
+      </Box>
+      <Box width={["100%", "49%"]}>
+        <TextBase textStyle="activity-title" mt="1rem" mb=".5rem">AI Analysis in Spatial Clustering and Occupation</TextBase>
+        <Image src="https://images.prismic.io/syntia/aCoBISdWJ-7kSQtN_Screenshot2025-05-18at17.42.06.jpg?auto=format,compress" width={["100%", "93%"]}/>
+      </Box>
+      <Box width={["100%", "49%"]}>
+        <TextBase textStyle="activity-title" mt="1rem" mb=".5rem">AI Agents in IoT and Smart Devices</TextBase>
+        <Image src="https://images.prismic.io/syntia/aCoqZCdWJ-7kSQ0C_tracker.jpg?auto=format,compress" width={["100%", "93%"]} />
+      </Box>
       </Flex>
         <InitiativeOverview {...args} border="1px solid #CCCCCC" borderRadius=".5rem" mt="1rem" isFollowing={null} p={["4rem .5rem", "3rem 2rem 2rem"]}>
           <Flex flexDirection={["column", "column", "row"]} overflow="none" flexWrap={["wrap", "wrap", "nowrap"]}>

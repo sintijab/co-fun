@@ -7,32 +7,24 @@ const isMobile = useBreakpointValue({ base: true, md: false });
 
 const rows = [
   {
-    impact: 'AI Agents optimize operations across industries',
-    advantage: 'by competitive technology differentiator',
-  },
-  {
     impact: 'Eliminate manual routine tasks',
-    advantage: 'freeing up time for strategic work',
+    advantage: 'Freeing up your team to focus on high-value, strategic work',
   },
   {
-    impact: 'Making sense of data when needed',
-    advantage: 'by turning complex information into clear, actionable answers',
+    impact: 'Making sense of complex data',
+    advantage: 'Delivering clear, actionable insights exactly when you need them',
   },
   {
     impact: 'Solving integration gaps',
     advantage: 'enabling seamless interaction between different platforms',
   },
   {
-    impact: 'AI chat agents go beyond static interfaces',
-    advantage: 'modernizing platforms and reducing data acquired',
+    impact: 'Bridge integration gaps',
+    advantage: 'Connecting tools, platforms, and systems for seamless workflows',
   },
   {
-    impact: 'AI agents addresses business needs',
-    advantage: 'without additional tools to adapt and learn',
-  },
-  {
-    impact: 'Turning to technological co-discovery',
-    advantage: 'accelerating sustainable and inclusive growth',
+    impact: 'Modernize user experience',
+    advantage: 'Replacing outdated interfaces with responsive, intelligent chat agents',
   },
 ];
 
