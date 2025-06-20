@@ -110,13 +110,22 @@ export default function Index() {
       <Head>
         <title>Product roadmap for 2025</title>
       </Head>
-      <Flex justifyContent="center" alignItems="center" p=".5rem" display={["flex", "flex"]} m="0 0 3rem" flexDirection="column">
+      <Flex justifyContent="center" alignItems="center" p=".5rem" display={["flex", "flex"]} m={["0 0 1rem", "0 0 3rem"]} flexDirection="column">
+        <Box p="1rem" textAlign="center">
+          <TextBase  m="0 0 3rem" color="primary.default" textStyle="hero-h2" textAlign="center">Our partners</TextBase>
+          <Flex justifyContent="center" flexDirection={["column", "row"]}>
+            <Image src="https://images.prismic.io/syntia/aFV5f3fc4bHWik82_european_management_institute.jpg?auto=format,compress" height={["auto", "100px"]} width="auto" mr="1rem"/>
+            <TextBase width={["100%", "50%"]} textStyle="initiative-descr" fontSize="17pt" fontWeight="regular" lineHeight="2" p=".5rem 0">We have established a strategic partnership with the European Management Institute to co-develop and advance solutions for digitalization initiatives across Europe.</TextBase>
+          </Flex>
+        </Box>
+      </Flex>
+      <Flex justifyContent="center" alignItems="center" p=".5rem" display={["flex", "flex"]} flexDirection="column">
         <Box p=".5rem">
           <TextBase color="primary.default" textStyle="hero-h2">Our offers</TextBase>
         </Box>
       </Flex>
       <Flex flexWrap="wrap" justifyContent="center">
-      <Box width={["100%", "100%"]} margin="auto" textAlign="center">
+      <Box width={["100%", "100%"]} margin="auto" ml="1rem" mr="1rem">
         <TextBase flex='1' textStyle="activity-title" mt="1rem" mb=".5rem" width={["100%", "93%"]}>AI Assistants at glance</TextBase>
         <TextBase flex='1' textStyle="initiative-descr" fontSize="17pt" fontWeight="regular" lineHeight="2" p=".5rem 0">CO-FUN chat-based AI agents allows us to communicate in the most human, intuitive way—through conversation, instructing conversations to access information and perform actions to achieve certain business goals.</TextBase>
       </Box>
