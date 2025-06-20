@@ -202,7 +202,7 @@ export default function Chat() {
   }
 
   return (<>
-    <AIAssistantChat onClickSuggestion={onClickSuggestion} suggestions={suggestions} history={messages} onSubmit={(data) => onSubmit(data as string)} image={<CareerIcon h="2.5rem" w="2.5rem" p=".1rem" borderRadius="50%" m="0 .5rem 0 0" />} conversations={[conversation]} title={"AI Assistant in Career Discovery"} disabled={!!buttonSelect?.answers?.length || !!suggestions.length || !!isLoading || offersList[0]?.connection === "close"}>
+    <AIAssistantChat theme="lilac" onClickSuggestion={onClickSuggestion} suggestions={suggestions} history={messages} onSubmit={(data) => onSubmit(data as string)} image={<CareerIcon h="2.5rem" w="2.5rem" p=".1rem" borderRadius="50%" m="0 .5rem 0 0" />} conversations={[conversation]} title={"AI Assistant in Career Discovery"} disabled={!!buttonSelect?.answers?.length || !!suggestions.length || !!isLoading || offersList[0]?.connection === "close"}>
       {buttonSelect && <Box m={["1rem 0", "1rem 0 1rem 5rem"]}><ButtonList style={buttonSelect.style} title={buttonSelect.title} description={buttonSelect?.description} answers={buttonSelect.answers} onClick={onOptionSelect} /></Box>}
       {isLoading && <Box pl="1.3rem"><InputLoader /></Box>}
     </AIAssistantChat>
