@@ -154,7 +154,11 @@ export default function Index() {
         <TextBase textStyle="activity-title" mt="1rem" mb=".5rem">AI Analysis in Spatial Clustering and Occupation</TextBase>
         <Image src="https://images.prismic.io/syntia/aCoBISdWJ-7kSQtN_Screenshot2025-05-18at17.42.06.jpg?auto=format,compress" width={["100%", "93%"]}/>
       </Box>
-      <Box width={["100%", "49%"]}>
+      <Box width={["100%", "49%"]} height="600px" overflow="hidden">
+        <a href='http://ai-career-assistant.cofun.digital/'><u><TextBase textStyle="activity-title" mt="1rem" mb=".5rem">AI for Recruitment and Career Discovery</TextBase></u></a>
+        <Image src="./a51bca33-ab7c-445d-b403-cb46a80b2ff5.jpeg" width={["100%", "93%"]}/>
+      </Box>
+      <Box width={["100%", "49%"]}alignItems="center">
         <TextBase textStyle="activity-title" mt="1rem" mb=".5rem">AI Agents in IoT and Smart Devices</TextBase>
         <Image src="https://images.prismic.io/syntia/aCoqZCdWJ-7kSQ0C_tracker.jpg?auto=format,compress" width={["100%", "93%"]} />
       </Box>
