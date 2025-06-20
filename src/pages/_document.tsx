@@ -94,8 +94,8 @@ export default function Document() {
       <body>
         <Main />
         <NextScript />
-        <Script src="https://sound-master-chat.onrender.com/socket.io/socket.io.js" />
-        <script src="https://js.puter.com/v2/"></script>
+        {/* <Script src="https://sound-master-chat.onrender.com/socket.io/socket.io.js" />
+        <script src="https://js.puter.com/v2/"></script> */}
       </body>
     </Html>
   );

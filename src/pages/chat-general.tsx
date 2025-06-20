@@ -7,7 +7,6 @@ export default function Chat() {
   const [suggestions, setSuggestions] = useState<{ answer: string, key: string }[]>([])
   const [chatCompleted, setChatCompleted] = useState<boolean>(false)
 
-  console.log(suggestions.length)
   useEffect(() => {
     setMessages([{ response: "Hi, I'm CO-FUN assistant. Would you like to see our products, schedule a call or send a message?"}])
     setSuggestions([{ answer: "Offers", key: "offers"}, { answer: "Call", key: "call"}, { answer: "Message", key: "message"}])
@@ -52,6 +51,6 @@ export default function Chat() {
     return <Loader />
   }
   return (<>
-    <AIAssistantChat onClickSuggestion={onClickSuggestion} suggestions={suggestions} history={messages} onSubmit={(data) => onSubmit(data as string)} image={<Avatar src="./assistant_logo.png" h="2.5rem" w="2.5rem" maxWidth="2.5rem" p=".1rem" borderRadius="50%" m="0 .5rem 0 0" />} conversations={[conversation]} title={"AI Assistant in Q&A"} disabled={Array.isArray(suggestions) && !!suggestions.length || chatCompleted} />
+    <AIAssistantChat theme="lilac" onClickSuggestion={onClickSuggestion} suggestions={suggestions} history={messages} onSubmit={(data) => onSubmit(data as string)} image={<Avatar src="./assistant_logo.png" h="2.5rem" w="2.5rem" maxWidth="2.5rem" p=".1rem" borderRadius="50%" m="0 .5rem 0 0" />} conversations={[conversation]} title={"AI Assistant in Q&A"} disabled={Array.isArray(suggestions) && !!suggestions.length || chatCompleted} />
   </>)
 }

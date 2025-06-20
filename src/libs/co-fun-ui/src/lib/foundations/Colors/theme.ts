@@ -43,11 +43,20 @@ const colorTheme = {
         divider: '#CAC4D0',
         borderIcon: '#79747E',
         convoBg: '#F0DCFC',
-        messageBg: '#F0E4F4',
+        messageBg: {
+          lilac: '#F0E4F4',
+          ocean: '#e4eff4'
+        },
         defaultBg: '#FEF7FF',
         defaultBgTransparent: 'rgba(254, 247, 255, 0.55)',
-        authorBg: '#625B71',
-        suggestions: '#F0DCFC'
+        authorBg: {
+          lilac: '#625B71',
+          ocean: '#5b6471'
+        },
+        suggestions: {
+          lilac: '#F0DCFC',
+          ocean: '#dcf4fc'
+        }
       },
       reviews: {
         lilac: '#dd9dcc',
@@ -56,6 +65,16 @@ const colorTheme = {
         lightBlue: '#8ab1f3',
         darkBlue: '#304697',
         default: '#484848'
+      },
+      flow: {
+        success: {
+          border: '#78c878',
+          bg: '#ddf9dd',
+          color: '#4eae4e'
+        },
+        default: {
+          bg: '#f0f0f0'
+        }
       }
     },
   };

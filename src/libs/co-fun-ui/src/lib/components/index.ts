@@ -17,5 +17,6 @@ import { StackedSingleBar } from './Charts';
 import { Timeline, BearAnimation, ReviewCards } from './Timeline';
 import PricingTable from './PriceTable';
 import WordCloud from './WordCloud';
+import { CustomNodeFlow } from './Flow/CustomNodeFlow';
 
-export { NavigationTop, NavigationChat, Hero, HeroMinimal, HeroPersonal, Card, Activity, ActivityGroup, Footer, Pagination, NavigationSide, ConversationsList, ConvoListItem, Messages, Rating, Input, Loader, ButtonList, ModalBase, Sketch, Carousel, StackedSingleBar, Timeline, BearAnimation, ReviewCards, PricingTable, WordCloud, fluorescentColors };
+export { NavigationTop, NavigationChat, Hero, HeroMinimal, HeroPersonal, Card, Activity, ActivityGroup, Footer, Pagination, NavigationSide, ConversationsList, ConvoListItem, Messages, Rating, Input, Loader, ButtonList, ModalBase, Sketch, Carousel, StackedSingleBar, Timeline, BearAnimation, ReviewCards, PricingTable, WordCloud, fluorescentColors, CustomNodeFlow };
