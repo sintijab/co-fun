@@ -1,8 +1,8 @@
 import { Box, TextProps } from "@chakra-ui/react";
 import { Parallax, ParallaxProvider } from "react-scroll-parallax";
 import { Fade } from "react-awesome-reveal";
-import { TextBase } from "../../foundations";
 import { useParallax } from 'react-scroll-parallax';
+import { TextBase } from "../../foundations";
 
 const ReviewCard = ({ text, alignment, color, content, pt }: { text: string; alignment: 'left' | 'right'; color: string; content: string, pt?:string  }) => (
   <Box position="relative" width="100%" pt={pt}>

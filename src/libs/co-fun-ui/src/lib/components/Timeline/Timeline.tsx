@@ -2,8 +2,8 @@ import { Box, TextProps } from "@chakra-ui/react";
 import { Parallax, ParallaxProvider } from "react-scroll-parallax";
 import { VerticalScroll } from "./VerticalScroll";
 import { Fade } from "react-awesome-reveal";
-import { TextBase } from "../../foundations";
 import { useParallax } from 'react-scroll-parallax';
+import { TextBase } from "../../foundations";
 
 const TimelineEvent = ({ text, alignment, color, content, pt }: { text: string; alignment: 'left' | 'right'; color: string; content: string, pt: string }) => (
   

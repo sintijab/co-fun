@@ -1,5 +1,5 @@
 import { Flex, Box, FlexProps } from "@chakra-ui/react";
-import { TextBase } from "../../foundations";
+import { TextBase } from "../../foundations/Typography";
 
 export type CardProps = { category?: string; title?: string; description: string }
 

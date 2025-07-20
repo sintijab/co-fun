@@ -222,5 +222,8 @@ const icons = [SearchIcon, ArrowDownIcon, BellIcon, BookmarkIcon, FilterIcon, Gi
 
 export { Flex, Box, ButtonPrimary, Link, NavigationTop, SearchIcon, ArrowDownIcon, BellIcon, BookmarkIcon, FilterIcon, GiftIcon, ShareIcon, SupportIcon, UserAddIcon, EndorsementIcon, LinkedInIcon, InstagramIcon, XIcon, YoutubeIcon, Logo, Hero, Card, TextBase, CardDeck, SectionLayout, HeroMinimal, Activity, ActivityGroup, Project, InitiativeOverview, Footer, HeroPersonal, PinContainerIcon, UserPlusIcon, ToggleOnIcon, ChatIcon, ProjectList, ProjectDetails, SearchThinIcon, FilterFollowingIcon, ArrowLeftIcon, ArrowRightIcon, icons, Pagination, ProfileAvatarIcon, HamburgerMenuIcon, PlusIcon, ChatSingleIcon, TrendsIcon, ExploreIcon, WalletIcon, SettingsIcon, BackIcon, CalendarIcon, VerticalEllipsisIcon, NavigationSide, NavigationChat, ConversationsList, AvatarIcon, EditIcon, ConvoListItem, Messages, Rating, Input, InputLoader, AIAssistantChat, Loader, LipsIcon, ButtonList, ModalBase, Sketch, Carousel, StackedSingleBar, Heading, Poster, Timeline, BearAnimation, ReviewCards, MonitorIcon, DiagramIcon, NetworkIcon, CertificateIcon, StarsIcon, PricingTable, InputBase, Textarea, HamburgerIcon, WordCloud, fluorescentColors, getContrastRatio, CareerIcon, ImpactTable, CustomNodeFlow };
 
+// Example usage for all AIAssistantChat components inline (not fixed):
+// <AIAssistantChat inline author="AI" theme="default" image="avatar.png" history={[]} title="Assistant" disabled={false} onSubmit={() => {}} />
+
 export default CoFunUiProvider;
 

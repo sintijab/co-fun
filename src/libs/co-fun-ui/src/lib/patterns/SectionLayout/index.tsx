@@ -1,6 +1,6 @@
 import { Grid, GridItem, FlexProps } from "@chakra-ui/react";
-import { TextBase } from "../../foundations";
 import { Image } from '@chakra-ui/react';
+import { TextBase } from "../../foundations";
 
 export const SectionLayout = ({ blockquote, title, description, image, children, ...props }: { blockquote: string; title: string; description: string; image?: string } & FlexProps) => (
   <Grid templateColumns='repeat(16, 1fr)' position='relative' overflow='hidden' pt='3.44rem' {...props}>
