@@ -1,6 +1,5 @@
 import { Flex, Link } from "@chakra-ui/react";
-import { TextBase } from "../../foundations";
-import { InstagramIcon, LinkedInIcon, XIcon, YoutubeIcon } from "../../co-fun-ui";
+import { InstagramIcon, LinkedInIcon, TextBase, XIcon, YoutubeIcon } from "../../co-fun-ui";
 
 export const Footer = ({ columns, ...props }: { columns: { title: string; links: { label: string; href: string}[] }[] }) => (
   <Flex justifyContent="flex-start" gap="12%" flexWrap="wrap" {...props}>

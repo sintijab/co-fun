@@ -1,9 +1,8 @@
 import { Box, Flex } from "@chakra-ui/react"
-import { EditIcon, TextBase } from "@co-fun/ui";
-import { AvatarIcon } from "@co-fun/ui";
 import { Image } from '@chakra-ui/react';
 
 import { IConversations } from "./ConversationsList";
+import { AvatarIcon, TextBase } from "../../foundations";
 
 export const ConvoListItem = (convo: IConversations) => {
     const truncate = (text: string, maxLength: number): string => text.length > maxLength ? text.substring(0, maxLength - 3) + '...' : text;
