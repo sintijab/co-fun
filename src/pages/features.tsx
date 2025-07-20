@@ -1,4 +1,4 @@
-import { Flex, TextBase } from "@co-fun/ui";
+import { Flex, Box, TextBase } from "@co-fun/ui";
 import Head from "next/head";
 
 export default function Index() {
@@ -10,6 +10,18 @@ export default function Index() {
       <TextBase textStyle="heading" lineHeight="2" alignSelf="center">
         AI Assistance at Glance
       </TextBase>
+      {/* --- @co-fun/ui Open Source Announcement --- */}
+      <Box w={["100%", "80%", "60%"]} mx="auto" mt={["2rem", "3rem"]} mb={["2rem", "3rem"]} p={[4, 8]} bg="white" borderRadius="2xl" boxShadow="0 4px 24px rgba(0,0,0,0.10)" position="relative" overflow="hidden">
+        <Box position="absolute" top={0} left={0} w="100%" h="100%" zIndex={0} style={{ filter: 'blur(18px)', opacity: 0.18 }}>
+          <img src="/glass.jpg" alt="Glass background" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+        </Box>
+        <Flex direction="column" align="center" zIndex={1} position="relative">
+          <TextBase textStyle="heading" fontSize={["1.25rem", "1.75rem"]} mb={2} color="#232323" fontWeight={700} fontFamily="'Inter', 'IBM Plex Sans', 'Arial', sans-serif" letterSpacing="-0.01em" textAlign="center">@co-fun/ui Open Source Library</TextBase>
+          <TextBase textStyle="project-descr" fontSize={["1rem", "1.15rem"]} color="#444" textAlign="center" fontFamily="'Inter', 'IBM Plex Sans', 'Arial', sans-serif" fontWeight={400} lineHeight={1.7} px={3} mb={2}>
+            Build modern, scalable AI chatbots and digital products with our open-source design system. Unified design language, reusable code, and clear guidelines for human-AI interaction. <u><a href="https://www.cofun.digital/open-source" target="_blank" rel="noopener">See demo & docs</a></u>
+          </TextBase>
+        </Flex>
+      </Box>
       <TextBase textStyle="project-descr" lineHeight="2" p=".5rem 0">
         Adopting AI tools for assistance requires some technical knowledge. At CO-FUN we are making conscious decisions by promoting sustainable and efficient use of technology, adaptation and learning, consulting and developing solutions end-to-end to support businesses in project planning and execution.
       </TextBase>
