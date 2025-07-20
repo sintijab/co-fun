@@ -76,7 +76,9 @@ export default function App({
             <Component {...pageProps} />
           </Flex>}
           {isFullLayout &&
-            <Component {...pageProps} />
+            <>
+              <Component {...pageProps} />
+            </>
           }
           {!isChat &&
             <Box m="3.5rem 1rem 1rem" position="relative" height="max-content">
