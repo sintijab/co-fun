@@ -9,7 +9,6 @@ export default function FeatureAnnouncement() {
       w="100%"
       maxW="540px"
       alignItems="center"
-      p={6}
       borderRadius="2rem"
       p={["1rem .5rem", "1.5rem 1rem"]}
       boxShadow="0 4px 24px rgba(0,0,0,0.10)"
