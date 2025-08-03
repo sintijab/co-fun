@@ -21,7 +21,7 @@ export const Hero = ({ heading, subheading, link, image }: { heading?: React.Rea
     objectFit="cover"
   >
     <Fade>
-      <Image src={image} width="100vw" height="100%" objectFit="cover"  objectPosition="center calc(100% + 10rem)" />
+      <Image src={image} width="100vw" height="100%" objectFit="cover"  objectPosition={["center", "center calc(100% + 5rem)"]} />
     </Fade>
   </AspectRatio>}
     {!!heading && <GridItem colStart={[2, 3]} colEnd={8} rowStart={2} rowEnd={3}>{heading}</GridItem>}
