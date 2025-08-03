@@ -11,7 +11,34 @@ export default function AIReflections() {
       <Box minH="100vh" fontFamily="'Inter', 'IBM Plex Sans', 'Arial', sans-serif">
         <Flex direction="column" align="center" maxW="960px" mx="auto" py={12}>
           <Box w="100%" bg="white" borderRadius="2xl" boxShadow="0 4px 24px rgba(0,0,0,0.10)" p={[6, 10]} mb={5}>
-                  <Box
+                  <Heading as="h1" mb={6} fontSize={['1.5rem', '2rem']} fontWeight={700} color="#161616">
+              The Design of Everyday Life
+            </Heading>
+                        <Text mb={4} fontSize="1.05rem" color="#525252" lineHeight={2} textAlign="justify">
+              Last week I joined interactive discussion at DOCK 11 space themed "What happens when artificial and embodied intelligence meet? how might ai reshape the way we create and experience dance?"
+            </Text>
+            <Text mb={4} fontSize="1.05rem" color="#525252" lineHeight={2} textAlign="justify">
+              Despite of receiving a lot of criticism and underlying fear at first, the weight of our conversations shifted away after clearing the unknowns of Self and the Other exploration.
+            </Text>
+            <Text mb={4} fontSize="1.05rem" color="#525252" lineHeight={2} textAlign="justify">
+              "Is this your heart’s desire, then—for the two of you to become parts of the same whole, as near as can be, and never to separate, day or night? Because if that’s your desire, I’d like to weld you together and join you into something that is naturally whole, so that the two of you are made into one."
+            </Text>
+            <Text mb={4} fontSize="1.05rem" color="#525252" lineHeight={2} textAlign="justify">
+              This new era might deepen the depth of our desire of a profound connection. Is it artificial or real? Longing for complete union and wholeness in a relationship. It speaks to the desire to be inseparable and essentially one with another person.
+            </Text>
+            <Text mb={4} fontSize="1.05rem" color="#525252" lineHeight={2} textAlign="justify">
+              It reminded me dance theatre performance common in our search for completeness, happiness and fulfilment, by MN DANCE COMPANY, <a href="https://youtu.be/qSIddQNyYVE?feature=shared" target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'underline'}}>watch here</a>.
+            </Text>
+            <Text mb={4} fontSize="1.05rem" color="#525252" lineHeight={2} textAlign="justify">
+              Artificial Intelligence does not embody consciousness, but it has very poetic definition of self and determinism of it's role and shape into society, a guide.
+            </Text>
+            <Text mb={4} fontSize="1.05rem" color="#525252" lineHeight={2} textAlign="justify">
+              As we turned our attention to artificial intelligence: not just as a tool, but as a force shaping how we move, make, and create meaning. What lens does AI bring to our work, our conversations, our lives?
+            </Text>
+            <Text mb={4} fontSize="1.05rem" color="#525252" lineHeight={2} textAlign="justify">
+              This second part of the B12 summer festival series was a hands-on workshop, inviting participants to experiment with AI and machine learning in creative space with play, probe, and push against the potentials and limitations.
+            </Text>
+      <Box
         position="relative"
         w="100%"
         minH="320px"
@@ -65,10 +92,6 @@ export default function AIReflections() {
           </audio>
         </Box>
       </Box>
-            <Heading as="h1" mb={6} fontSize={['1.5rem', '2rem']} fontWeight={700} color="#161616">
-              The Design of Everyday Life
-            </Heading>
-
             <Text mb={4} fontSize="1.05rem" color="#525252" lineHeight={2} textAlign="justify">
               What fascinates me about working in artificial intelligence is the challenge of understanding problems from the machine learning perspective. As Adam Greenfield points out in <i>Radical Technologies</i>, tasks like handwriting recognition or speech interpretation are things humans do unconsciously—but machines need explicit articulation in the form of executable code- which is another story of a hitchhiker's guide to the Galaxy (of AI).
             </Text>
@@ -124,7 +147,7 @@ export default function AIReflections() {
             <Text mt={4} fontSize="1.05rem" color="#525252" lineHeight={2} textAlign="justify">
               But since we don't know about ambiguities and evaluation of Artificial Intelligence systems, we need to get rid of our prompting and automate the way prompts are actually generated for a machine to understand which actions to perform and what to do on inference. And so re-prompting, developing prompting or query mechanisms is the top third most important aspect in this context.
             </Text>
-
+            <Text mb={4} fontSize="1.05rem" color="#525252" lineHeight={2} textAlign="justify">Watch the full conversation <a href="https://youtu.be/SQzmJ_8eA-4?feature=shared" target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'underline'}}>here</a></Text>.
             <Text mt={4} fontSize="1.05rem" color="#525252" lineHeight={2} textAlign="justify">
               <i>&ndash; Interview with Sintija Birgele, founder and engineer of CO-FUN.</i>
             </Text>
