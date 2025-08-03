@@ -1,6 +1,8 @@
 import { Box, Flex, Hero, ImpactTable, InitiativeOverview, Project, TextBase } from "@co-fun/ui";
 import Head from "next/head";
-import { Heading, Image } from '@chakra-ui/react';
+import { Image, Button, Link } from '@chakra-ui/react';
+import FeatureAnnouncement from "../components/FeatureAnnouncement";
+import NextLink from 'next/link';
 
 export default function Index() {
 
@@ -21,7 +23,7 @@ export default function Index() {
           label: 'Get started',
           href: '/explore'
         },
-        image: '/weissensee.png',
+        image: '/aI-ABaTt2nPbZzGg.avif',
       }
     } />
     <Flex direction="column" margin="auto" flexWrap="wrap" maxWidth="100%">
@@ -41,17 +43,23 @@ export default function Index() {
           <TextBase color="primary.green" textStyle="hero-h2">lasting impact</TextBase>
         </Box>
       </Flex>
-      <Flex direction="column" alignItems="center" justifyContent="center" mt="2.5rem" mb="2.5rem">
-        <Box boxShadow="0 4px 32px rgba(0,0,0,0.08)" borderRadius="2rem" p={["1rem .5rem", "1.5rem 2rem"]} background="rgba(255,255,255,0.7)" backdropFilter="blur(8px)" maxWidth="700px" width="100%" display="flex" flexDirection={["column", "row"]} alignItems="center" justifyContent="center">
+      <Flex direction="row" alignItems="center" justifyContent="center" mt="2.5rem" mb="2.5rem">
+        <Flex boxShadow="0 4px 32px rgba(0,0,0,0.08)" borderRadius="2rem" p={["1rem .5rem", "1.5rem 1rem"]} background="rgba(255,255,255,0.7)" backdropFilter="blur(8px)" maxWidth="700px" width="100%" flexDirection={["column", "row"]} alignItems="center" justifyContent="center" mr={6}>
           <img src="/glass.jpg" alt="Glass effect" style={{ width: '200px', height: '200px', aspectRatio: '1 / 1', borderRadius: '2rem', marginRight: '0', boxShadow: '0 2px 28px rgba(0,0,0,0.13)', objectFit: 'cover', objectPosition: 'center' }} />
-          <Box width="100%" display="flex" flexDirection="column" alignItems="left" mt={["1.5rem", "0.5rem"]}>
+          <Flex width="100%" flexDirection="column" alignItems="left" mt={["1.5rem", "0.5rem"]} align="center">
             <TextBase textStyle="heading" fontSize={["1.25rem", "1.45rem"]} mb={2} mr={3} color="#232323" fontWeight={700} fontFamily="'Inter', 'IBM Plex Sans', 'Arial', sans-serif" letterSpacing="-0.01em" textAlign="right">@co-fun/ui</TextBase>
             <TextBase textStyle="heading" fontSize={["1.25rem", "1.75rem"]} mb={2} color="#232323" fontWeight={700} fontFamily="'Inter', 'IBM Plex Sans', 'Arial', sans-serif" letterSpacing="-0.01em" ml="2.6rem">Open-Source UI for AI Chat</TextBase>
             <TextBase textStyle="project-descr" fontSize={["1rem", "1.15rem"]} color="#444" textAlign="justify" ml="2rem" fontFamily="'Inter', 'IBM Plex Sans', 'Arial', sans-serif" fontWeight={400} lineHeight={1.7} px={3} mb={2}>
-              Build modern, scalable AI chatbots and digital products with our open-source design system. Unified design language, reusable code, and clear guidelines for human-AI interaction. <u><br/><Flex justifyContent="flex-end"><a href="https://www.cofun.digital/open-source" target="_blank" rel="noopener">See demo & docs</a></Flex></u>
+              Build modern, scalable AI chatbots and digital products with our open-source design system. Unified design language, reusable code, and clear guidelines for human-AI interaction. <u><br/></u>
             </TextBase>
-          </Box>
-        </Box>
+                <NextLink href="/open-source" passHref legacyBehavior>
+                <Button as={Link} color="primary.green" variant="link" mt={2}>
+                  See demo & docs
+                </Button>
+              </NextLink>
+          </Flex>
+        </Flex>
+        <FeatureAnnouncement />
       </Flex>
       <Flex justifyContent="center" alignItems="center" p="1rem" display={["flex", "flex"]} m="0 0 3rem" flexWrap="wrap">
         <Box width={["100%", "33%"]} p=".5rem">
