@@ -1,5 +1,5 @@
 import { Box, Flex } from "@chakra-ui/react";
-import { AvatarIcon, BackIcon, Logo, TextBase } from "../../foundations";
+import { AvatarIcon, Logo, TextBase } from "../../foundations";
 import { Image } from '@chakra-ui/react';
 
 export const NavigationChat = ({ author, image, title, showBackIcon }: { author?: string, image?: string | React.ReactNode, title?: string, showBackIcon?: boolean}) => (

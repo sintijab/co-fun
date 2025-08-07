@@ -1,10 +1,10 @@
 import React from 'react';
-import CoFunUiProvider from './co-fun-ui';
-import { GlobalStyles } from './GlobalStyles';
-import { AIAssistantChat as AIAssistantChatRaw } from './AIAssistantChat';
-import { Messages as MessagesRaw } from './components/Chat/Messages';
-import { Input as InputRaw } from './components/Chat/Input';
-import { NavigationChat as NavigationChatRaw } from './components/Navigation/NavigationChat';
+import CoFunUiProvider from './co-fun-ui.js';
+import { GlobalStyles } from './GlobalStyles.js';
+import { AIAssistantChat as AIAssistantChatRaw } from './AIAssistantChat.js';
+import { Messages as MessagesRaw } from './components/Chat/Messages.js';
+import { Input as InputRaw } from './components/Chat/Input.js';
+import { NavigationChat as NavigationChatRaw } from './components/Navigation/NavigationChat.js';
 
 export const AIAssistantChat = (props: any) => (
   <CoFunUiProvider>

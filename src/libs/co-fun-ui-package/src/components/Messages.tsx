@@ -1,7 +1,7 @@
-import { Box, Fade, Flex, FlexProps, Icon } from "@chakra-ui/react";
+import { Box, Fade, Flex, FlexProps } from "@chakra-ui/react";
 import { Image } from '@chakra-ui/react';
 import { AvatarIcon, TextBase } from "../foundations";
-import { MutableRefObject, ReactNode, useEffect, useRef } from "react";
+import { ReactNode, useEffect, useRef } from "react";
 
 type IMessage = { response: string | ReactNode; widget?: any; author?: string; }
 export type IMessages = { author?: string; theme: string; image?: string | React.ReactNode; history?: IMessage[]; title: string; children?: any; } & FlexProps;

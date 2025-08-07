@@ -1,7 +1,7 @@
 import { InputGroup, Input as InputBase, InputRightElement, Flex, Box, FlexProps, FormControl } from "@chakra-ui/react"
 import { useForm } from "react-hook-form"
 import { useEffect } from "react"
-import { SendIcon } from "../../foundations/Icons";
+import { SendIcon } from "../../foundations/Icons/SendIcon.js";
 import { TextBase } from "../../foundations/Typography";
 
 export const Input = ({ suggestions, bottomAddon, theme, disabled, onSubmit, onClickSuggestion, ...props }: { disabled: boolean; bottomAddon?: React.ReactNode; theme: string; suggestions?: { answer: string }[] | null} & { onSubmit: (data: string) => void; onClickSuggestion?: (i: number) => void} & FlexProps) => {
