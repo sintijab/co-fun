@@ -15,6 +15,7 @@ The `AIAssistantChat` component now features a two-column layout:
 - The chat side is scrollable with a hidden scrollbar for a cleaner UI.
 ## Installation
 
+
 ```bash
 npm install @co-fun/ui
 ```

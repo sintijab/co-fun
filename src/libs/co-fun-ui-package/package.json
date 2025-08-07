@@ -1,9 +1,9 @@
 {
   "name": "@co-fun/ui",
-  "version": "1.1.8",
+  "version": "1.1.13",
   "description": "Open-source UI library containing only AIAssistantChat and its associated components.",
-  "main": "dist/index.js",
-  "module": "dist/index.esm.js",
+  "main": "dist/cjs/index.js",
+  "module": "dist/esm/index.js",
   "types": "dist/index.d.ts",
   "files": ["dist"],
   "author": "co-fun",
@@ -30,10 +30,11 @@
   },
   "peerDependencies": {
     "react": ">=17.0.0",
-    "@chakra-ui/react": ">=2.0.0"
+    "@chakra-ui/react": ">=2.0.0",
+    "framer-motion": "^12.23.6"
   },
-  "scripts": {
-    "build": "tsc && cp README.md dist/",
-    "prepare": "npm run build"
-  }
+"scripts": {
+  "build": "tsc -p tsconfig.cjs.json && tsc -p tsconfig.esm.json && cp README.md dist/",
+  "prepare": "npm run build"
+}
 }
