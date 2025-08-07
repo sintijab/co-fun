@@ -1,6 +1,6 @@
 'use client';
 
-import { Box, CoFunUiProvider, Flex, Footer, LipsIcon, NavigationTop, TextBase } from '@co-fun/ui';
+import { Box, CoFunUiProvider, Flex, Footer, NavigationTop, TextBase } from '@co-fun/ui';
 import { AppProps } from 'next/app';
 import { Provider } from 'react-redux';
 import { PersistGate } from 'redux-persist/integration/react'

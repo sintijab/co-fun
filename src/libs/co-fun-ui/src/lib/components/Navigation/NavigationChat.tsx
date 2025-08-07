@@ -12,7 +12,6 @@ export const NavigationChat = ({ author, image, title, showBackIcon }: { author?
       {!image && !!author && <AvatarIcon m="0 .5rem 0 2rem" w="2.3rem" h="2.3rem">{author.substring(0, 1)}</AvatarIcon>}
       <Box>
       {!!title && <Flex alignItems="center" fontSize="13pt"><TextBase>{title}</TextBase></Flex>}
-      <Box textAlign="center"><a href="https://cofun.digital">generated with<Logo height={["11px", "11px"]} width={["5rem", "5.2rem"]} marginBottom="2px" /></a></Box>
       </Box>
     </Flex>
   </Flex>

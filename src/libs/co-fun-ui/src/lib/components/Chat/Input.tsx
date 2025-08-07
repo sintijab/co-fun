@@ -4,7 +4,7 @@ import { useEffect } from "react"
 import { SendIcon } from "../../foundations/Icons";
 import { TextBase } from "../../foundations/Typography";
 
-export const Input = ({ suggestions, theme, disabled, onSubmit, onClickSuggestion, ...props }: { disabled: boolean; theme: string; suggestions?: { answer: string }[] | null} & { onSubmit: (data: string) => void; onClickSuggestion?: (i: number) => void} & FlexProps) => {
+export const Input = ({ suggestions, bottomAddon, theme, disabled, onSubmit, onClickSuggestion, ...props }: { disabled: boolean; bottomAddon?: React.ReactNode; theme: string; suggestions?: { answer: string }[] | null} & { onSubmit: (data: string) => void; onClickSuggestion?: (i: number) => void} & FlexProps) => {
   const {
     register,
     handleSubmit,
@@ -22,12 +22,18 @@ export const Input = ({ suggestions, theme, disabled, onSubmit, onClickSuggestio
       <form onSubmit={handleSubmit((data) => { reset(); return onSubmit(data.chat)} )}>
       <FormControl>
       <InputGroup>
+        {bottomAddon && (
+          <InputRightElement pointerEvents="none" height="100%" width="14rem" alignItems="flex-end" justifyContent="flex-end" mr={["1.5rem", "2rem"]}>
+              {bottomAddon}
+          </InputRightElement>
+        )}
         <InputBase disabled={disabled} {...register("chat")} variant="unstyled" padding=".75rem" border="1px" borderColor={`chat.authorBg.${theme}`} size="lg" placeholder='Message' focusBorderColor={`chat.authorBg.${theme}`} borderRadius="2rem" _placeholder={{ color: `chat.authorBg.${theme}`, fontFamily: '"Roboto", sans-serif;' }} _focus={{ border: '2px', borderColor: 'navigation.dark'}} />
         {!disabled && <InputRightElement padding="1.75rem" cursor="pointer">
           <SendIcon p="0 .1rem .2rem" fill={`chat.authorBg.${theme}`} onClick={handleSubmit((data) => { reset(); return onSubmit(data.chat)} )}/>
         </InputRightElement>}
       </InputGroup>
       </FormControl>
+        {/* bottomAddon is now always visible inside InputBase */}
       </form>
     </Box>
   )

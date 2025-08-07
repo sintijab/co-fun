@@ -1,7 +1,7 @@
 import React from 'react';
 import { Box, Flex, Button, Link } from '@chakra-ui/react';
 import NextLink from 'next/link';
-import { TextBase } from '../libs/co-fun-ui-package/src/foundations';
+import { TextBase } from '../libs/co-fun-ui/src/lib/foundations';
 
 export default function FeatureAnnouncement() {
   return (

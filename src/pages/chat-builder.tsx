@@ -1,10 +1,10 @@
-import { AIAssistantChat, CustomNodeFlow, LipsIcon, Loader } from "@co-fun/ui";
+import { AIAssistantChat, CustomNodeFlow, Loader } from "@co-fun/ui";
 import { MutableRefObject, ReactNode, useEffect, useRef, useState } from "react";
 import { Image as Avatar } from '@chakra-ui/react';
 import '@xyflow/react/dist/style.css';
 import { ReactFlowProvider } from "@xyflow/react";
-import { useDispatch, useSelector } from "react-redux";
-import { AppDispatch, RootState } from "../store";
+import { useSelector } from "react-redux";
+import { RootState } from "../store";
 
 interface Response { response: string | ReactNode, author?: string; ref?: MutableRefObject<HTMLDivElement | null> };
 
@@ -14,7 +14,7 @@ export default function Chat() {
   const [suggestions, setSuggestions] = useState<{ answer: string, key: string }[] | null>(null)
   const [chatCompleted, setChatCompleted] = useState<boolean>(false)
   const refElement =  useRef<HTMLDivElement | null>(null);
-  const { discovered, total, processed, loading, error } = useSelector((state: RootState) => state.progress);
+  const { discovered } = useSelector((state: RootState) => state.progress);
 
   useEffect(() => {
     setMessages([{ response: "Hi, I'm a CO-FUN chat generator. Would you like to build an AI assistant?"}])
@@ -67,6 +67,6 @@ export default function Chat() {
     return <Loader />
   }
   return (<>
-    <AIAssistantChat theme="ocean" ref={refElement} onClickSuggestion={onClickSuggestion} suggestions={suggestions} history={messages} onSubmit={(data) => onSubmit(data as string)} image={<Avatar src="./chat_builder.jpg" h="2.5rem" w="2.5rem" maxWidth="2.5rem" p=".1rem" borderRadius="50%" m="0 .5rem 0 0" />} conversations={[conversation]} title={"AI Assistant for Chat Builder"} disabled={Array.isArray(suggestions) && !!suggestions.length || chatCompleted} />
+    <AIAssistantChat theme="ocean" ref={refElement} onClickSuggestion={onClickSuggestion} suggestions={suggestions} history={messages} onSubmit={(data) => onSubmit(data as string)} image={<Avatar src="./chat_builder.jpg" h="2.5rem" w="2.5rem" maxWidth="2.5rem" p=".1rem" borderRadius="50%" m="0 .5rem 0 0" />} conversations={[conversation]} title={"AI Assistant for Chat Builder"} disabled={Array.isArray(suggestions) && !!suggestions.length || chatCompleted}>{'Embedded content windows'}</AIAssistantChat>
   </>)
 }

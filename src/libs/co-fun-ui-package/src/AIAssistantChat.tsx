@@ -51,7 +51,7 @@ export const AIAssistantChat = forwardRef<HTMLDivElement, IAssistantProps>(
             direction="column"
             overflowY="auto"
             overflowX="hidden"
-            w={width || ["100%", "40%"]}
+            w={width || ["100%", "50%"]}
             m="auto"
             sx={{
               '::-webkit-scrollbar': {
@@ -79,7 +79,7 @@ export const AIAssistantChat = forwardRef<HTMLDivElement, IAssistantProps>(
                 onClickSuggestion={onClickSuggestion}
                 suggestions={suggestions}
                 {...(inline ? { position: "relative", left: undefined, right: undefined, bottom: undefined } : { position: "fixed", left: "0", right: undefined, bottom: ".1rem" })}
-                w={width || ["100%", "40%"]}
+                w={width || ["100%", "50%"]}
                 m="auto"
                 onSubmit={(data) => onSubmit(data as FormEvent<HTMLDivElement>)}
               />
