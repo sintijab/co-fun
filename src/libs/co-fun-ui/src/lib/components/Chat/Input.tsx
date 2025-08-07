@@ -33,7 +33,6 @@ export const Input = ({ suggestions, bottomAddon, theme, disabled, onSubmit, onC
         </InputRightElement>}
       </InputGroup>
       </FormControl>
-        {/* bottomAddon is now always visible inside InputBase */}
       </form>
     </Box>
   )

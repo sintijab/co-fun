@@ -8,6 +8,7 @@ import { IMessages, Messages } from "./components/Chat/Messages";
 import { FormEvent, forwardRef } from "react";
 import { NavigationChat } from "./components/Navigation/NavigationChat";
 import { Input } from "./components/Chat";
+import { Logo, TextBase } from "./foundations";
 
 type IAssistantProps = IConversationsList &
   IMessages & {
@@ -82,6 +83,7 @@ export const AIAssistantChat = forwardRef<HTMLDivElement, IAssistantProps>(
                 w={width || ["100%", "50%"]}
                 m="auto"
                 onSubmit={(data) => onSubmit(data as FormEvent<HTMLDivElement>)}
+                bottomAddon={<TextBase fontSize="8pt">designed with<a href="https://cofun.digital"><Logo fill="#4d4d4dff" height={["8px", "8px"]} width={["3.8rem", "3.8rem"]} marginBottom="2px" /></a></TextBase>}
               />
             </Messages>
           </Flex>
