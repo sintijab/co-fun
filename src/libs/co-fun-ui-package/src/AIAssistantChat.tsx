@@ -13,7 +13,6 @@ import { Logo, TextBase } from "./foundations";
 type IAssistantProps = IConversationsList &
   IMessages & {
     disabled: boolean;
-    links?: string[];
     suggestions?: { answer: string }[] | null;
     onSubmit: (data: string) => void;
     inline?: boolean;
