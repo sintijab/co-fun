@@ -20,6 +20,12 @@ The `AIAssistantChat` component now features a two-column layout:
 npm install @co-fun/ui
 ```
 
+> **Note:**
+> This package lists `framer-motion` as a peer dependency that is a design system dependency ./node_modules/@chakra-ui/react/dist/esm/menu/menu-list.mjs:4:1. You must install it in your app if it's not present:
+> ```bash
+> npm install framer-motion
+> ```
+
 ## Usage
 ### Example basic usage
 

@@ -52,48 +52,9 @@ export const AIAssistantChat = forwardRef<HTMLDivElement, IAssistantProps>(
         <Flex pt="3rem" h="100%" {...flexProps}>
           <Flex
             ref={ref}
-            direction="column"
             overflowY="auto"
             overflowX="hidden"
-            w={width || ["100%", "40%"]}
-            m="auto"
-            sx={{
-              '::-webkit-scrollbar': {
-                display: 'none',
-              },
-              scrollbarWidth: 'none',
-              msOverflowStyle: 'none',
-            }}
-            {...(inline
-              ? { position: "relative" }
-              : {
-                  position: "fixed",
-                  top: "0",
-                  bottom: suggestions?.length ? "5.5rem" : "3.5rem",
-                  left: "0",
-                  mb: "3.5rem",
-                  mt: "6.5rem"
-                }
-            )}
-          >
-            <Messages author={author} theme={theme} image={image} history={history} title={title}>
-              <Input
-                theme={theme}
-                disabled={disabled}
-                onClickSuggestion={onClickSuggestion}
-                suggestions={suggestions}
-                {...(inline ? { position: "relative", left: undefined, right: undefined, bottom: undefined } : { position: "fixed", left: "0", right: undefined, bottom: ".1rem" })}
-                w={width || ["100%", "40%"]}
-                m="auto"
-                onSubmit={(data) => onSubmit(data as FormEvent<HTMLDivElement>)}
-              />
-            </Messages>
-          </Flex>
-          <Flex
-            direction="column"
-            overflowY="auto"
-            overflowX="hidden"
-            w={width || ["100%", "60%"]}
+            w={width || ["100%", "50%"]}
             m="auto"
             {...(inline
               ? { position: "relative" }
@@ -102,12 +63,25 @@ export const AIAssistantChat = forwardRef<HTMLDivElement, IAssistantProps>(
                   top: "0",
                   bottom: suggestions?.length ? "5.5rem" : "3.5rem",
                   right: "0",
+                  left: "0",
                   mb: "3.5rem",
                   mt: "6.5rem"
                 }
             )}
           >
-            {children}
+            <Messages author={author} theme={theme} image={image} history={history} title={title}>
+              {children}
+              <Input
+                theme={theme}
+                disabled={disabled}
+                onClickSuggestion={onClickSuggestion}
+                suggestions={suggestions}
+                {...(inline ? { position: "relative", left: undefined, right: undefined, bottom: undefined } : { position: "fixed", left: "0", right: "0", bottom: ".1rem" })}
+                w={width || ["100%", "50%"]}
+                m="auto"
+                onSubmit={(data) => onSubmit(data as FormEvent<HTMLDivElement>)}
+              />
+            </Messages>
           </Flex>
         </Flex>
       </>

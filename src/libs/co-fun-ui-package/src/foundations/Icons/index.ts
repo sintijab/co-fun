@@ -1,3 +1,3 @@
-export { SendIcon } from './SendIcon';
-export { BackIcon } from './BackIcon';
-export { EditIcon } from './EditIcon';
+export { SendIcon } from './SendIcon.js';
+export { BackIcon } from './BackIcon.js';
+export { EditIcon } from './EditIcon.js';
