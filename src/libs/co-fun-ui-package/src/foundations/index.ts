@@ -1,6 +1,6 @@
-import { Logo } from './Logo';
-import { TextBase } from './Typography';
-import { AvatarIcon } from './Avatar';
+import { Logo } from './Logo.js';
+import { TextBase } from './Typography.js';
+import { AvatarIcon } from './Avatar.js';
 import { BackIcon } from './Icons/BackIcon.js';
 import { SendIcon } from './Icons/SendIcon.js';
 

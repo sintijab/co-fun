@@ -2,7 +2,7 @@ import { InputGroup, Input as InputBase, InputRightElement, Flex, Box, FlexProps
 import { useForm } from "react-hook-form"
 import { useEffect } from "react"
 import { SendIcon } from "../../foundations/Icons/SendIcon.js";
-import { TextBase } from "../../foundations/Typography";
+import { TextBase } from "../../foundations/Typography/TextBase/index.js";
 
 export const Input = ({ suggestions, bottomAddon, theme, disabled, onSubmit, onClickSuggestion, ...props }: { disabled: boolean; bottomAddon?: React.ReactNode; theme: string; suggestions?: { answer: string }[] | null} & { onSubmit: (data: string) => void; onClickSuggestion?: (i: number) => void} & FlexProps) => {
   const {

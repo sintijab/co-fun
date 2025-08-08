@@ -1,6 +1,7 @@
 import { Box, Fade, Flex, FlexProps } from "@chakra-ui/react";
 import { Image } from '@chakra-ui/react';
-import { AvatarIcon, TextBase } from "../../foundations";
+import { AvatarIcon } from "../../foundations/Avatar.js";
+import { TextBase } from "../../foundations/Typography.js";
 import { ReactNode, useEffect, useRef } from "react";
 
 type IMessage = { response: string | ReactNode; widget?: any; author?: string; }
@@ -23,7 +24,7 @@ export const Messages = ({ author, theme = 'lilac', image, history, children, ..
       const isResponder = author === msg.author || msg.author === undefined;
       const isComponent = typeof msg?.response !== 'string';
       return (
-      <Flex key={`msg-${i}`} ref={i === lastElement ? messageRef : null} p="0.5rem" alignSelf={!isResponder ? 'flex-end' : 'flex-start'} maxWidth="70%">
+      <Flex key={`msg-${i}`} ref={i === lastElement ? messageRef : null} p="0.5rem" alignSelf={!isResponder ? 'flex-end' : 'flex-start'} maxWidth="100%">
       <Fade in={!!history}>
         <Box>
           <Flex>

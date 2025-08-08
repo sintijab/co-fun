@@ -3,12 +3,12 @@ import {
   Flex,
   FlexProps,
 } from "@chakra-ui/react";
-import { IConversationsList } from "./components/Chat/ConversationsList";
-import { IMessages, Messages } from "./components/Chat/Messages";
+import { IConversationsList } from "./components/Chat/ConversationsList.js";
+import { IMessages, Messages } from "./components/Chat/Messages.js";
 import { FormEvent, forwardRef } from "react";
-import { NavigationChat } from "./components/Navigation/NavigationChat";
-import { Input } from "./components/Chat";
-import { Logo, TextBase } from "./foundations";
+import { NavigationChat } from "./components/Navigation/NavigationChat.js";
+import { Input } from "./components/Chat/Input.js";
+import { Logo, TextBase } from "./foundations/index.js";
 
 type IAssistantProps = IConversationsList &
   IMessages & {
@@ -90,7 +90,7 @@ export const AIAssistantChat = forwardRef<HTMLDivElement, IAssistantProps>(
             direction="column"
             overflowY="auto"
             overflowX="hidden"
-            w={width || ["100%", "60%"]}
+            w={width || ["100%", "50%"]}
             m="auto"
             {...(inline
               ? { position: "relative" }

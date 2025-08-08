@@ -1,6 +1,6 @@
 import { Flex } from "@chakra-ui/react"
-import { ConvoListItem } from "./ConvoListItem";
-import { TextBase } from "../../foundations";
+import { ConvoListItem } from "./ConvoListItem.js";
+import { TextBase } from "../../foundations/Typography/TextBase/index.js";
 import { EditIcon } from "../../foundations/Icons/EditIcon.js";
 
 export type IConversations = { author?: string; image?: string | React.ReactNode; time: string; title: string; category: string; isActive?: boolean };
