@@ -1,7 +1,6 @@
 import { Box, Flex, Hero, ImpactTable, InitiativeOverview, Project, TextBase } from "@co-fun/ui";
 import Head from "next/head";
 import { Image, Button, Link } from '@chakra-ui/react';
-import FeatureAnnouncement from "../components/FeatureAnnouncement";
 import NextLink from 'next/link';
 
 export default function Index() {
@@ -44,22 +43,17 @@ export default function Index() {
         </Box>
       </Flex>
       <Flex direction={["column", "row"]} alignItems="center" justifyContent="center" mt="2.5rem" mb="2.5rem">
-        <Flex boxShadow="0 4px 32px rgba(0,0,0,0.08)" borderRadius="2rem" p={["1rem .5rem", "1.5rem 1rem"]} background="rgba(255,255,255,0.7)" backdropFilter="blur(8px)" maxWidth="700px" width="100%" flexDirection={["column", "row"]} alignItems="center" justifyContent="center" mr={[0, 6]} mb=".5rem" >
-          <img src="/glass.jpg" alt="Glass effect" style={{ width: '200px', height: '200px', aspectRatio: '1 / 1', borderRadius: '2rem', marginRight: '0', boxShadow: '0 2px 28px rgba(0,0,0,0.13)', objectFit: 'cover', objectPosition: 'center' }} />
-          <Flex width="100%" flexDirection="column" alignItems="left" mt={["1.5rem", "0.5rem"]}align="center">
-            <TextBase textStyle="heading" fontSize={["1.25rem", "1.45rem"]} mb={2} mr={3} color="#232323" fontWeight={700} fontFamily="'Inter', 'IBM Plex Sans', 'Arial', sans-serif" letterSpacing="-0.01em" textAlign="right">@co-fun/ui</TextBase>
-            <TextBase textStyle="heading" fontSize={["1.25rem", "1.75rem"]} mb={2} color="#232323" fontWeight={700} fontFamily="'Inter', 'IBM Plex Sans', 'Arial', sans-serif" letterSpacing="-0.01em" ml="2.6rem">Open-Source UI for AI Chat</TextBase>
-            <TextBase textStyle="project-descr" fontSize={["1rem", "1.15rem"]} color="#444" textAlign="justify" ml="2rem" fontFamily="'Inter', 'IBM Plex Sans', 'Arial', sans-serif" fontWeight={400} lineHeight={1.7} px={3} mb={2}>
-              Build modern, scalable AI chatbots and digital products with our open-source design system. Unified design language, reusable code, and clear guidelines for human-AI interaction. <u><br/></u>
+        {/* Banner for Construction AI Article */}
+        <Flex boxShadow="0 4px 32px rgba(0,0,0,0.08)" p={0} background="linear-gradient(90deg, #e0e7ff 0%, #f8fafc 100%)" width="100%" maxWidth="none" minHeight="280px" height="300px" position="relative" overflow="hidden" alignItems="center" justifyContent="center" ml={0} mb=".5rem" margin="auto">
+          <img src="/20250812_124822.jpg" alt="Construction AI" style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'center', zIndex: 0 }} />
+          <Flex width="100%" height="100%" flexDirection="column" alignItems="flex-start" justifyContent="center" p={[3, 8]} zIndex={1} position="relative">
+            <TextBase textStyle="heading" fontSize={["1.1rem", "1.75rem"]} mb={1} color="#ffffffff" fontWeight={600} fontFamily="'Inter', 'IBM Plex Sans', 'Arial', sans-serif" letterSpacing="-0.01em" textAlign="left">From the Construction Planning to Operations</TextBase>
+            <TextBase textStyle="project-descr" fontSize={[".98rem", "1.05rem"]} color="#ffffffff" textAlign="justify" fontFamily="'Inter', 'IBM Plex Sans', 'Arial', sans-serif" fontWeight={400} lineHeight={1.7} px={2} mb={1}>
+              How AI is transforming construction: predictive analytics, digital twins, safety, and project optimization. <NextLink href="/construction-ai" passHref legacyBehavior><Button as={Link} color="white" variant="link" ml={2} fontWeight={600}>Read article</Button></NextLink>
             </TextBase>
-                <NextLink href="/open-source" passHref legacyBehavior>
-                <Button as={Link} color="primary.green" variant="link" mt={2}>
-                  See demo & docs
-                </Button>
-              </NextLink>
+            <TextBase fontSize=".95rem" color="#ffffffff" textAlign="left" fontWeight={300} mt={0}>August 31, 2025 · 3 min to read · by Sintija</TextBase>
           </Flex>
         </Flex>
-        <FeatureAnnouncement />
       </Flex>
       <Flex justifyContent="center" alignItems="center" p="1rem" display={["flex", "flex"]} m="0 0 3rem" flexWrap="wrap">
         <Box width={["100%", "33%"]} p=".5rem">
