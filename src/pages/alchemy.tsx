@@ -18,7 +18,7 @@ export default function Alchemy() {
                     September 5, 2025 · 4 min to read · by Sintija
                 </TextBase>
                 <TextBase textStyle="initiative-descr" fontSize="17pt" fontWeight="regular" lineHeight="2" p=".5rem 0" textAlign="justify">
-                    This capture of me free-falling into cenote was taken in Tulum in late December as part of W3 training at{' '}
+                   This "underwater river" phenomenon with free-fall was taken in Yucatan, Mexico in late December as part of my W3 training at{' '}
                     <a
                         href="https://cenotefreediving.com/"
                         target="_blank"
