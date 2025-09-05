@@ -54,7 +54,7 @@ export default function Index() {
             The Alchemical Room
           </TextBase>
           <TextBase textStyle="project-descr" fontSize={[".98rem", "1.05rem"]} color="#fff" textAlign="justify" fontFamily="'Inter', 'IBM Plex Sans', 'Arial', sans-serif" fontWeight={400} lineHeight={1.7} px={2} mb={3}>
-            A journey into the symbolism, history, and the personal story with the room construct.
+            A journey into the symbolism, history, and a personal story of the room construct.
           </TextBase>
           <NextLink href="/alchemy" passHref legacyBehavior>
             <Button as={Link} bg="#111" color="#fff" fontWeight={700} borderRadius="2rem" px={7} py={2} fontSize="1.08rem" _hover={{ bg: '#222' }} boxShadow="0 2px 12px rgba(0,0,0,0.16)">
