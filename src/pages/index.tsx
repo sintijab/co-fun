@@ -84,7 +84,7 @@ export default function Index() {
             padding: '2.5rem 3.5rem',
           }}>
             <TextBase textStyle="heading" fontSize={["1.3rem", "2.1rem"]} mb={2} color="#fff" fontWeight={700} fontFamily="'Inter', 'IBM Plex Sans', 'Arial', sans-serif" letterSpacing="-0.01em" textAlign="left" style={{textShadow: '0 2px 16px rgba(0,0,0,0.18)'}}>From the Construction Planning to Operations</TextBase>
-            <TextBase textStyle="project-descr" fontSize={["1.05rem", "1.18rem"]} color="#e0e7ff" textAlign="left" fontFamily="'Inter', 'IBM Plex Sans', 'Arial', sans-serif" fontWeight={400} lineHeight={1.7} mb={3} style={{maxWidth: 540}}>
+            <TextBase textStyle="project-descr" fontSize={["1.05rem", "1.18rem"]} color="#e0e7ff" textAlign="left" lineHeight="1.3" fontFamily="'Inter', 'IBM Plex Sans', 'Arial', sans-serif" fontWeight={400} lineHeight={1.7} mb={3} style={{maxWidth: 540}}>
               How AI is transforming construction: predictive analytics, digital twins, safety, and project optimization.
             </TextBase>
             <NextLink href="/construction-ai" passHref legacyBehavior>
