@@ -2,7 +2,7 @@ import { Box, Flex, Hero, ImpactTable, InitiativeOverview, Project, TextBase } f
 import Head from "next/head";
 import { Image, Button, Link } from '@chakra-ui/react';
 import NextLink from 'next/link';
-
+import ParallaxHero from "../components/ParallaxHero";
 export default function Index() {
 
   const args = {
@@ -42,18 +42,59 @@ export default function Index() {
           <TextBase color="primary.green" textStyle="hero-h2">lasting impact</TextBase>
         </Box>
       </Flex>
-      <Flex direction={["column", "row"]} alignItems="center" justifyContent="center" mt="2.5rem" mb="2.5rem">
-        {/* Banner for Construction AI Article */}
-        <Flex boxShadow="0 4px 32px rgba(0,0,0,0.08)" p={0} background="linear-gradient(90deg, #e0e7ff 0%, #f8fafc 100%)" width="100%" maxWidth="none" minHeight="280px" height="300px" position="relative" overflow="hidden" alignItems="center" justifyContent="center" ml={0} mb=".5rem" margin="auto">
-          <img src="/20250812_124822.jpg" alt="Construction AI" style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'center', zIndex: 0 }} />
-          <Flex width="100%" height="100%" flexDirection="column" alignItems="flex-start" justifyContent="center" p={[3, 8]} zIndex={1} position="relative">
-            <TextBase textStyle="heading" fontSize={["1.1rem", "1.75rem"]} mb={1} color="#ffffffff" fontWeight={600} fontFamily="'Inter', 'IBM Plex Sans', 'Arial', sans-serif" letterSpacing="-0.01em" textAlign="left">From the Construction Planning to Operations</TextBase>
-            <TextBase textStyle="project-descr" fontSize={[".98rem", "1.05rem"]} color="#ffffffff" textAlign="justify" fontFamily="'Inter', 'IBM Plex Sans', 'Arial', sans-serif" fontWeight={400} lineHeight={1.7} px={2} mb={1}>
-              How AI is transforming construction: predictive analytics, digital twins, safety, and project optimization. <NextLink href="/construction-ai" passHref legacyBehavior><Button as={Link} color="white" variant="link" ml={2} fontWeight={600}>Read article</Button></NextLink>
+          {/* Alchemy Parallax Banner */}
+    <TextBase as="h2" textStyle="heading" fontSize={["1.5rem", "2.3rem"]} fontWeight={800} color="#181c2c" mb={["1.2rem", "1.7rem"]} mt={["2.5rem", "3.5rem"]} letterSpacing="-0.01em" textAlign="left" px={[3, 8]}>
+      Latest Work
+    </TextBase>
+    <Box position="relative" width="100%" minHeight="320px" mb={0}>
+      <ParallaxHero src="/A7401064.png" alt="The Alchemical Room Cover" height="40vh" minHeight="300px"/>
+      <Flex position="absolute" top={0} left={0} width="100%" height="100%" alignItems="center" justifyContent="flex-start" zIndex={2} p={[3, 8]}>
+        <Box background="rgba(0,0,0,0.32)" borderRadius="2rem" p={[2, 4]} maxWidth={["100%", "60%"]}>
+          <TextBase textStyle="heading" fontSize={["1.1rem", "1.75rem"]} mb={1} color="#fff" fontWeight={600} fontFamily="'Inter', 'IBM Plex Sans', 'Arial', sans-serif" letterSpacing="-0.01em" textAlign="left">
+            The Alchemical Room
+          </TextBase>
+          <TextBase textStyle="project-descr" fontSize={[".98rem", "1.05rem"]} color="#fff" textAlign="justify" fontFamily="'Inter', 'IBM Plex Sans', 'Arial', sans-serif" fontWeight={400} lineHeight={1.7} px={2} mb={3}>
+            A journey into the symbolism, history, and the personal story with the room construct.
+          </TextBase>
+          <NextLink href="/alchemy" passHref legacyBehavior>
+            <Button as={Link} bg="#111" color="#fff" fontWeight={700} borderRadius="2rem" px={7} py={2} fontSize="1.08rem" _hover={{ bg: '#222' }} boxShadow="0 2px 12px rgba(0,0,0,0.16)">
+              Read article
+            </Button>
+          </NextLink>
+          <TextBase fontSize=".95rem" color="#fff" textAlign="left" fontWeight={300} mt={0}>September 5, 2025 · 4 min to read · by Sintija</TextBase>
+        </Box>
+      </Flex>
+    </Box>
+  <Flex direction={["column", "row"]} alignItems="center" justifyContent="center" mt={0} mb={0}>
+        {/* Modern Parallax Banner for Construction AI Article */}
+        <div style={{ width: '100%', minHeight: '320px', height: '340px', position: 'relative', marginBottom: '.5rem', borderRadius: '1.2rem', overflow: 'hidden', boxShadow: '0 4px 32px rgba(0,0,0,0.10)' }}>
+          <ParallaxHero src="/20250812_124822.jpg" alt="Construction AI" height="340px" />
+          <div style={{
+            position: 'absolute',
+            top: 0,
+            left: 0,
+            width: '100%',
+            height: '100%',
+            background: 'linear-gradient(90deg, rgba(24,32,56,0.72) 0%, rgba(24,32,56,0.32) 60%, rgba(255,255,255,0.05) 100%)',
+            zIndex: 1,
+            display: 'flex',
+            flexDirection: 'column',
+            justifyContent: 'center',
+            alignItems: 'flex-start',
+            padding: '2.5rem 3.5rem',
+          }}>
+            <TextBase textStyle="heading" fontSize={["1.3rem", "2.1rem"]} mb={2} color="#fff" fontWeight={700} fontFamily="'Inter', 'IBM Plex Sans', 'Arial', sans-serif" letterSpacing="-0.01em" textAlign="left" style={{textShadow: '0 2px 16px rgba(0,0,0,0.18)'}}>From the Construction Planning to Operations</TextBase>
+            <TextBase textStyle="project-descr" fontSize={["1.05rem", "1.18rem"]} color="#e0e7ff" textAlign="left" fontFamily="'Inter', 'IBM Plex Sans', 'Arial', sans-serif" fontWeight={400} lineHeight={1.7} mb={3} style={{maxWidth: 540}}>
+              How AI is transforming construction: predictive analytics, digital twins, safety, and project optimization.
             </TextBase>
-            <TextBase fontSize=".95rem" color="#ffffffff" textAlign="left" fontWeight={300} mt={0}>August 31, 2025 · 3 min to read · by Sintija</TextBase>
-          </Flex>
-        </Flex>
+            <NextLink href="/construction-ai" passHref legacyBehavior>
+              <Button as={Link} colorScheme="blue" bg="#2563eb" color="#fff" fontWeight={700} borderRadius="2rem" px={7} py={2} fontSize="1.08rem" _hover={{ bg: '#1e40af' }} boxShadow="0 2px 12px rgba(37,99,235,0.12)">
+                Read article
+              </Button>
+            </NextLink>
+            <TextBase fontSize=".98rem" color="#e0e7ff" textAlign="left" fontWeight={300} mt={3} style={{opacity: 0.85}}>August 31, 2025 · 3 min to read · by Sintija</TextBase>
+          </div>
+        </div>
       </Flex>
       <Flex justifyContent="center" alignItems="center" p="1rem" display={["flex", "flex"]} m="0 0 3rem" flexWrap="wrap">
         <Box width={["100%", "33%"]} p=".5rem">
