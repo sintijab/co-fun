@@ -75,6 +75,9 @@ export default function Neuroaesthetics() {
                     <ParallaxHero src="./502669200_18385473763136549_854997160371190443_n.jpg" height="480px" alt="Parallax Image 1" />
                     <ParallaxHero src="./502681898_18385473745136549_3028420093694613459_n.jpg" height="480px" alt="Parallax Image 2" objectPosition="25% 50%" />
                 </div>
+                <div style={{ textAlign: 'center', fontSize: '0.85rem', color: '#888', marginTop: '0.5rem' }}>
+                    Source: <a href="https://www.instagram.com/p/DKSXexPNT9q/?img_index=6&igsh=aDBnYXJwdnA1MGNr" style={{ color: '#888', textDecoration: 'underline', fontSize: '0.85rem' }} target="_blank" rel="noopener noreferrer">https://www.instagram.com/p/DKSXexPNT9q</a>
+                </div>
                 <TextBase textStyle="initiative-descr" fontSize="17pt" fontWeight="regular" lineHeight="2" p=".5rem 0" textAlign="justify">
                     Modern research reveals that has an impact on brain activity and connection with body functions. Spaces bathed in natural light, constructed with authentic materials, adorned in its landscape natural blending, designed for open and social spaces rather than isolating, activate neurological networks associated with pleasure, safety, and sense of belonging.
                 </TextBase>
@@ -103,6 +106,10 @@ export default function Neuroaesthetics() {
                 <TextBase textStyle="initiative-descr" fontSize="17pt" fontWeight="regular" lineHeight="2" p=".5rem 0" textAlign="justify">
                     <b>Pattern and Ornament:</b> Even minimalist properties retain subtle patterns through brick arches, decorative moldings, and artisanal tilework. These details engage the attention and curiosity.
                 </TextBase>
+                <ParallaxHero src="./g-11-palazzo-daniele.webp" height="480px" alt="Yoga on rooftop in Puglia" />
+                <div style={{ textAlign: 'center', fontSize: '0.85rem', color: '#888', marginTop: '0.5rem' }}>
+                    Source: <a href="https://www.palazzodaniele.com/" style={{ color: '#888', textDecoration: 'underline', fontSize: '0.85rem' }} target="_blank" rel="noopener noreferrer">https://www.palazzodaniele.com/</a>
+                </div>
                 <TextBase textStyle="initiative-descr" fontSize="17pt" fontWeight="regular" lineHeight="2" p=".5rem 0" textAlign="justify">
                     <b>Sustainability:</b> Increasingly, Italian villas and hotels adopt energy-efficient insulation, solar panels, and eco-friendly materials, aligning with global trends toward sustainable hospitality and tourism.
                 </TextBase>
