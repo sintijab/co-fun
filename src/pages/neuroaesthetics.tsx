@@ -11,28 +11,28 @@ declare global {
 
 export default function Neuroaesthetics() {
 
-useEffect(() => {
-  if (!window.instgrm) {
-    const script = document.createElement("script");
-    script.src = "https://www.instagram.com/embed.js";
-    script.async = true;
-    document.body.appendChild(script);
+    useEffect(() => {
+        if (!window.instgrm) {
+            const script = document.createElement("script");
+            script.src = "https://www.instagram.com/embed.js";
+            script.async = true;
+            document.body.appendChild(script);
 
-    script.onload = () => {
-      if (window.instgrm && window.instgrm.Embeds) {
-        window.instgrm.Embeds.process();
-      }
-    };
+            script.onload = () => {
+                if (window.instgrm && window.instgrm.Embeds) {
+                    window.instgrm.Embeds.process();
+                }
+            };
 
-    return () => {
-      document.body.removeChild(script);
-    };
-  } else {
-    if (window.instgrm && window.instgrm.Embeds) {
-      window.instgrm.Embeds.process();
-    }
-  }
-}, []);
+            return () => {
+                document.body.removeChild(script);
+            };
+        } else {
+            if (window.instgrm && window.instgrm.Embeds) {
+                window.instgrm.Embeds.process();
+            }
+        }
+    }, []);
     return (
         <>
             <Head>
@@ -56,7 +56,7 @@ useEffect(() => {
                 <TextBase textStyle="initiative-descr" fontSize="17pt" fontWeight="regular" lineHeight="2" p=".5rem 0" textAlign="justify">
                     Research in environmental psychology and neuroaesthetics shows that humans have an innate affiliation with nature, a phenomenon that goes beyond a fondness for greenery; our brains are wired to respond favorably to spaces that echo natural forms, materials and rhythmic patterns.
                 </TextBase>
-                
+
                 <TextBase textStyle="initiative-descr" fontSize="17pt" fontWeight="regular" lineHeight="2" p=".5rem 0" textAlign="justify">
                     Architecturally, buildings that use stone, wood, and natural building materials like clay, soil, or adobe feels more harmonious and provide thermal, acoustic effects, and comfort. When rooms open onto gardens, lakes, or mountain views, the experience of prospect—feeling safe while looking out over open space—increases feelings of creativity, relaxation, and clarity. Elements like earth-tone rooftops, natural ventilation, and large windows save energy and allow our daily rhythm synchronize with the environment, improving sleep, mood stability, and even immune response.
                 </TextBase>
@@ -67,13 +67,13 @@ useEffect(() => {
                 </div>                <TextBase textStyle="initiative-descr" fontSize="17pt" fontWeight="regular" lineHeight="2" p=".5rem 0" textAlign="justify">
                     Agrotourism and longevity are intimately connected with these concepts. Stays at farms or estates that prioritize organic agriculture, local food, and natural cycles provide a unique form of restorative travel. Here, architecture teaches about the rhythms and wisdom of the land and its heritage from generations. Participating in orchard harvests, family dinners, or time in the nature known to reduce chronic stress in recovery process and promote longevity and well-being.
                 </TextBase>
-                
+
                 <TextBase textStyle="initiative-descr" fontSize="17pt" fontWeight="regular" lineHeight="2" p=".5rem 0" textAlign="justify">
                     Psychologically, prioritizing agrotourism signals care, stewardship, and a sense of continuity—qualities associated with increased trust, community and care. In this way, architecture serves as a bridge—integrating the built environment with nature and inviting us to discover new.
                 </TextBase>
                 <div style={{ display: 'flex', flexDirection: 'row', gap: '2rem', width: '100%', justifyContent: 'center', margin: '2rem 0' }}>
-                  <ParallaxHero src="./502669200_18385473763136549_854997160371190443_n.jpg" height="480px" alt="Parallax Image 1" />
-                  <ParallaxHero src="./502681898_18385473745136549_3028420093694613459_n.jpg" height="480px" alt="Parallax Image 2" objectPosition="25% 50%" />
+                    <ParallaxHero src="./502669200_18385473763136549_854997160371190443_n.jpg" height="480px" alt="Parallax Image 1" />
+                    <ParallaxHero src="./502681898_18385473745136549_3028420093694613459_n.jpg" height="480px" alt="Parallax Image 2" objectPosition="25% 50%" />
                 </div>
                 <TextBase textStyle="initiative-descr" fontSize="17pt" fontWeight="regular" lineHeight="2" p=".5rem 0" textAlign="justify">
                     Modern research reveals that has an impact on brain activity and connection with body functions. Spaces bathed in natural light, constructed with authentic materials, adorned in its landscape natural blending, designed for open and social spaces rather than isolating, activate neurological networks associated with pleasure, safety, and sense of belonging.
@@ -135,93 +135,92 @@ useEffect(() => {
                 <TextBase textStyle="initiative-descr" fontSize="17pt" fontWeight="regular" lineHeight="2" p=".5rem 0" textAlign="justify">
                     The architecture, furnishings, and rituals are not arbitrary. Each choice is rooted in the way human minds respond to light, pattern, space, and social exchange. By integrating neuroscience with craft, locality, and artistry, these properties deliver comfort, belonging, and authentic experience. The future of hospitality is about how our efforts to meet our needs and connect with other people and experiences makes us feel, think, and experience the world.
                 </TextBase>
-                {/* Instagram Blockquotes in 3 columns on desktop */}
-<style>{`
-  .insta-grid {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 2rem;
-    width: 100%;
-    margin: 2rem 0;
-  }
-  @media (min-width: 900px) {
-    .insta-grid {
-      grid-template-columns: repeat(3, 1fr);
-    }
-  }
-`}</style>
-<div className="insta-grid">
-  <div style={{ width: '100%', maxWidth: '340px', minWidth: '320px', margin: '0 auto' }}>
-    <div
-      dangerouslySetInnerHTML={{
-        __html: `<blockquote class=\"instagram-media\" data-instgrm-permalink=\"https://www.instagram.com/reel/DMYNHy1sXhf/\" data-instgrm-version=\"14\" style=\"background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin:1px; width:100%; min-width:320px; max-width:340px; padding:0;\"></blockquote>`
-      }}
-    />
-  </div>
-  <div style={{ width: '100%', maxWidth: '340px', minWidth: '320px', margin: '0 auto' }}>
-    <div
-      dangerouslySetInnerHTML={{
-        __html: `<blockquote class=\"instagram-media\" data-instgrm-permalink=\"https://www.instagram.com/reel/DK7b6Y2oCtI/\" data-instgrm-version=\"14\" style=\"background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin:1px; width:100%; min-width:320px; max-width:340px; padding:0;\"></blockquote>`
-      }}
-    />
-  </div>
-  <div style={{ width: '100%', maxWidth: '340px', minWidth: '320px', margin: '0 auto' }}>
-    <div
-      dangerouslySetInnerHTML={{
-        __html: `<blockquote class=\"instagram-media\" data-instgrm-permalink=\"https://www.instagram.com/reel/DNIsTykobB0/\" data-instgrm-version=\"14\" style=\"background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin:1px; width:100%; min-width:320px; max-width:340px; padding:0;\"></blockquote>`
-      }}
-    />
-  </div>
-</div>
+                <style>{`
+                    .insta-grid {
+                        display: grid;
+                        grid-template-columns: 1fr;
+                        gap: 2rem;
+                        width: 100%;
+                        margin: 2rem 0;
+                    }
+                    @media (min-width: 900px) {
+                        .insta-grid {
+                        grid-template-columns: repeat(3, 1fr);
+                        }
+                    }
+                    `}</style>
+                <div className="insta-grid">
+                    <div style={{ width: '100%', maxWidth: '340px', minWidth: '320px', margin: '0 auto' }}>
+                        <div
+                            dangerouslySetInnerHTML={{
+                                __html: `<blockquote class=\"instagram-media\" data-instgrm-permalink=\"https://www.instagram.com/reel/DMYNHy1sXhf/\" data-instgrm-version=\"14\" style=\"background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin:1px; width:100%; min-width:320px; max-width:340px; padding:0;\"></blockquote>`
+                            }}
+                        />
+                    </div>
+                    <div style={{ width: '100%', maxWidth: '340px', minWidth: '320px', margin: '0 auto' }}>
+                        <div
+                            dangerouslySetInnerHTML={{
+                                __html: `<blockquote class=\"instagram-media\" data-instgrm-permalink=\"https://www.instagram.com/reel/DK7b6Y2oCtI/\" data-instgrm-version=\"14\" style=\"background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin:1px; width:100%; min-width:320px; max-width:340px; padding:0;\"></blockquote>`
+                            }}
+                        />
+                    </div>
+                    <div style={{ width: '100%', maxWidth: '340px', minWidth: '320px', margin: '0 auto' }}>
+                        <div
+                            dangerouslySetInnerHTML={{
+                                __html: `<blockquote class=\"instagram-media\" data-instgrm-permalink=\"https://www.instagram.com/reel/DNIsTykobB0/\" data-instgrm-version=\"14\" style=\"background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin:1px; width:100%; min-width:320px; max-width:340px; padding:0;\"></blockquote>`
+                            }}
+                        />
+                    </div>
+                </div>
                 <TextBase textStyle="activity-title" mt="2rem" textAlign="center">
-                  What science has taught us so far?
+                    What science has taught us so far?
                 </TextBase>
                 <TextBase textStyle="initiative-descr" fontSize="16pt" fontWeight="regular" lineHeight="2" p=".5rem 0" textAlign="justify">
-                  Aesthetic experiences reshape a complex web of our physiological, neurological, and biological systems—sensory, cognitive, immune, endocrine, motor, respiratory, and more.<br/><br/>
-                  We might think the brain runs the show, but our body's physiology responds to our environments without our awareness, and as sensations of light, sound, smell, taste, and touch enter the brain, they set off a complex cascade of neurobiological effects in a continuous feedback loop.<br/><br/>
-                  New non-invasive technologies like mobile EEG headsets to measure brainwaves, biosensors to capture physiology, brain-computer interfaces, and AI are enabling us to make meaning of our moment-to-moment responses in real-world settings.<br/><br/>
-                  This is revolutionizing the way we translate and apply science into design, by creating a wealth of new information that allows us to integrate scientific measures within our complex social tapestry.
+                    Aesthetic experiences reshape a complex web of our physiological, neurological, and biological systems—sensory, cognitive, immune, endocrine, motor, respiratory, and more.<br /><br />
+                    We might think the brain runs the show, but our body's physiology responds to our environments without our awareness, and as sensations of light, sound, smell, taste, and touch enter the brain, they set off a complex cascade of neurobiological effects in a continuous feedback loop.<br /><br />
+                    New non-invasive technologies like mobile EEG headsets to measure brainwaves, biosensors to capture physiology, brain-computer interfaces, and AI are enabling us to make meaning of our moment-to-moment responses in real-world settings.<br /><br />
+                    This is revolutionizing the way we translate and apply science into design, by creating a wealth of new information that allows us to integrate scientific measures within our complex social tapestry.
                 </TextBase>
-                                <TextBase textStyle="activity-title" mt="2rem" mb=".5rem" textAlign="center">
+                <TextBase textStyle="activity-title" mt="2rem" mb=".5rem" textAlign="center">
                     How aesthetic experiences impact our brain
                 </TextBase>
                 <TextBase textStyle="initiative-descr" fontSize="16pt" fontWeight="regular" lineHeight="2" p=".5rem 0" textAlign="justify">
                     <b>Evolution. </b>
-                    Our biological responses stem from our evolutionary needs for survival from our time in savannahs. We are wired to favor safety and security.<br/><br/>
+                    Our biological responses stem from our evolutionary needs for survival from our time in savannahs. We are wired to favor safety and security.<br /><br />
                     <b>Saliency. </b>
-                    The salience network in the brain brings attention to what matters to us, emotionally or practically, and aesthetic experiences light up this brain region.<br/><br/>
+                    The salience network in the brain brings attention to what matters to us, emotionally or practically, and aesthetic experiences light up this brain region.<br /><br />
                     <b>Neurochemicals. </b>
-                    Pleasure centers in the brain light up when we engage with aesthetics. These moments trigger the release of feel-good chemicals such as dopamine, serotonin, and oxytocin from the reward system.<br/><br/>
+                    Pleasure centers in the brain light up when we engage with aesthetics. These moments trigger the release of feel-good chemicals such as dopamine, serotonin, and oxytocin from the reward system.<br /><br />
                     <b>Emotions. </b>
-                    These physiological sensations often serve as our first response to an environment.<br/>
-                    Linked with the autonomic nervous system, they communicate with our brain to guide our feelings, actions, and experiences.<br/><br/>
+                    These physiological sensations often serve as our first response to an environment.<br />
+                    Linked with the autonomic nervous system, they communicate with our brain to guide our feelings, actions, and experiences.<br /><br />
                     <b>Default Mode Network. </b>
-                    The DMN or 'seat of self' encodes what we find beautiful and meaningful. This mechanism thrives on the patterns in aesthetics that are personally significant to us.<br/><br/>
+                    The DMN or 'seat of self' encodes what we find beautiful and meaningful. This mechanism thrives on the patterns in aesthetics that are personally significant to us.<br /><br />
                     <b>Memories. </b>
                     While memories reside in the hippocampus, the emotional essence of aesthetics drives them deeper. Engaging with our sensory and rewards system, memories are stored somatically.
                 </TextBase>
                 <TextBase textStyle="activity-title" mt="2rem" mb=".5rem" textAlign="center">
-                  Designing for Belonging
+                    Designing for Belonging
                 </TextBase>
                 <TextBase textStyle="initiative-descr" fontSize="16pt" fontWeight="regular" lineHeight="2" p=".5rem 0" textAlign="justify">
-                  "There are certain shapes we gravitate towards, like a cup, because our hands have shaped it and they can embrace it. We have millions of nerves in our fingers and hands that connect to our brain and what feels intuitively right. Honoring these physiologies is really when design gets better."<br/>
-                  <i>— Susan Magsamen</i>
+                    "There are certain shapes we gravitate towards, like a cup, because our hands have shaped it and they can embrace it. We have millions of nerves in our fingers and hands that connect to our brain and what feels intuitively right. Honoring these physiologies is really when design gets better."<br />
+                    <i>— Susan Magsamen</i>
                 </TextBase>
                 <TextBase textStyle="initiative-descr" fontSize="16pt" fontWeight="regular" lineHeight="2" p=".5rem 0" textAlign="justify">
-                  The character, culture, and shape of built spaces is linked to our sense of belonging—a feeling deeply ingrained in human nature.<br/><br/>
-                  Our emotions have the most physiological influence over our decision-making, reiterating that designing for emotion will have more impactful results.
+                    The character, culture, and shape of built spaces is linked to our sense of belonging—a feeling deeply ingrained in human nature.<br /><br />
+                    Our emotions have the most physiological influence over our decision-making, reiterating that designing for emotion will have more impactful results.
                 </TextBase>
                 <ParallaxHero src="./509436663_122200943936256056_4864651780829267929_n.jpg" height="480px" alt="Yoga on rooftop in Puglia" />
                 <div style={{ textAlign: 'center', fontSize: '0.85rem', color: '#888', marginTop: '0.5rem' }}>
                     Source: <a href="https://www.instagram.com/p/DLRiT52qXpD?img_index=6" style={{ color: '#888', textDecoration: 'underline', fontSize: '0.85rem' }} target="_blank" rel="noopener noreferrer">https://www.instagram.com/p/DLRiT52qXpD?img_index=6</a>
                 </div>
                 <TextBase textStyle="initiative-descr" fontSize="16pt" fontWeight="regular" lineHeight="2" p=".5rem 0" textAlign="justify">
-                  Stemming from our evolutionary needs, this feeling of affinity and physical safety is essential for us to be present, connected, and to flourish in our environments.<br/><br/>
-                  This begins at the very first encounter with a space. Our bodies respond before we are able to consciously process it, so when entering a new environment, we should ideally feel a sense of calm and security. Elements like color, light, and materials create something new that is unique to each of us. Understanding the interplay of these sensory ingredients enables us to design from a richer basis of knowledge.
+                    Stemming from our evolutionary needs, this feeling of affinity and physical safety is essential for us to be present, connected, and to flourish in our environments.<br /><br />
+                    This begins at the very first encounter with a space. Our bodies respond before we are able to consciously process it, so when entering a new environment, we should ideally feel a sense of calm and security. Elements like color, light, and materials create something new that is unique to each of us. Understanding the interplay of these sensory ingredients enables us to design from a richer basis of knowledge.
                 </TextBase>
                 <TextBase textStyle="initiative-descr" fontSize="16pt" fontWeight="regular" lineHeight="2" p=".5rem 0" textAlign="justify">
-                  In 2024, the World Economic Forum stated that to create a truly sustainable future we must "take full advantage of the links between nature, the environment, and human health and longevity."<br/><br/>
-                  By placing nature at the heart of design, we can preserve our planet and shift our role from environmental takers to stewards—improving our health and longevity in the process.
+                    In 2024, the World Economic Forum stated that to create a truly sustainable future we must "take full advantage of the links between nature, the environment, and human health and longevity."<br /><br />
+                    By placing nature at the heart of design, we can preserve our planet and shift our role from environmental takers to stewards—improving our health and longevity in the process.
                 </TextBase>
             </Flex>
         </>
