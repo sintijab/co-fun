@@ -1,6 +1,8 @@
 "use client";
 import React from 'react';
 import dynamic from 'next/dynamic';
+import type p5 from "p5";
+
 // import p5 from 'p5'; // Moved to client-only code below
 
   // Extended Fluorescent and expressive palettes with organic tones
@@ -47,7 +49,7 @@ class SculpturalShape {
     this.radius = radius;
     this.points = points;
     this.useCurves = useCurves;
-    this.angleOffset = p5.random(0, 360);
+    this.angleOffset = this.p5.random(0, 360);
     this.vertices = [];
     this.depths = [];
     this.colors = colors; // Global colors assigned in setup()
@@ -119,8 +121,8 @@ class SculpturalShape {
   }
 }
 
-const generateColorPalettes = (p5: p5) => {
-  let newPalettes: p5.Color[][] = [];
+const generateColorPalettes = (p5: any) => {
+  let newPalettes: any[][] = [];
 
   // Generate monochrome palettes
   for (let i = 0; i < 10; i++) {
