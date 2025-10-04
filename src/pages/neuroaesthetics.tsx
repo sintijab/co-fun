@@ -92,7 +92,7 @@ export default function Neuroaesthetics() {
                 </TextBase>
                 <TextBase textStyle="activity-title" mt="1rem" mb=".5rem" textAlign="justify">Spatial Layouts and Eco-Conscious Design</TextBase>
                 <TextBase textStyle="initiative-descr" fontSize="17pt" fontWeight="regular" lineHeight="2" p=".5rem 0" textAlign="justify">
-                    <b>Spatial Construction. </b> open layouts, and expansive doors/windows allow the landscape—in jungle, mountain, or sea—to enter at every turn in rhythm of a slow living.
+                    <b>Spatial Construction. </b> Open layouts, and expansive doors/windows allow the landscape—in jungle, mountain, or sea—to enter at every turn in rhythm of a slow living.
                 </TextBase>
                 <TextBase textStyle="initiative-descr" fontSize="17pt" fontWeight="regular" lineHeight="2" p=".5rem 0" textAlign="justify">
                     Infinity pools, rooftop terraces, and hammocks recall hacienda grandeur and contemporary luxury. Many villas in Riviera Maya, Punta Mita, and Los Cabos are shaped by the Hacienda, Colonial, and Modernist styles.
@@ -108,7 +108,7 @@ export default function Neuroaesthetics() {
                     <b>Cultural Expression. </b> Embedded motifs and reference points connect guests to place, heightening the quality of value for stay with local integrity.
                 </TextBase>
                 <TextBase textStyle="initiative-descr" fontSize="17pt" fontWeight="regular" lineHeight="2" p=".5rem 0" textAlign="justify">
-                    <b>Spatial Versatility. </b> Spaces transition easily from social gathering zones to private, contemplative nooks, supporting a range of neurological and emotional needs.
+                    <b>Spatial Versatility. </b> Spaces transition easily from social gathering zones to private, contemplative nooks.
                 </TextBase>
                 <TextBase textStyle="initiative-descr" fontSize="17pt" fontWeight="regular" lineHeight="2" p=".5rem 0" textAlign="justify">
                     <b>Sensory Calibration. </b> Each architectural element—light, color, echo, and tactility—is thoughtfully calibrated to optimize sensory clarity or rest, harnessing the power of environmental psychology.
