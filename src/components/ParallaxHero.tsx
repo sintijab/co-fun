@@ -2,7 +2,7 @@
 
 import { useRef, useEffect } from "react";
 
-export default function ParallaxHero({ src, alt = "", height = "60vh", minHeight }: { src: string; alt?: string; height?: string; minHeight?: string }) {
+export default function ParallaxHero({ src, alt = "", height = "60vh", minHeight, objectPosition }: { src: string; alt?: string; height?: string; minHeight?: string, objectPosition?: string}) {
   const containerRef = useRef<HTMLDivElement | null>(null);
   const imgRef = useRef<HTMLImageElement | null>(null);
 
@@ -57,7 +57,7 @@ export default function ParallaxHero({ src, alt = "", height = "60vh", minHeight
         style={{
           width: "100%",
           objectFit: "cover",
-          objectPosition: "center",
+          objectPosition: objectPosition || "center",
           position: "absolute",
           left: 0,
           top: 0,

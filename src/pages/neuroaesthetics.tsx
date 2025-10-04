@@ -10,6 +10,29 @@ declare global {
 }
 
 export default function Neuroaesthetics() {
+
+useEffect(() => {
+  if (!window.instgrm) {
+    const script = document.createElement("script");
+    script.src = "https://www.instagram.com/embed.js";
+    script.async = true;
+    document.body.appendChild(script);
+
+    script.onload = () => {
+      if (window.instgrm && window.instgrm.Embeds) {
+        window.instgrm.Embeds.process();
+      }
+    };
+
+    return () => {
+      document.body.removeChild(script);
+    };
+  } else {
+    if (window.instgrm && window.instgrm.Embeds) {
+      window.instgrm.Embeds.process();
+    }
+  }
+}, []);
     return (
         <>
             <Head>
@@ -27,10 +50,7 @@ export default function Neuroaesthetics() {
                 </TextBase>
                 <div style={{ display: 'flex', flexDirection: 'column', gap: '2rem', width: '100%', alignItems: 'center', marginBottom: '2rem' }}>
 
-                    <ParallaxHero src="./551334975_18279079654262905_1465024795965712906_n (1).jpg" height="480px" alt="Yoga on rooftop in Puglia" />
-                    <div style={{ textAlign: 'center', fontSize: '0.85rem', color: '#888', marginTop: '0.5rem' }}>
-                        Source: <a href="https://www.instagram.com/p/DO3iQlsiE2X/?img_index=4" style={{ color: '#888', textDecoration: 'underline', fontSize: '0.85rem' }} target="_blank" rel="noopener noreferrer">https://www.instagram.com/p/DO3iQlsiE2X/?img_index=4</a>
-                    </div>
+                    <ParallaxHero src="./472935387_1635479040377473.png" height="480px" alt="Yoga on rooftop in Puglia" />
                 </div>
                 <TextBase textStyle="activity-title" mt="1rem" mb=".5rem" textAlign="justify">Environmental Psychology</TextBase>
                 <TextBase textStyle="initiative-descr" fontSize="17pt" fontWeight="regular" lineHeight="2" p=".5rem 0" textAlign="justify">
@@ -40,22 +60,21 @@ export default function Neuroaesthetics() {
                 <TextBase textStyle="initiative-descr" fontSize="17pt" fontWeight="regular" lineHeight="2" p=".5rem 0" textAlign="justify">
                     Architecturally, buildings that use stone, wood, and natural building materials like clay, soil, or adobe feels more harmonious and provide thermal, acoustic effects, and comfort. When rooms open onto gardens, lakes, or mountain views, the experience of prospect—feeling safe while looking out over open space—increases feelings of creativity, relaxation, and clarity. Elements like earth-tone rooftops, natural ventilation, and large windows save energy and allow our daily rhythm synchronize with the environment, improving sleep, mood stability, and even immune response.
                 </TextBase>
+
                 <ParallaxHero src="./521844422_18391691815136549_4605097953059149504_n.jpg" height="480px" alt="Yoga on rooftop in Puglia" />
                 <div style={{ textAlign: 'center', fontSize: '0.85rem', color: '#888', marginTop: '0.5rem' }}>
                     Source: <a href="https://www.instagram.com/p/DMSUHH2tcNE?img_index=8" style={{ color: '#888', textDecoration: 'underline', fontSize: '0.85rem' }} target="_blank" rel="noopener noreferrer">https://www.instagram.com/p/DMSUHH2tcNE?img_index=8</a>
                 </div>                <TextBase textStyle="initiative-descr" fontSize="17pt" fontWeight="regular" lineHeight="2" p=".5rem 0" textAlign="justify">
                     Agrotourism and longevity are intimately connected with these concepts. Stays at farms or estates that prioritize organic agriculture, local food, and natural cycles provide a unique form of restorative travel. Here, architecture teaches about the rhythms and wisdom of the land and its heritage from generations. Participating in orchard harvests, family dinners, or time in the nature known to reduce chronic stress in recovery process and promote longevity and well-being.
                 </TextBase>
-                <ParallaxHero src="./509436663_122200943936256056_4864651780829267929_n.jpg" height="480px" alt="Yoga on rooftop in Puglia" />
-                <div style={{ textAlign: 'center', fontSize: '0.85rem', color: '#888', marginTop: '0.5rem' }}>
-                    Source: <a href="https://www.instagram.com/p/DLRiT52qXpD?img_index=6" style={{ color: '#888', textDecoration: 'underline', fontSize: '0.85rem' }} target="_blank" rel="noopener noreferrer">https://www.instagram.com/p/DLRiT52qXpD?img_index=6</a>
+                
+                <TextBase textStyle="initiative-descr" fontSize="17pt" fontWeight="regular" lineHeight="2" p=".5rem 0" textAlign="justify">
+                    Psychologically, prioritizing agrotourism signals care, stewardship, and a sense of continuity—qualities associated with increased trust, community and care. In this way, architecture serves as a bridge—integrating the built environment with nature and inviting us to discover new.
+                </TextBase>
+                <div style={{ display: 'flex', flexDirection: 'row', gap: '2rem', width: '100%', justifyContent: 'center', margin: '2rem 0' }}>
+                  <ParallaxHero src="./502669200_18385473763136549_854997160371190443_n.jpg" height="480px" alt="Parallax Image 1" />
+                  <ParallaxHero src="./502681898_18385473745136549_3028420093694613459_n.jpg" height="480px" alt="Parallax Image 2" objectPosition="25% 50%" />
                 </div>
-                <TextBase textStyle="initiative-descr" fontSize="17pt" fontWeight="regular" lineHeight="2" p=".5rem 0" textAlign="justify">
-                    Psychologically, prioritizing agrotourism signals care, stewardship, and a sense of continuity—qualities associated with increased trust, community and care.
-                </TextBase>
-                <TextBase textStyle="initiative-descr" fontSize="17pt" fontWeight="regular" lineHeight="2" p=".5rem 0" textAlign="justify">
-                    In this way, architecture serves as a bridge—integrating the built environment with nature and inviting guests to discover not only new landscapes, but also a deeper, more harmonious connection with themselves and others.
-                </TextBase>
                 <TextBase textStyle="initiative-descr" fontSize="17pt" fontWeight="regular" lineHeight="2" p=".5rem 0" textAlign="justify">
                     Modern research reveals that has an impact on brain activity and connection with body functions. Spaces bathed in natural light, constructed with authentic materials, adorned in its landscape natural blending, designed for open and social spaces rather than isolating, activate neurological networks associated with pleasure, safety, and sense of belonging.
                 </TextBase>
@@ -116,6 +135,44 @@ export default function Neuroaesthetics() {
                 <TextBase textStyle="initiative-descr" fontSize="17pt" fontWeight="regular" lineHeight="2" p=".5rem 0" textAlign="justify">
                     The architecture, furnishings, and rituals are not arbitrary. Each choice is rooted in the way human minds respond to light, pattern, space, and social exchange. By integrating neuroscience with craft, locality, and artistry, these properties deliver comfort, belonging, and authentic experience. The future of hospitality is about how our efforts to meet our needs and connect with other people and experiences makes us feel, think, and experience the world.
                 </TextBase>
+                {/* Instagram Blockquotes in 3 columns on desktop */}
+<style>{`
+  .insta-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    width: 100%;
+    margin: 2rem 0;
+  }
+  @media (min-width: 900px) {
+    .insta-grid {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+`}</style>
+<div className="insta-grid">
+  <div style={{ width: '100%', maxWidth: '340px', minWidth: '320px', margin: '0 auto' }}>
+    <div
+      dangerouslySetInnerHTML={{
+        __html: `<blockquote class=\"instagram-media\" data-instgrm-permalink=\"https://www.instagram.com/reel/DMYNHy1sXhf/\" data-instgrm-version=\"14\" style=\"background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin:1px; width:100%; min-width:320px; max-width:340px; padding:0;\"></blockquote>`
+      }}
+    />
+  </div>
+  <div style={{ width: '100%', maxWidth: '340px', minWidth: '320px', margin: '0 auto' }}>
+    <div
+      dangerouslySetInnerHTML={{
+        __html: `<blockquote class=\"instagram-media\" data-instgrm-permalink=\"https://www.instagram.com/reel/DK7b6Y2oCtI/\" data-instgrm-version=\"14\" style=\"background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin:1px; width:100%; min-width:320px; max-width:340px; padding:0;\"></blockquote>`
+      }}
+    />
+  </div>
+  <div style={{ width: '100%', maxWidth: '340px', minWidth: '320px', margin: '0 auto' }}>
+    <div
+      dangerouslySetInnerHTML={{
+        __html: `<blockquote class=\"instagram-media\" data-instgrm-permalink=\"https://www.instagram.com/reel/DNIsTykobB0/\" data-instgrm-version=\"14\" style=\"background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin:1px; width:100%; min-width:320px; max-width:340px; padding:0;\"></blockquote>`
+      }}
+    />
+  </div>
+</div>
                 <TextBase textStyle="activity-title" mt="2rem" textAlign="center">
                   What science has taught us so far?
                 </TextBase>
@@ -154,6 +211,10 @@ export default function Neuroaesthetics() {
                   The character, culture, and shape of built spaces is linked to our sense of belonging—a feeling deeply ingrained in human nature.<br/><br/>
                   Our emotions have the most physiological influence over our decision-making, reiterating that designing for emotion will have more impactful results.
                 </TextBase>
+                <ParallaxHero src="./509436663_122200943936256056_4864651780829267929_n.jpg" height="480px" alt="Yoga on rooftop in Puglia" />
+                <div style={{ textAlign: 'center', fontSize: '0.85rem', color: '#888', marginTop: '0.5rem' }}>
+                    Source: <a href="https://www.instagram.com/p/DLRiT52qXpD?img_index=6" style={{ color: '#888', textDecoration: 'underline', fontSize: '0.85rem' }} target="_blank" rel="noopener noreferrer">https://www.instagram.com/p/DLRiT52qXpD?img_index=6</a>
+                </div>
                 <TextBase textStyle="initiative-descr" fontSize="16pt" fontWeight="regular" lineHeight="2" p=".5rem 0" textAlign="justify">
                   Stemming from our evolutionary needs, this feeling of affinity and physical safety is essential for us to be present, connected, and to flourish in our environments.<br/><br/>
                   This begins at the very first encounter with a space. Our bodies respond before we are able to consciously process it, so when entering a new environment, we should ideally feel a sense of calm and security. Elements like color, light, and materials create something new that is unique to each of us. Understanding the interplay of these sensory ingredients enables us to design from a richer basis of knowledge.

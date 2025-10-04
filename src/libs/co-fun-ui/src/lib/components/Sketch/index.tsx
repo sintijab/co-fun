@@ -1,7 +1,7 @@
 "use client";
 import React from 'react';
 import dynamic from 'next/dynamic';
-import p5 from 'p5';
+// import p5 from 'p5'; // Moved to client-only code below
 
   // Extended Fluorescent and expressive palettes with organic tones
   export const fluorescentColors = [
@@ -16,7 +16,7 @@ import p5 from 'p5';
     '#ffe4b5', '#ffefd5', '#faebd7', '#f5deb3', '#d2691e', '#cd853f', '#8b4513', '#a0522d', '#b8860b', '#f4a460'
   ];
 
-const P5Wrapper = dynamic(import('./P5Wrapper'), {
+const P5Wrapper = dynamic(() => import('./P5Wrapper'), {
   ssr: false
 });
 
@@ -36,8 +36,14 @@ class SculpturalShape {
   colors;
   accentColors;
 
-  constructor(p5: p5, radius: number, points: number, useCurves: boolean) {
-    this.p5 = p5;
+  constructor(p5Instance: any, radius: number, points: number, useCurves: boolean) {
+    // Import p5 only on client
+    if (typeof window !== 'undefined') {
+      const p5 = require('p5');
+      this.p5 = p5Instance;
+    } else {
+      this.p5 = p5Instance;
+    }
     this.radius = radius;
     this.points = points;
     this.useCurves = useCurves;
