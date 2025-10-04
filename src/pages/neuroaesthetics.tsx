@@ -37,6 +37,16 @@ export default function Neuroaesthetics() {
         <>
             <Head>
                 <title>Neuroaesthetics: Design for the Mind</title>
+                <meta name="description" content="Explore how neuroaesthetics and architecture shape our minds, emotions, and well-being. Discover the science behind design for belonging and nature." />
+                <meta property="og:title" content="Neuroaesthetics: Design for the Mind" />
+                <meta property="og:description" content="Explore how neuroaesthetics and architecture shape our minds, emotions, and well-being. Discover the science behind design for belonging and nature." />
+                <meta property="og:image" content="/472935387_1635479040377473.png" />
+                <meta property="og:type" content="article" />
+                <meta property="og:url" content="https://cofun.digital/neuroaesthetics" />
+                <meta name="twitter:card" content="summary_large_image" />
+                <meta name="twitter:title" content="Neuroaesthetics: Design for the Mind" />
+                <meta name="twitter:description" content="Explore how neuroaesthetics and architecture shape our minds, emotions, and well-being. Discover the science behind design for belonging and nature." />
+                <meta name="twitter:image" content="/472935387_1635479040377473.png" />
             </Head>
             <Flex direction="column" align="center" maxW="960px" mx="auto" py={12}>
                 <TextBase textStyle="heading" lineHeight="2" alignSelf="center" textAlign="center">
