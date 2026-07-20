@@ -38,7 +38,8 @@ export default function App({
     router.asPath.includes('/home#') ||
     router.asPath.includes('/career-discovery') ||
     router.asPath.includes('/alchemy') ||
-    router.asPath.includes('/photography');
+    router.asPath.includes('/photography') ||
+    router.asPath.includes('/aging-in-peace');
 
   // useEffect(() => {
   //   const healthCheck = async () => {

@@ -2,7 +2,7 @@
 
 import { useRef, useEffect } from "react";
 
-export default function ParallaxHero({ src, alt = "", height = "60vh", minHeight, objectPosition }: { src: string; alt?: string; height?: string; minHeight?: string, objectPosition?: string}) {
+export default function ParallaxHero({ src, alt = "", height = "60vh", minHeight, objectPosition, parallaxScale = 1.4 }: { src: string; alt?: string; height?: string; minHeight?: string, objectPosition?: string, parallaxScale?: number}) {
   const containerRef = useRef<HTMLDivElement | null>(null);
   const imgRef = useRef<HTMLImageElement | null>(null);
 
@@ -15,11 +15,17 @@ export default function ParallaxHero({ src, alt = "", height = "60vh", minHeight
       const windowHeight = window.innerHeight;
       // How far the top of the container is from the top of the viewport
       const fromTop = rect.top;
-      // The scroll progress through the container (0 = top, 1 = bottom)
-      const progress = Math.max(0, Math.min(1, -fromTop / (rect.height - windowHeight)));
+      // Scroll progress across the time the container spends passing through
+      // the viewport: 0 when it's just entering from the bottom, 1 once it
+      // has fully scrolled past the top. Works regardless of whether the
+      // container is taller or shorter than the viewport.
+      const progress = Math.max(
+        0,
+        Math.min(1, (windowHeight - fromTop) / (windowHeight + rect.height))
+      );
       // Make the image always taller than the container (e.g., 1.4x)
       const containerHeight = rect.height;
-      const imgHeight = containerHeight * 1.4;
+      const imgHeight = containerHeight * parallaxScale;
       img.style.height = `${imgHeight}px`;
       img.style.width = '100%';
       // The max offset is the difference between image and container
@@ -34,7 +40,7 @@ export default function ParallaxHero({ src, alt = "", height = "60vh", minHeight
       window.removeEventListener("scroll", setParallax);
       window.removeEventListener("resize", setParallax);
     };
-  }, []);
+  }, [parallaxScale]);
 
   return (
     <div
