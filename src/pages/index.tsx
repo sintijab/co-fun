@@ -135,6 +135,87 @@ export default function Index() {
           Latest Work
         </TextBase>
 
+        {/* Aging in Peace Parallax Banner */}
+        <Box position="relative" width="100%" minHeight="320px" mb={0}>
+          <ParallaxHero
+            src="/aging_in_peace.jpg"
+            alt="Aging in Peace Cover"
+            height="40vh"
+            minHeight="300px"
+            objectPosition="center 14%"
+          />
+          <Flex
+            position="absolute"
+            top={0}
+            left={0}
+            width="100%"
+            height="100%"
+            alignItems="center"
+            justifyContent="flex-start"
+            zIndex={2}
+            p={[3, 8]}
+          >
+            <Box
+              background="rgba(0,0,0,0.32)"
+              borderRadius="2rem"
+              p={[2, 4]}
+              maxWidth={['100%', '60%']}
+            >
+              <TextBase
+                textStyle="heading"
+                fontSize={['1.1rem', '1.75rem']}
+                mb={1}
+                color="#fff"
+                fontWeight={600}
+                fontFamily="'Inter', 'IBM Plex Sans', 'Arial', sans-serif"
+                letterSpacing="-0.01em"
+                textAlign="left"
+              >
+                Age doesn&apos;t have a look— peace does.
+              </TextBase>
+              <TextBase
+                textStyle="project-descr"
+                fontSize={['.98rem', '1.05rem']}
+                color="#fff"
+                textAlign="justify"
+                fontFamily="'Inter', 'IBM Plex Sans', 'Arial', sans-serif"
+                fontWeight={400}
+                lineHeight="1.7"
+                px={2}
+                mb={3}
+              >
+                On longevity, overwork, and burnout recovery — and a homemade,
+                alcohol-free cocktail for aging in peace.
+              </TextBase>
+              <NextLink href="/aging-in-peace" passHref legacyBehavior>
+                <Button
+                  as={Link}
+                  bg="#111"
+                  color="#fff"
+                  fontWeight={700}
+                  borderRadius="2rem"
+                  px={7}
+                  py={2}
+                  fontSize="1.08rem"
+                  _hover={{ bg: '#222' }}
+                  boxShadow="0 2px 12px rgba(0,0,0,0.16)"
+                >
+                  Read article
+                </Button>
+              </NextLink>
+              <TextBase
+                fontSize=".95rem"
+                color="#fff"
+                textAlign="left"
+                fontWeight={300}
+                mt={0}
+              >
+                July 20, 2026 · 4 min to read · by Sintija
+              </TextBase>
+            </Box>
+          </Flex>
+        </Box>
+
         {/* Photography Parallax Banner */}
         <Box position="relative" width="100%" minHeight="320px" mb={0}>
           <ParallaxHero
