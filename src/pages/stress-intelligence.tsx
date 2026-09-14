@@ -215,7 +215,12 @@ export default function StressIntelligence() {
           property="og:description"
           content="On stress intelligence, false alignment, and the six response patterns leaders default to under pressure."
         />
-        <meta property="og:image" content="/01-lilies.jpeg" />
+        <meta
+          property="og:image"
+          content="https://cofun.digital/01-lilies.jpeg"
+        />
+        <meta property="og:image:width" content="1842" />
+        <meta property="og:image:height" content="2304" />
         <meta property="og:type" content="article" />
         <meta
           property="og:url"
@@ -227,7 +232,10 @@ export default function StressIntelligence() {
           name="twitter:description"
           content="On stress intelligence, false alignment, and the six response patterns leaders default to under pressure."
         />
-        <meta name="twitter:image" content="/01-lilies.jpeg" />
+        <meta
+          name="twitter:image"
+          content="https://cofun.digital/01-lilies.jpeg"
+        />
       </Head>
       <TripleParallaxHero
         images={[
