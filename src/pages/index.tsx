@@ -22,6 +22,30 @@ export default function Index() {
     <>
       <Head>
         <title>Agentic AI chat builder</title>
+        <meta
+          name="description"
+          content="Recruit AI assistant team for your business in seconds."
+        />
+        <meta property="og:site_name" content="CO-FUN" />
+        <meta property="og:title" content="CO-FUN" />
+        <meta
+          property="og:description"
+          content="Recruit AI assistant team for your business in seconds."
+        />
+        <meta
+          property="og:image"
+          content="https://cofun.digital/career-bot-5.jpg"
+        />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="CO-FUN" />
+        <meta
+          name="twitter:description"
+          content="Recruit AI assistant team for your business in seconds."
+        />
+        <meta
+          name="twitter:image"
+          content="https://cofun.digital/career-bot-5.jpg"
+        />
       </Head>
       <Hero
         {...{
