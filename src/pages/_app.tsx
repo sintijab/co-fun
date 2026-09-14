@@ -39,7 +39,7 @@ export default function App({
     router.asPath.includes('/career-discovery') ||
     router.asPath.includes('/alchemy') ||
     router.asPath.includes('/photography') ||
-    router.asPath.includes('/aging-in-peace');
+    router.asPath.includes('/stress-intelligence');
 
   // useEffect(() => {
   //   const healthCheck = async () => {

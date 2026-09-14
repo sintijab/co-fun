@@ -135,15 +135,24 @@ export default function Index() {
           Latest Work
         </TextBase>
 
-        {/* Aging in Peace Parallax Banner */}
+        {/* Stress Intelligence Triptych Banner */}
         <Box position="relative" width="100%" minHeight="320px" mb={0}>
-          <ParallaxHero
-            src="/aging_in_peace.jpg"
-            alt="Aging in Peace Cover"
-            height="40vh"
-            minHeight="300px"
-            objectPosition="center 14%"
-          />
+          <Flex width="100%" height={['32vh', '40vh']} minHeight="300px">
+            {['/01-lilies.jpeg', '/02-lilies.jpeg', '/03-lilies.jpeg'].map(
+              (src) => (
+                <Box key={src} flex="1 1 33.3333%" overflow="hidden">
+                  <Image
+                    src={src}
+                    alt="Lilies sewn with coarse cotton thread"
+                    width="100%"
+                    height="100%"
+                    objectFit="cover"
+                    objectPosition="center 14%"
+                  />
+                </Box>
+              )
+            )}
+          </Flex>
           <Flex
             position="absolute"
             top={0}
@@ -171,7 +180,7 @@ export default function Index() {
                 letterSpacing="-0.01em"
                 textAlign="left"
               >
-                Age doesn&apos;t have a look— peace does.
+                Conflict in False Alignment
               </TextBase>
               <TextBase
                 textStyle="project-descr"
@@ -184,10 +193,10 @@ export default function Index() {
                 px={2}
                 mb={3}
               >
-                On longevity, overwork, and burnout recovery — and a homemade,
-                alcohol-free cocktail for aging in peace.
+                On stress intelligence, false alignment, and the six response
+                patterns leaders default to under pressure.
               </TextBase>
-              <NextLink href="/aging-in-peace" passHref legacyBehavior>
+              <NextLink href="/stress-intelligence" passHref legacyBehavior>
                 <Button
                   as={Link}
                   bg="#111"
@@ -210,7 +219,7 @@ export default function Index() {
                 fontWeight={300}
                 mt={0}
               >
-                July 20, 2026 · 4 min to read · by Sintija
+                September 14, 2026 · 16 min to read · by Sintija
               </TextBase>
             </Box>
           </Flex>
