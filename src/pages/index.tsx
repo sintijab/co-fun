@@ -11,6 +11,7 @@ import Head from 'next/head';
 import { Image, Button, Link } from '@chakra-ui/react';
 import NextLink from 'next/link';
 import ParallaxHero from '../components/ParallaxHero';
+import TripleParallaxHero from '../components/TripleParallaxHero';
 export default function Index() {
   const args = {
     link: 'http://ai-career-assistant.cofun.digital/',
@@ -137,22 +138,15 @@ export default function Index() {
 
         {/* Stress Intelligence Triptych Banner */}
         <Box position="relative" width="100%" minHeight="320px" mb={0}>
-          <Flex width="100%" height={['32vh', '40vh']} minHeight="300px">
-            {['/01-lilies.jpeg', '/02-lilies.jpeg', '/03-lilies.jpeg'].map(
-              (src) => (
-                <Box key={src} flex="1 1 33.3333%" overflow="hidden">
-                  <Image
-                    src={src}
-                    alt="Lilies sewn with coarse cotton thread"
-                    width="100%"
-                    height="100%"
-                    objectFit="cover"
-                    objectPosition="center 14%"
-                  />
-                </Box>
-              )
-            )}
-          </Flex>
+          <TripleParallaxHero
+            images={[
+              { src: '/01-lilies.jpeg', alt: 'Lilies sewn with coarse cotton thread, panel one' },
+              { src: '/02-lilies.jpeg', alt: 'Lilies sewn with coarse cotton thread, panel two' },
+              { src: '/03-lilies.jpeg', alt: 'Lilies sewn with coarse cotton thread, panel three' },
+            ]}
+            height="40vh"
+            minHeight="300px"
+          />
           <Flex
             position="absolute"
             top={0}

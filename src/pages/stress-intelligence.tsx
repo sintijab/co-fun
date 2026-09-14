@@ -1,45 +1,6 @@
 import Head from 'next/head';
 import { Box, Flex, TextBase } from '@co-fun/ui';
-
-function TripleImageHero({
-  images,
-}: {
-  images: { src: string; alt: string }[];
-}) {
-  return (
-    <div
-      style={{
-        display: 'flex',
-        width: '100%',
-        margin: 0,
-        padding: 0,
-      }}
-    >
-      {images.map((img) => (
-        <div
-          key={img.src}
-          style={{
-            flex: '1 1 33.3333%',
-            overflow: 'hidden',
-            height: '46vh',
-            minHeight: '260px',
-          }}
-        >
-          <img
-            src={img.src}
-            alt={img.alt}
-            style={{
-              width: '100%',
-              height: '100%',
-              objectFit: 'cover',
-              display: 'block',
-            }}
-          />
-        </div>
-      ))}
-    </div>
-  );
-}
+import TripleParallaxHero from '../components/TripleParallaxHero';
 
 type Segment = { text: string; bold?: boolean };
 const t = (text: string): Segment => ({ text });
@@ -246,12 +207,14 @@ export default function StressIntelligence() {
       <Head>
         <title>Conflict in False Alignment</title>
       </Head>
-      <TripleImageHero
+      <TripleParallaxHero
         images={[
           { src: '/01-lilies.jpeg', alt: 'Lilies sewn with coarse cotton thread, panel one' },
           { src: '/02-lilies.jpeg', alt: 'Lilies sewn with coarse cotton thread, panel two' },
           { src: '/03-lilies.jpeg', alt: 'Lilies sewn with coarse cotton thread, panel three' },
         ]}
+        height="62vh"
+        minHeight="360px"
       />
       <Box p=".75rem 1rem" textAlign="center">
         <TextBase
