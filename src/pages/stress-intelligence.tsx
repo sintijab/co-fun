@@ -206,6 +206,28 @@ export default function StressIntelligence() {
     <>
       <Head>
         <title>Conflict in False Alignment</title>
+        <meta
+          name="description"
+          content="On stress intelligence, false alignment, and the six response patterns leaders default to under pressure."
+        />
+        <meta property="og:title" content="Conflict in False Alignment" />
+        <meta
+          property="og:description"
+          content="On stress intelligence, false alignment, and the six response patterns leaders default to under pressure."
+        />
+        <meta property="og:image" content="/01-lilies.jpeg" />
+        <meta property="og:type" content="article" />
+        <meta
+          property="og:url"
+          content="https://cofun.digital/stress-intelligence"
+        />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Conflict in False Alignment" />
+        <meta
+          name="twitter:description"
+          content="On stress intelligence, false alignment, and the six response patterns leaders default to under pressure."
+        />
+        <meta name="twitter:image" content="/01-lilies.jpeg" />
       </Head>
       <TripleParallaxHero
         images={[
